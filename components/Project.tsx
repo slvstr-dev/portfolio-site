@@ -1,6 +1,6 @@
 import styles from "../styles/Projects.module.scss";
 
-const Project = ({ project }: any) => (
+export const Project: React.FC<Props> = ({ project }: any) => (
 	<div>
 		<h2>{project.name}</h2>
 
@@ -8,4 +8,6 @@ const Project = ({ project }: any) => (
 	</div>
 );
 
-export default Project;
+type Props = {
+	project: Object;
+};

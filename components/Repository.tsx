@@ -1,6 +1,6 @@
 import styles from "../styles/Repositories.module.scss";
 
-const Repository = ({ repository }: any) => (
+export const Repository: React.FC<Props> = ({ repository }: any) => (
 	<div>
 		<h2>{repository.name}</h2>
 
@@ -14,4 +14,6 @@ const Repository = ({ repository }: any) => (
 	</div>
 );
 
-export default Repository;
+type Props = {
+	repository: Object;
+};

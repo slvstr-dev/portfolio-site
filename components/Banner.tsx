@@ -1,9 +1,11 @@
 import styles from "../styles/Banner.module.scss";
 
-const Banner = ({ title }: any) => (
+export const Banner: React.FC<Props> = ({ title }) => (
 	<section>
 		<h1>{title}</h1>
 	</section>
 );
 
-export default Banner;
+type Props = {
+	title: string;
+};

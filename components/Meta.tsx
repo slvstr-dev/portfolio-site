@@ -1,6 +1,10 @@
 import Head from "next/head";
 
-const Meta = ({ title, keywords, description }: any) => (
+export const Meta: React.FC<Props> = ({
+	title,
+	description,
+	keywords,
+}: any) => (
 	<Head>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="keywords" content={keywords} />
@@ -13,10 +17,8 @@ const Meta = ({ title, keywords, description }: any) => (
 	</Head>
 );
 
-Meta.defaultProps = {
-	title: "slvstr.dev",
-	keywords: "",
-	description: "",
+type Props = {
+	title: string;
+	description: string;
+	keywords: string;
 };
-
-export default Meta;

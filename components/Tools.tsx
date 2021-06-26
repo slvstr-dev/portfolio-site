@@ -1,5 +1,3 @@
 import styles from "../styles/Tools.module.scss";
 
-const Tools = () => <section>Tools placeholder</section>;
-
-export default Tools;
+export const Tools: React.FC = () => <section>Tools placeholder</section>;

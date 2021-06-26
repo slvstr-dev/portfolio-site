@@ -1,5 +1,3 @@
 import styles from "../styles/Footer.module.scss";
 
-const Footer = () => <footer>Footer placeholder</footer>;
-
-export default Footer;
+export const Footer: React.FC = () => <footer>Footer placeholder</footer>;

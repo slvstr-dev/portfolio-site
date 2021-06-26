@@ -1,6 +1,6 @@
 import styles from "../styles/User.module.scss";
 
-const User = ({ user }: any) => (
+export const User: React.FC<Props> = ({ user }) => (
 	<section>
 		<img src={user.avatar_url} alt={user.name} />
 
@@ -16,4 +16,6 @@ const User = ({ user }: any) => (
 	</section>
 );
 
-export default User;
+type Props = {
+	user: any;
+};

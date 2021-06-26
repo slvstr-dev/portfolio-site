@@ -1,7 +1,7 @@
-import Repository from "./Repository";
+import { Repository } from "./Repository";
 import styles from "../styles/Repositories.module.scss";
 
-const Repositories = ({ repositories }: any) => (
+export const Repositories: React.FC<Props> = ({ repositories }: any) => (
 	<section>
 		{repositories.map((repository: any) => {
 			return <Repository key={repository.id} repository={repository} />;
@@ -9,4 +9,6 @@ const Repositories = ({ repositories }: any) => (
 	</section>
 );
 
-export default Repositories;
+type Props = {
+	repositories: Object[];
+};

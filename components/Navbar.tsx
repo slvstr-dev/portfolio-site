@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "../styles/Navbar.module.scss";
 
-const Navbar = () => (
+export const Navbar: React.FC = () => (
 	<nav>
 		<ul className={styles.list}>
 			<li>
@@ -14,5 +14,3 @@ const Navbar = () => (
 		</ul>
 	</nav>
 );
-
-export default Navbar;

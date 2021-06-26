@@ -1,5 +1,5 @@
 import styles from "../styles/Languages.module.scss";
 
-const Languages = () => <section>Languages placeholder</section>;
-
-export default Languages;
+export const Languages: React.FC = () => (
+	<section>Languages placeholder</section>
+);

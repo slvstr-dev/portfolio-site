@@ -1,12 +1,12 @@
-import Meta from "./Meta";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import { Meta } from "./Meta";
+import { Navbar } from "./Navbar";
+import { Footer } from "./Footer";
 import styles from "../styles/Layout.module.scss";
 
-const Layout = ({ children }: any) => {
+export const Layout: React.FC<Props> = ({ children }: any) => {
 	return (
 		<>
-			<Meta />
+			<Meta title="slvstr.dev" description="" keywords="" />
 			<Navbar />
 
 			<main>{children}</main>
@@ -16,4 +16,6 @@ const Layout = ({ children }: any) => {
 	);
 };
 
-export default Layout;
+type Props = {
+	children: React.ReactNode;
+};

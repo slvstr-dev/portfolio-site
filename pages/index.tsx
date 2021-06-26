@@ -1,11 +1,11 @@
 import projects from "../data/projects.json";
-import Banner from "../components/Banner";
-import Contact from "../components/Contact";
-import Languages from "../components/Languages";
-import Projects from "../components/Projects";
-import Repositories from "../components/Repositories";
-import Tools from "../components/Tools";
-import User from "../components/User";
+import { Banner } from "../components/Banner";
+import { Contact } from "../components/Contact";
+import { Languages } from "../components/Languages";
+import { Projects } from "../components/Projects";
+import { Repositories } from "../components/Repositories";
+import { Tools } from "../components/Tools";
+import { User } from "../components/User";
 import styles from "../styles/Home.module.scss";
 
 export const getStaticProps = async () => {
@@ -25,7 +25,7 @@ export const getStaticProps = async () => {
 	};
 };
 
-const Home = ({ user, repositories }: any) => (
+const Home: React.FC<Props> = ({ user, repositories }: any) => (
 	<>
 		<Banner title="slvstr.dev" />
 		<User user={user} />
@@ -36,5 +36,10 @@ const Home = ({ user, repositories }: any) => (
 		<Contact />
 	</>
 );
+
+type Props = {
+	user: Object;
+	repositories: Object;
+};
 
 export default Home;
