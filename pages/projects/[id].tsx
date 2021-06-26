@@ -5,7 +5,8 @@ import styles from "../../styles/Project.module.scss";
 const Project: React.FC<Props> = ({ project }) => (
 	<>
 		<Meta title={project.title} description="" keywords="" />
-		<Banner title="About" />
+
+		<Banner title={project.title} />
 
 		<p>{project.description}</p>
 	</>

@@ -3,7 +3,7 @@ import styles from "../styles/User.module.scss";
 
 export const User: React.FC<Props> = ({ user }) => (
 	<section>
-		<Image src={user.avatar_url} alt={user.name} />
+		<Image src={user.avatar_url} alt={user.name} width="500" height="500" />
 
 		<h2>{user.name}</h2>
 

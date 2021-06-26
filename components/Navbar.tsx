@@ -9,7 +9,7 @@ export const Navbar: React.FC = () => (
 			</li>
 
 			<li>
-				<Link href="/contact">Contact</Link>
+				<Link href="/about">About</Link>
 			</li>
 		</ul>
 	</nav>
