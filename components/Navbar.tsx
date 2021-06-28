@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "../styles/Navbar.module.scss";
+import styles from "../styles/components/Navbar.module.scss";
 
 export const Navbar: React.FC = () => (
 	<nav>

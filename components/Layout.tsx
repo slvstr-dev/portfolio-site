@@ -1,9 +1,9 @@
 import { Meta } from "./Meta";
 import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
-import styles from "../styles/Layout.module.scss";
+import styles from "../styles/components/Layout.module.scss";
 
-export const Layout: React.FC<Props> = ({ children }: any) => {
+export const Layout: React.FC<Layout> = ({ children }) => {
 	return (
 		<>
 			<Meta title="slvstr.dev" description="" keywords="" />
@@ -14,8 +14,4 @@ export const Layout: React.FC<Props> = ({ children }: any) => {
 			<Footer />
 		</>
 	);
-};
-
-type Props = {
-	children: React.ReactNode;
 };

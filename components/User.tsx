@@ -1,7 +1,7 @@
 import Image from "next/image";
-import styles from "../styles/User.module.scss";
+import styles from "../styles/components/User.module.scss";
 
-export const User: React.FC<Props> = ({ user }) => (
+export const User: React.FC<User> = ({ user }) => (
 	<section>
 		<Image src={user.avatar_url} alt={user.name} width="500" height="500" />
 
@@ -16,7 +16,3 @@ export const User: React.FC<Props> = ({ user }) => (
 		</ul>
 	</section>
 );
-
-type Props = {
-	user: any;
-};

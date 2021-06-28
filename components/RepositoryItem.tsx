@@ -1,6 +1,6 @@
-import styles from "../styles/Repositories.module.scss";
+import styles from "../styles/components/RepositoryItem.module.scss";
 
-export const Repository: React.FC<Props> = ({ repository }: any) => (
+export const RepositoryItem: React.FC<Repository> = ({ repository }) => (
 	<div>
 		<h2>{repository.name}</h2>
 
@@ -13,7 +13,3 @@ export const Repository: React.FC<Props> = ({ repository }: any) => (
 		</ul>
 	</div>
 );
-
-type Props = {
-	repository: Object;
-};

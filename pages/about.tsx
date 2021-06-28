@@ -1,6 +1,6 @@
 import { Banner } from "../components/Banner";
 import { Meta } from "../components/Meta";
-import styles from "../styles/About.module.scss";
+import styles from "../styles/pages/About.module.scss";
 
 const About: React.FC = () => (
 	<>
