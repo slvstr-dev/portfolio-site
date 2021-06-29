@@ -1,6 +1,17 @@
 import styles from "../styles/components/RepositoryItem.module.scss";
 
-export const RepositoryItem: React.FC<Repository> = ({ repository }) => (
+interface RepositoryItem {
+	repository: {
+		id: number;
+		name: string;
+		description: string;
+		created_at: string;
+		updated_at: string;
+		html_url: string;
+	};
+}
+
+export const RepositoryItem: React.FC<RepositoryItem> = ({ repository }) => (
 	<div>
 		<h2>{repository.name}</h2>
 

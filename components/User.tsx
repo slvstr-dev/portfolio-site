@@ -1,6 +1,17 @@
 import Image from "next/image";
 import styles from "../styles/components/User.module.scss";
 
+interface User {
+	user: {
+		avatar_url: string;
+		name: string;
+		bio: string;
+		company: string;
+		location: string;
+		html_url: string;
+	};
+}
+
 export const User: React.FC<User> = ({ user }) => (
 	<section>
 		<Image src={user.avatar_url} alt={user.name} width="500" height="500" />

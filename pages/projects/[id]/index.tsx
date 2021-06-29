@@ -1,9 +1,17 @@
-import projects from "../../../public/data/projects.json";
+import projects from "../../../data/projects.json";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { ParsedUrlQuery } from "querystring";
 import { Banner } from "../../../components/Banner";
 import { Meta } from "../../../components/Meta";
 import styles from "../../styles/pages/Projects.module.scss";
+
+interface Project {
+	project: {
+		id: number;
+		name: string;
+		url: string;
+	};
+}
 
 export const getStaticProps: GetStaticProps = async (context) => {
 	const { id } = context.params as ParsedUrlQuery & { id: string };
@@ -17,7 +25,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	const ids = projects.map((project: ProjectItem) => project.id);
+	const ids = projects.map((project: Project["project"]) => project.id);
 	const paths = ids.map((id: number) => ({ params: { id: id.toString() } }));
 
 	return {

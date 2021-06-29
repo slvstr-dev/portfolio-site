@@ -1,5 +1,11 @@
 import Head from "next/head";
 
+interface Meta {
+	title: string;
+	description: string;
+	keywords: string;
+}
+
 export const Meta: React.FC<Meta> = ({ title, description, keywords }) => (
 	<Head>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
