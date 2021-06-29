@@ -1,4 +1,3 @@
-import { server } from "../config/index";
 import projects from "../data/projects.json";
 import { GetStaticProps } from "next";
 import { Banner } from "../components/Banner";

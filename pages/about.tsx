@@ -1,10 +1,10 @@
 import { Banner } from "../components/Banner";
-import { Meta } from "../components/Meta";
+import { PageMeta } from "../components/PageMeta";
 import styles from "../styles/pages/About.module.scss";
 
 const About: React.FC = () => (
 	<>
-		<Meta title="About" description="" keywords="" />
+		<PageMeta title="About" />
 		<Banner title="About" />
 	</>
 );

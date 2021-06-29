@@ -1,5 +1,4 @@
-const development = process.env.NODE_ENV !== "production";
-
-export const server = development
-	? "http://localhost:3000"
-	: "https://www.slvstr.dev";
+export const domain =
+	process.env.NODE_ENV !== "production"
+		? "http://localhost:3000"
+		: "https://www.slvstr.dev";
