@@ -1,7 +1,7 @@
 import projects from "../../../data/projects.json";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { ParsedUrlQuery } from "querystring";
-import { Banner } from "../../../components/Banner";
+import { Hero } from "../../../components/Hero";
 import { PageMeta } from "../../../components/PageMeta";
 import styles from "../../styles/pages/Projects.module.scss";
 
@@ -38,7 +38,7 @@ const Project: React.FC<Project> = ({ project }) => (
 	<>
 		<PageMeta title={project.name} />
 
-		<Banner title={project.name} />
+		<Hero title={project.name} />
 
 		<a href={project.url}>{project.name}</a>
 	</>
