@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "../styles/components/User.module.scss";
 
 interface User {
@@ -14,7 +13,7 @@ interface User {
 
 export const User: React.FC<User> = ({ user }) => (
 	<section>
-		<Image src={user.avatar_url} alt={user.name} width="500" height="500" />
+		<img src={user.avatar_url} alt={user.name} width="500" height="500" />
 
 		<h2>{user.name}</h2>
 
