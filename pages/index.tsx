@@ -1,6 +1,6 @@
 import projects from "../data/projects.json";
 import { GetStaticProps } from "next";
-import { Banner } from "../components/Banner";
+import { Hero } from "../components/Hero";
 import { Contact } from "../components/Contact";
 import { Languages } from "../components/Languages";
 import { ProjectsList } from "../components/ProjectsList";
@@ -53,7 +53,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const Home: React.FC<Home> = ({ user, projects, repositories }) => (
 	<>
-		<Banner title="slvstr.dev" />
+		<Hero title="slvstr.dev" />
 		<User user={user} />
 		<ProjectsList projects={projects} />
 		<RepositoriesList repositories={repositories} />

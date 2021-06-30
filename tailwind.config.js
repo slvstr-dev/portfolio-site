@@ -5,7 +5,16 @@ module.exports = {
 	],
 	darkMode: false, // or 'media' or 'class'
 	theme: {
-		extend: {},
+		extend: {
+			fontSize: {
+				xxs: "0.65rem",
+			},
+			colors: {
+				lemon: "##FCF175",
+				peach: "#FAD0C0",
+				oatmeal: "#F8F3E5",
+			},
+		},
 	},
 	variants: {
 		extend: {},

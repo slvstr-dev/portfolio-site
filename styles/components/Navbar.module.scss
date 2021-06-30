@@ -1,0 +1,11 @@
+.list {
+	@apply flex justify-center;
+	@apply text-sm font-medium;
+
+	font-family: "Source Code Pro";
+
+	li {
+		@apply px-2;
+		@apply hover:text-gray-500;
+	}
+}
