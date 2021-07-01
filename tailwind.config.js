@@ -3,14 +3,14 @@ module.exports = {
 		"./pages/**/*.{js,ts,jsx,tsx}",
 		"./components/**/*.{js,ts,jsx,tsx}",
 	],
-	darkMode: false, // or 'media' or 'class'
+	darkMode: false,
 	theme: {
 		extend: {
 			fontSize: {
 				xxs: "0.65rem",
 			},
 			colors: {
-				lemon: "##FCF175",
+				lemon: "#FCF175",
 				peach: "#FAD0C0",
 				oatmeal: "#F8F3E5",
 			},

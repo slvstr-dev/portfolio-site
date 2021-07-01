@@ -1,3 +1,9 @@
-import styles from "../styles/components/Footer.module.scss";
+import { Contact } from "./Contact";
+import { Copyright } from "./Copyright";
 
-export const Footer: React.FC = () => <footer>Footer placeholder</footer>;
+export const Footer: React.FC = () => (
+	<footer>
+		<Contact />
+		<Copyright />
+	</footer>
+);

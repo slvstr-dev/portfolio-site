@@ -53,13 +53,13 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const Home: React.FC<Home> = ({ user, projects, repositories }) => (
 	<>
-		<Hero title="slvstr.dev" />
-		<User user={user} />
+		<Hero title="This is an adventure" />
+		{/* <User user={user} />
 		<ProjectsList projects={projects} />
 		<RepositoriesList repositories={repositories} />
 		<Languages />
 		<Tools />
-		<Contact />
+		<Contact /> */}
 	</>
 );
 

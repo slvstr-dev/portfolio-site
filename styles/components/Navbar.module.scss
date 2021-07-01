@@ -1,11 +1,14 @@
-.list {
-	@apply flex justify-center;
-	@apply text-sm font-medium;
+.navbar {
+	@apply hidden md:block;
 
-	font-family: "Source Code Pro";
+	ul {
+		@apply flex justify-center;
+		@apply text-sm font-medium;
+		font-family: "Source Code Pro";
 
-	li {
-		@apply px-2;
-		@apply hover:text-gray-500;
+		li {
+			@apply px-2;
+			@apply hover:text-gray-500;
+		}
 	}
 }

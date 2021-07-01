@@ -1,0 +1,14 @@
+.hero {
+	@apply mx-auto md:px-10;
+}
+
+.hero__container {
+	@apply flex justify-center items-center;
+	@apply md:rounded-xl;
+	@apply h-96;
+	background: cadetblue center/cover no-repeat;
+}
+
+.hero__title {
+	@apply text-center text-lemon uppercase;
+}

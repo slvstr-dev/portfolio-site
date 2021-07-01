@@ -1,0 +1,26 @@
+.header {
+	@apply my-2;
+	@apply text-center;
+}
+
+.header__topbar {
+	@apply flex justify-between items-center;
+	@apply px-2 md:px-10;
+}
+
+.header__logo {
+	@apply flex flex-col items-center;
+	@apply cursor-pointer select-none;
+}
+
+.header__title {
+	@apply block;
+	@apply text-2xl text-red-600 font-black uppercase;
+	@apply border-b-2 border-red-600 px-5;
+}
+
+.header__subtitle {
+	@apply block;
+	@apply pt-1;
+	@apply text-xxs text-red-600 font-semibold leading-4 uppercase;
+}
