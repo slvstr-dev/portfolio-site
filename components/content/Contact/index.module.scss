@@ -1,0 +1,20 @@
+.contact {
+	@apply bg-peach;
+}
+
+.contact__container {
+	@apply flex justify-between items-center;
+}
+
+.contact__logo {
+	@apply mr-10;
+	@apply font-extrabold text-4xl text-center text-red-600;
+}
+
+.contact__postcard {
+	@apply flex-auto;
+}
+
+.contact__title {
+	@apply font-extrabold text-xl text-red-600;
+}

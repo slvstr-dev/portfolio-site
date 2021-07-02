@@ -1,9 +1,8 @@
-import projects from "../../../data/projects.json";
+import projects from "../../../shared/data/projects.json";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { ParsedUrlQuery } from "querystring";
-import { Hero } from "../../../components/Hero";
-import { PageMeta } from "../../../components/PageMeta";
-import styles from "../../styles/pages/Projects.module.scss";
+import { Hero } from "../../../components/content/Hero";
+import { PageMeta } from "../../../components/misc/PageMeta";
 
 interface Project {
 	project: {

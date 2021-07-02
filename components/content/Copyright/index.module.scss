@@ -1,0 +1,10 @@
+.copyright {
+	@apply bg-red-900;
+	@apply text-peach text-sm font-medium;
+	font-family: "Source Code Pro";
+}
+
+.copyright__container {
+	@apply text-center;
+	@apply py-3 px-2 md:px-10;
+}

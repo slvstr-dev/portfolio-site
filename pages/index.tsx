@@ -1,13 +1,12 @@
-import projects from "../data/projects.json";
+import projects from "../shared/data/projects.json";
 import { GetStaticProps } from "next";
-import { Hero } from "../components/Hero";
-import { Contact } from "../components/Contact";
-import { Languages } from "../components/Languages";
-import { ProjectsList } from "../components/ProjectsList";
-import { RepositoriesList } from "../components/RepositoriesList";
-import { Tools } from "../components/Tools";
-import { User } from "../components/User";
-import styles from "../styles/pages/Home.module.scss";
+import { PageMeta } from "../components/misc/PageMeta";
+import { Hero } from "../components/content/Hero";
+import { Contact } from "../components/content/Contact";
+import { Skills } from "../components/content/Skills";
+import { Projects } from "../components/content/Projects";
+import { Repositories } from "../components/content/Repositories";
+import { User } from "../components/content/User";
 
 interface Home {
 	user: {
@@ -53,12 +52,12 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const Home: React.FC<Home> = ({ user, projects, repositories }) => (
 	<>
+		<PageMeta title="Home placeholder" />
 		<Hero title="This is an adventure" />
 		{/* <User user={user} />
-		<ProjectsList projects={projects} />
-		<RepositoriesList repositories={repositories} />
-		<Languages />
-		<Tools />
+		<Projects projects={projects} />
+		<Repositories repositories={repositories} />
+		<Skills />
 		<Contact /> */}
 	</>
 );

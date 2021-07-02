@@ -1,10 +1,9 @@
-import { Hero } from "../components/Hero";
-import { PageMeta } from "../components/PageMeta";
-import styles from "../styles/pages/About.module.scss";
+import { Hero } from "../components/content/Hero";
+import { PageMeta } from "../components/misc/PageMeta";
 
 const About: React.FC = () => (
 	<>
-		<PageMeta title="About" />
+		<PageMeta title="About" description="About description" />
 		<Hero title="About" />
 	</>
 );
