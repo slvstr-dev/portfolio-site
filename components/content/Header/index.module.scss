@@ -9,15 +9,7 @@
 	@apply px-2 md:px-10;
 }
 
-.header__button {
-	@apply md:hidden;
-}
-
-.header__hamburger,
-.header__linkedIn {
-	@apply text-red-600 rounded-md hover:text-white hover:bg-red-600 transition-colors ease-in-out;
-}
-
-.header__linkedIn {
+.header__socials {
 	@apply md:absolute right-10 bottom-0;
+	@apply flex md:flex-row-reverse gap-2;
 }

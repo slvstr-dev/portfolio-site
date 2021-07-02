@@ -1,0 +1,20 @@
+.button {
+	@apply inline-block;
+	@apply rounded-full py-3 px-6;
+	@apply bg-red-600 text-white text-sm font-semibold uppercase;
+	@apply transition ease-in-out;
+
+	svg {
+		@apply inline w-5 h-5 align-text-bottom;
+		@apply stroke-3;
+		@apply transition ease-in-out;
+	}
+
+	&:hover {
+		@apply bg-white text-red-600;
+
+		svg {
+			@apply transform translate-x-1;
+		}
+	}
+}

@@ -1,0 +1,23 @@
+.bio {
+	@apply bg-peach;
+	@apply mt-36 md:mt-0;
+}
+
+.bio__container {
+	@apply flex flex-col md:flex-row-reverse justify-center md:justify-between items-center;
+}
+
+.bio__info {
+	@apply md:flex-grow;
+	@apply text-center md:text-left;
+}
+
+.bio__content {
+	@apply my-6;
+	@apply text-2xl;
+}
+
+.bio__image {
+	@apply -mt-40 md:-mt-0 mb-6 md:mb-0;
+	@apply w-64 md:w-1/3;
+}

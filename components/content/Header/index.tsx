@@ -1,23 +1,25 @@
 import Link from "next/link";
-import LinkedIn from "../../../public/svg/linkedin.svg";
-import Hamburger from "../../../public/svg/hamburger.svg";
+import { linkedInUrl, gitHubUrl } from "../../../config";
+import { IconButton } from "../../elements/IconButton";
 import { Logo } from "../../elements/Logo";
-import { Button } from "../../elements/Button";
+import { Menu } from "../../content/Menu";
 import { Navbar } from "../Navbar";
+import LinkedIn from "../../../public/svg/linkedin.svg";
+import GitHub from "../../../public/svg/github.svg";
 import styles from "./index.module.scss";
 
 export const Header: React.FC = () => (
 	<header className={styles.header}>
 		<div className={styles.header__container}>
-			<Link href="https://www.linkedin.com/in/sylvesterhofstra/" passHref>
-				<a target="_blank">
-					<LinkedIn
-						className={styles.header__linkedIn}
-						height="30"
-						width="30"
-					/>
-				</a>
-			</Link>
+			<div className={styles.header__socials}>
+				<IconButton url={linkedInUrl}>
+					<LinkedIn />
+				</IconButton>
+
+				<IconButton url={gitHubUrl}>
+					<GitHub />
+				</IconButton>
+			</div>
 
 			<Link href="/" passHref>
 				<a>
@@ -25,18 +27,7 @@ export const Header: React.FC = () => (
 				</a>
 			</Link>
 
-			<Button
-				className={styles.header__button}
-				handleClick={() => {
-					console.log("Hello World!");
-				}}
-			>
-				<Hamburger
-					className={styles.header__hamburger}
-					height="30"
-					width="30"
-				/>
-			</Button>
+			<Menu />
 
 			<Navbar />
 		</div>

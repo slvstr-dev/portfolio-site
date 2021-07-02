@@ -14,6 +14,9 @@ module.exports = {
 				peach: "#FAD0C0",
 				oatmeal: "#F8F3E5",
 			},
+			strokeWidth: {
+				3: 3,
+			},
 		},
 	},
 	variants: {

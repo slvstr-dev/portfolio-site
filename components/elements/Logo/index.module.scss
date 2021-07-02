@@ -1,7 +1,7 @@
 .logo {
 	@apply flex flex-col items-center;
 	@apply cursor-pointer select-none;
-	@apply hover:opacity-75 transition-colors ease-in-out;
+	@apply hover:opacity-75 transition ease-in-out;
 }
 
 .logo__title {

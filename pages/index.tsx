@@ -2,11 +2,10 @@ import projects from "../shared/data/projects.json";
 import { GetStaticProps } from "next";
 import { PageMeta } from "../components/misc/PageMeta";
 import { Hero } from "../components/content/Hero";
-import { Contact } from "../components/content/Contact";
-import { Skills } from "../components/content/Skills";
+import { Intro } from "../components/content/Intro";
+import { Bio } from "../components/content/Bio";
 import { Projects } from "../components/content/Projects";
 import { Repositories } from "../components/content/Repositories";
-import { User } from "../components/content/User";
 
 interface Home {
 	user: {
@@ -54,11 +53,10 @@ const Home: React.FC<Home> = ({ user, projects, repositories }) => (
 	<>
 		<PageMeta title="Home placeholder" />
 		<Hero title="This is an adventure" />
-		{/* <User user={user} />
-		<Projects projects={projects} />
-		<Repositories repositories={repositories} />
-		<Skills />
-		<Contact /> */}
+		<Intro text="Als ‘self-taught’ frontend developer vind ik het belangrijk om met een moderne stack te werken binnen een creatieve en open organisatie, waarin persoonlijke ontwikkeling actief wordt gestimuleerd." />
+		<Bio user={user} />
+		{/* <Projects projects={projects} /> */}
+		{/* <Repositories repositories={repositories} /> */}
 	</>
 );
 
