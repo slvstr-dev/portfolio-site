@@ -1,30 +1,44 @@
 import Link from "next/link";
-import { Icon } from "../../elements/Icon";
+import LinkedIn from "../../../public/svg/linkedin.svg";
+import Hamburger from "../../../public/svg/hamburger.svg";
+import { Logo } from "../../elements/Logo";
 import { Button } from "../../elements/Button";
 import { Navbar } from "../Navbar";
 import styles from "./index.module.scss";
 
 export const Header: React.FC = () => (
 	<header className={styles.header}>
-		<div className={styles.header__topbar}>
-			<Button>
-				<Icon />
-			</Button>
-
-			<Link href="/" passHref>
-				<div className={styles.header__logo}>
-					<span className={styles.header__title}>Slvstr.dev</span>
-					<span className={styles.header__subtitle}>
-						Frontend developer
-					</span>
-				</div>
+		<div className={styles.header__container}>
+			<Link href="https://www.linkedin.com/in/sylvesterhofstra/" passHref>
+				<a target="_blank">
+					<LinkedIn
+						className={styles.header__linkedIn}
+						height="30"
+						width="30"
+					/>
+				</a>
 			</Link>
 
-			<Button>
-				<Icon />
-			</Button>
-		</div>
+			<Link href="/" passHref>
+				<a>
+					<Logo />
+				</a>
+			</Link>
 
-		<Navbar />
+			<Button
+				className={styles.header__button}
+				handleClick={() => {
+					console.log("Hello World!");
+				}}
+			>
+				<Hamburger
+					className={styles.header__hamburger}
+					height="30"
+					width="30"
+				/>
+			</Button>
+
+			<Navbar />
+		</div>
 	</header>
 );

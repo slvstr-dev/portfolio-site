@@ -1,14 +1,15 @@
 .navbar {
 	@apply hidden md:block;
+	@apply pt-1;
 
 	ul {
 		@apply flex justify-center;
-		@apply text-sm font-medium;
+		@apply text-xs font-normal;
 		font-family: "Source Code Pro";
 
 		li {
 			@apply px-2;
-			@apply hover:text-gray-500;
+			@apply hover:opacity-75 transition-colors ease-in-out;
 		}
 	}
 }

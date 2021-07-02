@@ -1,0 +1,17 @@
+.logo {
+	@apply flex flex-col items-center;
+	@apply cursor-pointer select-none;
+	@apply hover:opacity-75 transition-colors ease-in-out;
+}
+
+.logo__title {
+	@apply block;
+	@apply text-2xl text-red-600 font-black uppercase;
+	@apply border-b-2 border-red-600 px-6;
+}
+
+.logo__subtitle {
+	@apply block;
+	@apply pt-1;
+	@apply text-xxs text-red-600 font-semibold leading-4 uppercase;
+}
