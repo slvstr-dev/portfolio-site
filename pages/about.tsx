@@ -1,5 +1,5 @@
-import { Hero } from "../components/content/Hero";
-import { PageMeta } from "../components/misc/PageMeta";
+import { PageMeta } from "../components/PageMeta";
+import { Hero } from "../components/Hero";
 
 const About: React.FC = () => (
 	<>

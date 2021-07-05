@@ -1,0 +1,30 @@
+.contact {
+	@apply bg-peach;
+}
+
+.contact__container {
+	@apply flex justify-between items-center;
+}
+
+.contact__logo {
+	@apply mr-10;
+}
+
+.contact__postcard {
+	@apply flex-auto;
+}
+
+.contact__title {
+	@apply font-extrabold text-xl text-red-600;
+}
+
+.copyright {
+	@apply bg-red-900;
+	@apply text-peach text-xs font-normal;
+	font-family: "Source Code Pro";
+}
+
+.copyright__container {
+	@apply text-center;
+	@apply py-3 px-2 md:px-10;
+}

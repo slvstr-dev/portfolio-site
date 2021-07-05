@@ -1,8 +1,8 @@
 import projects from "../../../shared/data/projects.json";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { ParsedUrlQuery } from "querystring";
-import { Hero } from "../../../components/content/Hero";
-import { PageMeta } from "../../../components/misc/PageMeta";
+import { Hero } from "../../../components/Hero";
+import { PageMeta } from "../../../components/PageMeta";
 
 interface Project {
 	project: {

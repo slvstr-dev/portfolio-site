@@ -1,11 +1,11 @@
 import projects from "../shared/data/projects.json";
 import { GetStaticProps } from "next";
-import { PageMeta } from "../components/misc/PageMeta";
-import { Hero } from "../components/content/Hero";
-import { Intro } from "../components/content/Intro";
-import { Bio } from "../components/content/Bio";
-import { ProjectsList } from "../components/content/ProjectsList";
-import { Repositories } from "../components/content/Repositories";
+import { PageMeta } from "../components/PageMeta";
+import { Hero } from "../components/Hero";
+import { Quote } from "../components/Quote";
+import { About } from "../components/About";
+import { ProjectsList } from "../components/ProjectsList";
+import { RepositoriesList } from "../components/RepositoriesList";
 
 interface Home {
 	user: {
@@ -52,11 +52,11 @@ export const getStaticProps: GetStaticProps = async () => {
 const Home: React.FC<Home> = ({ user, projects, repositories }) => (
 	<>
 		<PageMeta title="Home placeholder" />
-		<Hero title="This is an adventure" />
-		<Intro text="Als ‘self-taught’ frontend developer vind ik het belangrijk om met een moderne stack te werken binnen een creatieve en open organisatie, waarin persoonlijke ontwikkeling actief wordt gestimuleerd." />
-		<Bio user={user} />
+		<Hero title="Eat, code, sleep, repeat" />
+		<Quote text="Als ‘self-taught’ frontend developer vind ik het belangrijk om met een moderne stack te werken binnen een creatieve en open organisatie, waarin persoonlijke ontwikkeling actief wordt gestimuleerd." />
+		<About user={user} />
 		<ProjectsList projects={projects} />
-		{/* <Repositories repositories={repositories} /> */}
+		{/* <RepositoriesList repositories={repositories} /> */}
 	</>
 );
 

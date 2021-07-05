@@ -1,0 +1,19 @@
+.menu__hamburger {
+	@apply md:hidden;
+}
+
+.navbar {
+	@apply hidden md:block;
+	@apply pt-1;
+
+	ul {
+		@apply flex justify-center;
+		@apply text-xs font-normal;
+		font-family: "Source Code Pro";
+
+		li {
+			@apply px-2;
+			@apply hover:opacity-75 transition-colors ease-in-out;
+		}
+	}
+}
