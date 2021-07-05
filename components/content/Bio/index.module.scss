@@ -20,4 +20,5 @@
 .bio__image {
 	@apply -mt-40 md:-mt-0 mb-6 md:mb-0;
 	@apply w-64 md:w-1/3;
+	@apply rounded-md;
 }

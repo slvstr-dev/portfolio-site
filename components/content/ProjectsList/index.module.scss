@@ -1,0 +1,45 @@
+.projects {
+	@apply bg-oatmeal;
+}
+
+.projects__container {
+	@apply py-16;
+}
+
+.projects__title {
+	@apply pb-10;
+	@apply text-center uppercase;
+}
+
+.projects__cards {
+	@apply grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3;
+}
+
+.project__card {
+	@apply relative;
+	@apply w-full h-0;
+	@apply transform hover:scale-97 active:scale-95;
+	@apply transition-transform ease-in-out duration-200;
+
+	padding-bottom: 100%;
+}
+
+.project__overlay {
+	@apply absolute;
+	@apply opacity-0 rounded-xl;
+	@apply w-full h-full;
+	@apply bg-gradient-to-t from-gray-900;
+	@apply transform hover:opacity-20 active:opacity-40;
+	@apply transition-opacity ease-in-out duration-200;
+}
+
+.project__image {
+	@apply rounded-xl;
+}
+
+.project__title {
+	@apply absolute top-1/2 left-1/2;
+	@apply transform -translate-x-1/2 -translate-y-1/2;
+	@apply w-11/12 pointer-events-none;
+	@apply text-center text-white;
+}

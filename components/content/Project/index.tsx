@@ -9,9 +9,9 @@ interface Project {
 }
 
 export const Project: React.FC<Project> = ({ project }) => (
-	<div>
+	<article className={styles.card}>
 		<h2>{project.name}</h2>
 
 		<p>{project.url}</p>
-	</div>
+	</article>
 );

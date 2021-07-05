@@ -18,9 +18,11 @@ interface User {
 export const Bio: React.FC<User> = ({ user }) => (
 	<section className={styles.bio}>
 		<Container className={styles.bio__container}>
-			<div className={styles.bio__image}>
-				<img src={user.avatar_url} alt={user.name} />
-			</div>
+			<img
+				className={styles.bio__image}
+				src={user.avatar_url}
+				alt={user.name}
+			/>
 
 			<div className={styles.bio__info}>
 				<h2>{user.name}</h2>

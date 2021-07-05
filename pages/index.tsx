@@ -4,7 +4,7 @@ import { PageMeta } from "../components/misc/PageMeta";
 import { Hero } from "../components/content/Hero";
 import { Intro } from "../components/content/Intro";
 import { Bio } from "../components/content/Bio";
-import { Projects } from "../components/content/Projects";
+import { ProjectsList } from "../components/content/ProjectsList";
 import { Repositories } from "../components/content/Repositories";
 
 interface Home {
@@ -55,7 +55,7 @@ const Home: React.FC<Home> = ({ user, projects, repositories }) => (
 		<Hero title="This is an adventure" />
 		<Intro text="Als ‘self-taught’ frontend developer vind ik het belangrijk om met een moderne stack te werken binnen een creatieve en open organisatie, waarin persoonlijke ontwikkeling actief wordt gestimuleerd." />
 		<Bio user={user} />
-		{/* <Projects projects={projects} /> */}
+		<ProjectsList projects={projects} />
 		{/* <Repositories repositories={repositories} /> */}
 	</>
 );

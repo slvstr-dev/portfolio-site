@@ -10,5 +10,6 @@
 }
 
 .hero__title {
-	@apply text-center text-lemon uppercase;
+	@apply w-11/12;
+	@apply text-4xl xs:text-5xl text-center text-lemon uppercase;
 }
