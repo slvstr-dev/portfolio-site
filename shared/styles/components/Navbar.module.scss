@@ -1,0 +1,15 @@
+.navbar {
+	@apply pt-1;
+
+	ul {
+		@apply flex justify-center;
+		@apply text-xs font-normal;
+		font-family: "Source Code Pro";
+
+		li {
+			@apply px-2;
+			@apply hover:opacity-75;
+			@apply transition-opacity ease-in-out;
+		}
+	}
+}

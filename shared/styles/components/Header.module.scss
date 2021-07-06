@@ -1,0 +1,14 @@
+.header {
+	@apply my-3;
+	@apply text-center;
+}
+
+.header__container {
+	@apply relative max-w-screen-2xl;
+	@apply flex flex-col justify-between items-center;
+}
+
+.header__socials {
+	@apply absolute right-2 md:right-10 bottom-0;
+	@apply flex gap-2;
+}

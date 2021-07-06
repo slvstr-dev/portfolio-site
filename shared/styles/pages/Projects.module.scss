@@ -1,0 +1,18 @@
+.projects {
+	@apply bg-oatmeal;
+	@apply py-10;
+}
+
+.projects__container {
+	@apply max-w-screen-xl;
+	@apply py-16;
+}
+
+.projects__title {
+	@apply pb-10;
+	@apply text-center uppercase;
+}
+
+.projects__cards {
+	@apply grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3;
+}

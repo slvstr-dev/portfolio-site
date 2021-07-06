@@ -1,7 +1,7 @@
 import type { AppProps } from "next/app";
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
-import "../shared/styles/globals.scss";
+import { Header } from "../components/blocks/Header";
+import { Footer } from "../components/blocks/Footer";
+import "../shared/styles/global/globals.scss";
 
 const App = ({ Component, pageProps }: AppProps) => (
 	<>
