@@ -1,16 +1,22 @@
 import Link from "next/link";
 import styles from "./index.module.scss";
 
-export const IconButton: React.FC<{
+interface IconButton {
 	url?: string;
-	className?: string;
+	classNames?: string;
 	children: React.ReactNode;
-}> = ({ url, className, children }) => (
+}
+
+export const IconButton: React.FC<IconButton> = ({
+	url,
+	classNames,
+	children,
+}) => (
 	<>
 		{url ? (
 			<Link href={url} passHref>
 				<a
-					className={`${styles.button} ${className}`}
+					className={`${styles.button} ${classNames}`}
 					target="_blank"
 					rel="noreferrer noopener"
 				>
@@ -18,7 +24,7 @@ export const IconButton: React.FC<{
 				</a>
 			</Link>
 		) : (
-			<span className={`${styles.button} ${className}`}>{children}</span>
+			<span className={`${styles.button} ${classNames}`}>{children}</span>
 		)}
 	</>
 );

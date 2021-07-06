@@ -8,7 +8,7 @@ import styles from "./index.module.scss";
 export const Footer: React.FC = () => (
 	<footer>
 		<div className={styles.contact}>
-			<Container className={styles.contact__container}>
+			<Container classNames={styles.contact__container}>
 				<Link href="/" passHref>
 					<a>
 						<Logo className={styles.contact__logo} />
@@ -20,15 +20,13 @@ export const Footer: React.FC = () => (
 
 					<Form>
 						<Input type="email" placeholder="Jouw emailadres" />
-
-						<Input type="submit" value="&gt;" />
 					</Form>
 				</div>
 			</Container>
 		</div>
 
 		<div className={styles.copyright}>
-			<Container className={styles.copyright__container}>
+			<Container classNames={styles.copyright__container}>
 				&copy; {new Date().getFullYear()} Created by slvstr.dev.
 			</Container>
 		</div>

@@ -16,7 +16,7 @@
 }
 
 .contact__title {
-	@apply font-extrabold text-xl text-red-600;
+	@apply text-red-600 text-xl font-extrabold;
 }
 
 .copyright {
@@ -26,6 +26,6 @@
 }
 
 .copyright__container {
+	@apply py-3;
 	@apply text-center;
-	@apply py-3 px-2 md:px-10;
 }

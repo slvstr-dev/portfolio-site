@@ -1,11 +1,13 @@
 import React from "react";
 import styles from "./index.module.scss";
 
-export const Container: React.FC<{
-	className?: string;
+interface Container {
+	classNames?: string;
 	children: React.ReactNode;
-}> = ({ className, children }) => (
-	<div className={`${styles.container} ${className ? className : ""}`}>
+}
+
+export const Container: React.FC<Container> = ({ classNames, children }) => (
+	<div className={`${styles.container} ${classNames ? classNames : ""}`}>
 		{children}
 	</div>
 );

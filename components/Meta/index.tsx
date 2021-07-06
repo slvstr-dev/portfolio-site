@@ -2,14 +2,14 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { domain } from "../../config/index";
 
-interface PageMeta {
+interface Meta {
 	title?: string;
 	description?: string;
 	keywords?: string;
 	featuredImage?: string;
 }
 
-export const PageMeta: React.FC<PageMeta> = ({
+export const Meta: React.FC<Meta> = ({
 	title = "slvstr.dev",
 	description = "Layout placeholder description",
 	keywords = "Layout, Placeholder, Keywords",

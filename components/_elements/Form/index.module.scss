@@ -1,14 +1,4 @@
-.form {
-	input {
-		@apply bg-transparent;
-
-		&::placeholder {
-			@apply text-sm text-gray-800 font-normal;
-			font-family: "Source Code Pro";
-		}
-
-		button {
-			@apply text-red-600;
-		}
-	}
+.form__button {
+	@apply bg-transparent;
+	@apply text-red-600;
 }

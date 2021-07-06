@@ -13,7 +13,8 @@
 
 		li {
 			@apply px-2;
-			@apply hover:opacity-75 transition-colors ease-in-out;
+			@apply hover:opacity-75;
+			@apply transition-opacity ease-in-out;
 		}
 	}
 }

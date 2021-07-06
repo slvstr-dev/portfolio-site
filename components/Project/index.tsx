@@ -1,5 +1,4 @@
 import { Container } from "../_elements/Container";
-import styles from "./index.module.scss";
 
 interface Project {
 	project: {
@@ -10,8 +9,8 @@ interface Project {
 }
 
 export const Project: React.FC<Project> = ({ project }) => (
-	<article className={styles.project}>
-		<Container className={styles.project__container}>
+	<article>
+		<Container>
 			<h2>{project.name}</h2>
 
 			<p>{project.url}</p>

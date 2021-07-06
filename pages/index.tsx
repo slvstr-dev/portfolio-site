@@ -1,6 +1,6 @@
 import projects from "../shared/data/projects.json";
 import { GetStaticProps } from "next";
-import { PageMeta } from "../components/PageMeta";
+import { Meta } from "../components/Meta";
 import { Hero } from "../components/Hero";
 import { Quote } from "../components/Quote";
 import { About } from "../components/About";
@@ -36,7 +36,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const Home: React.FC<Home> = ({ user, projects }) => (
 	<>
-		<PageMeta title="Home placeholder" />
+		<Meta title="Home placeholder" />
 		<Hero title="Eat, code, sleep, repeat" />
 		<Quote text="Als ‘self-taught’ frontend developer vind ik het belangrijk om met een moderne stack te werken binnen een creatieve en open organisatie, waarin persoonlijke ontwikkeling actief wordt gestimuleerd." />
 		<About user={user} />

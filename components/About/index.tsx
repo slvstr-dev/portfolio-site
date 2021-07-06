@@ -17,7 +17,7 @@ interface About {
 
 export const About: React.FC<About> = ({ user }) => (
 	<section className={styles.bio}>
-		<Container className={styles.bio__container}>
+		<Container classNames={styles.bio__container}>
 			<img
 				className={styles.bio__image}
 				src={user.avatar_url}
@@ -37,7 +37,7 @@ export const About: React.FC<About> = ({ user }) => (
 					</ul>
 				</div>
 
-				<Button className={styles.bio__button} href={linkedInUrl}>
+				<Button classNames={styles.bio__button} href={linkedInUrl}>
 					Bekijk LinkedIn-profiel
 					<Chevron />
 				</Button>

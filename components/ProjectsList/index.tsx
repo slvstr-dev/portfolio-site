@@ -1,17 +1,17 @@
 import { Container } from "../_elements/Container";
 import styles from "./index.module.scss";
 
-type projectsList = {
+interface ProjectsList {
 	projects: {
 		id: number;
 		name: string;
 		url: string;
 	}[];
-};
+}
 
-export const ProjectsList: React.FC<projectsList> = ({ projects }) => (
+export const ProjectsList: React.FC<ProjectsList> = ({ projects }) => (
 	<section className={styles.projects}>
-		<Container className={styles.projects__container}>
+		<Container classNames={styles.projects__container}>
 			<h2 className={styles.projects__title}>Projects</h2>
 
 			<div className={styles.projects__cards}>

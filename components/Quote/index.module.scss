@@ -1,4 +1,7 @@
-.intro__text {
+.intro__container {
 	@apply max-w-screen-sm mx-auto py-10;
+}
+
+.intro__text {
 	@apply text-center text-2xl;
 }

@@ -1,5 +1,7 @@
 .button svg {
-	@apply inline w-8 h-8 rounded-md;
-	@apply text-red-600 hover:text-white hover:bg-red-600;
-	@apply transition ease-in-out;
+	@apply inline w-8 h-8;
+	@apply rounded-md;
+	@apply hover:bg-red-600;
+	@apply text-red-600 hover:text-white;
+	@apply transition ease-in-out duration-200;
 }

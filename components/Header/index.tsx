@@ -10,7 +10,7 @@ import styles from "./index.module.scss";
 
 export const Header: React.FC = () => (
 	<header className={styles.header}>
-		<Container className={styles.header__container}>
+		<Container classNames={styles.header__container}>
 			<div className={styles.header__socials}>
 				<IconButton url={linkedInUrl}>
 					<LinkedIn />

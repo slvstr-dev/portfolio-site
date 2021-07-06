@@ -1,4 +1,8 @@
-.button {
-	@apply bg-white;
-	@apply rounded-full;
+.input {
+	@apply bg-transparent;
+
+	&::placeholder {
+		@apply text-gray-800 text-sm font-normal;
+		font-family: "Source Code Pro";
+	}
 }

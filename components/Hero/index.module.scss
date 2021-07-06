@@ -5,10 +5,10 @@
 .hero__container {
 	@apply max-w-screen-2xl h-96;
 	@apply md:rounded-xl;
-	@apply flex justify-center items-center;
 	@apply bg-green-500 bg-no-repeat bg-cover bg-center;
+	@apply flex justify-center items-center;
 }
 
 .hero__title {
-	@apply text-4xl xs:text-5xl text-center text-lemon uppercase;
+	@apply text-lemon text-4xl xs:text-5xl text-center uppercase;
 }

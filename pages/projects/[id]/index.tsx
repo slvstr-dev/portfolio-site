@@ -2,7 +2,7 @@ import projects from "../../../shared/data/projects.json";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { ParsedUrlQuery } from "querystring";
 import { Hero } from "../../../components/Hero";
-import { PageMeta } from "../../../components/PageMeta";
+import { Meta } from "../../../components/Meta";
 
 interface Project {
 	project: {
@@ -35,7 +35,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 const Project: React.FC<Project> = ({ project }) => (
 	<>
-		<PageMeta title={project.name} />
+		<Meta title={project.name} />
 
 		<Hero title={project.name} />
 

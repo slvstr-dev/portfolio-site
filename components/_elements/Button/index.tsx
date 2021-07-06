@@ -1,11 +1,13 @@
 import styles from "./index.module.scss";
 
-export const Button: React.FC<{
+interface Button {
 	href: string;
-	className?: string;
+	classNames?: string;
 	children: React.ReactNode;
-}> = ({ href, className, children }) => (
-	<a className={`${styles.button} ${className}`} href={href}>
+}
+
+export const Button: React.FC<Button> = ({ href, classNames, children }) => (
+	<a className={`${styles.button} ${classNames}`} href={href}>
 		{children}
 	</a>
 );
