@@ -20,6 +20,9 @@ module.exports = {
 			fontSize: {
 				xxs: "0.65rem",
 			},
+			minHeight: {
+				"1/2": "50vh;",
+			},
 			scale: {
 				97: ".97",
 			},

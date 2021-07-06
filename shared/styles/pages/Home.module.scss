@@ -1,14 +1,20 @@
-.hero {
-	@apply mx-auto md:px-10;
+.home {
+	@apply mb-5 md:mb-10;
+	@apply flex items-stretch;
 }
 
-.hero__container {
-	@apply max-w-screen-2xl h-96;
-	@apply md:rounded-xl;
+.home__container {
+	@apply max-w-screen-2xl w-full;
+	@apply flex items-stretch;
+}
+
+.home__hero {
+	@apply w-full p-5;
+	@apply rounded-xl;
 	@apply bg-green-500 bg-no-repeat bg-cover bg-center;
 	@apply flex justify-center items-center;
 }
 
-.hero__title {
+.home__title {
 	@apply text-lemon text-4xl xs:text-5xl text-center uppercase;
 }

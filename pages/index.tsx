@@ -6,11 +6,15 @@ const Home: React.FC = () => (
 	<>
 		<Meta title="Home placeholder" />
 
-		<div className={styles.hero}>
-			<Container classNames={styles.hero__container}>
-				<h1 className={styles.hero__title}>Eat, code, sleep, repeat</h1>
+		<main className={styles.home}>
+			<Container classNames={styles.home__container}>
+				<div className={styles.home__hero}>
+					<h1 className={styles.home__title}>
+						Eat, code, sleep, repeat
+					</h1>
+				</div>
 			</Container>
-		</div>
+		</main>
 	</>
 );
 

@@ -34,18 +34,18 @@ const About: React.FC<About> = ({ user }) => (
 		<Meta title="About" description="About description" />
 		<Quote text="Als ‘self-taught’ frontend developer vind ik het belangrijk om met een moderne stack te werken binnen een creatieve en open organisatie, waarin persoonlijke ontwikkeling actief wordt gestimuleerd." />
 
-		<section className={styles.bio}>
-			<Container classNames={styles.bio__container}>
+		<main className={styles.about}>
+			<Container classNames={styles.about__container}>
 				<img
-					className={styles.bio__image}
+					className={styles.about__image}
 					src={user.avatar_url}
 					alt={user.name}
 				/>
 
-				<div className={styles.bio__info}>
+				<div className={styles.about__info}>
 					<h2>{user.name}</h2>
 
-					<div className={styles.bio__content}>
+					<div className={styles.about__content}>
 						<p>{user.bio}</p>
 
 						<ul>
@@ -55,13 +55,16 @@ const About: React.FC<About> = ({ user }) => (
 						</ul>
 					</div>
 
-					<Button classNames={styles.bio__button} href={linkedInUrl}>
+					<Button
+						classNames={styles.about__button}
+						href={linkedInUrl}
+					>
 						Bekijk LinkedIn-profiel
 						<Chevron />
 					</Button>
 				</div>
 			</Container>
-		</section>
+		</main>
 	</>
 );
 

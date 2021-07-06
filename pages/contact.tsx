@@ -10,7 +10,7 @@ const Contact: React.FC = () => (
 	<>
 		<Meta title="About" description="About description" />
 
-		<div className={styles.contact}>
+		<main className={styles.contact}>
 			<Container classNames={styles.contact__container}>
 				<Link href="/" passHref>
 					<a>
@@ -26,7 +26,7 @@ const Contact: React.FC = () => (
 					</Form>
 				</div>
 			</Container>
-		</div>
+		</main>
 	</>
 );
 

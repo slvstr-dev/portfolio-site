@@ -8,7 +8,7 @@ const Projects: React.FC = () => (
 	<>
 		<Meta title="Home placeholder" />
 
-		<section className={styles.projects}>
+		<main className={styles.projects}>
 			<Container classNames={styles.projects__container}>
 				<h2 className={styles.projects__title}>Projects</h2>
 
@@ -18,7 +18,7 @@ const Projects: React.FC = () => (
 					})}
 				</div>
 			</Container>
-		</section>
+		</main>
 	</>
 );
 
