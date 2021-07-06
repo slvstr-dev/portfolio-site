@@ -11,6 +11,16 @@ import styles from "../../shared/styles/components/Header.module.scss";
 export const Header: React.FC = () => (
 	<header className={styles.header}>
 		<Container classNames={styles.header__container}>
+			<div className={styles.header__socials}>
+				<IconButton href={gitHubUrl}>
+					<GitHub />
+				</IconButton>
+
+				<IconButton href={linkedInUrl}>
+					<LinkedIn />
+				</IconButton>
+			</div>
+
 			<Link href="/" passHref>
 				<a>
 					<Logo />
@@ -18,16 +28,6 @@ export const Header: React.FC = () => (
 			</Link>
 
 			<Navbar />
-
-			<div className={styles.header__socials}>
-				<IconButton href={linkedInUrl}>
-					<LinkedIn />
-				</IconButton>
-
-				<IconButton href={gitHubUrl}>
-					<GitHub />
-				</IconButton>
-			</div>
 		</Container>
 	</header>
 );

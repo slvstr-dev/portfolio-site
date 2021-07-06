@@ -1,3 +1,11 @@
 @use "./tailwind";
 @use "./fonts";
 @use "./typography.scss";
+
+body > div {
+	@apply flex flex-col min-h-screen;
+}
+
+main {
+	@apply flex-grow;
+}
