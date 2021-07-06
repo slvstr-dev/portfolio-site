@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { linkedInUrl, gitHubUrl } from "../../config";
+import { Container } from "../_elements/Container";
 import { IconButton } from "../_elements/IconButton";
 import { Logo } from "../_elements/Logo";
 import { Menu } from "../Menu";
@@ -9,7 +10,7 @@ import styles from "./index.module.scss";
 
 export const Header: React.FC = () => (
 	<header className={styles.header}>
-		<div className={styles.header__container}>
+		<Container className={styles.header__container}>
 			<div className={styles.header__socials}>
 				<IconButton url={linkedInUrl}>
 					<LinkedIn />
@@ -27,6 +28,6 @@ export const Header: React.FC = () => (
 			</Link>
 
 			<Menu />
-		</div>
+		</Container>
 	</header>
 );

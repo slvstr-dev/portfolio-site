@@ -3,13 +3,12 @@
 }
 
 .hero__container {
-	@apply flex justify-center items-center;
+	@apply max-w-screen-2xl h-96;
 	@apply md:rounded-xl;
-	@apply h-96;
+	@apply flex justify-center items-center;
 	@apply bg-green-500 bg-no-repeat bg-cover bg-center;
 }
 
 .hero__title {
-	@apply w-11/12;
 	@apply text-4xl xs:text-5xl text-center text-lemon uppercase;
 }

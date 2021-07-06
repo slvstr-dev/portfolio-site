@@ -5,11 +5,11 @@
 
 .header__container {
 	@apply relative;
+	@apply max-w-screen-2xl;
 	@apply flex justify-between items-center md:flex-col;
-	@apply px-2 md:px-10;
 }
 
 .header__socials {
-	@apply md:absolute right-10 bottom-0;
+	@apply md:absolute right-10 xl:right-0 bottom-0;
 	@apply flex md:flex-row-reverse gap-2;
 }

@@ -5,5 +5,7 @@ export const Container: React.FC<{
 	className?: string;
 	children: React.ReactNode;
 }> = ({ className, children }) => (
-	<div className={`${styles.container} ${className}`}>{children}</div>
+	<div className={`${styles.container} ${className ? className : ""}`}>
+		{children}
+	</div>
 );

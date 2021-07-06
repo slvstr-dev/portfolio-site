@@ -3,6 +3,7 @@
 }
 
 .contact__container {
+	@apply py-10;
 	@apply flex justify-between items-center;
 }
 

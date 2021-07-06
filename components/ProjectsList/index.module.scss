@@ -1,9 +1,10 @@
 .projects {
 	@apply bg-oatmeal;
+	@apply py-10;
 }
 
 .projects__container {
-	@apply py-16;
+	@apply max-w-screen-xl py-16;
 }
 
 .projects__title {
