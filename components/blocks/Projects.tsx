@@ -3,6 +3,7 @@ import { Project } from "../elements/Project";
 import styles from "../../shared/styles/components/blocks/Projects.module.scss";
 
 interface Projects {
+	title: string;
 	projects: {
 		id: number;
 		url: string;
@@ -15,10 +16,10 @@ interface Projects {
 	}[];
 }
 
-export const Projects: React.FC<Projects> = ({ projects }) => (
+export const Projects: React.FC<Projects> = ({ title, projects }) => (
 	<section className={styles.projects}>
 		<Container classNames={styles.projects__container}>
-			<h2 className={styles.projects__title}>Projects</h2>
+			<h2 className={styles.projects__title}>{title}</h2>
 
 			{projects.map((project) => {
 				return <Project key={project.id} project={project} />;

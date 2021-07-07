@@ -1,0 +1,11 @@
+{
+	"locales": ["nl"],
+	"defaultLocale": "nl",
+	"pages": {
+		"*": ["common"],
+		"/": ["home"],
+		"/about": ["about"],
+		"/portfolio": ["portfolio"],
+		"/contact": ["contact"]
+	}
+}

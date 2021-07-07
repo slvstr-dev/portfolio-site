@@ -1,6 +1,5 @@
 import { GetStaticProps } from "next";
 import { Meta } from "../components/blocks/Meta";
-import { Quote } from "../components/blocks/Quote";
 import { Profile } from "../components/blocks/Profile";
 import styles from "../shared/styles/pages/About.module.scss";
 

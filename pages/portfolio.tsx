@@ -47,9 +47,9 @@ const Portfolio: React.FC<Portfolio> = ({ projects, repositories }) => (
 		<main className={styles.portfolio}>
 			<h1 className={styles.portfolio__title}>Projects & repositories</h1>
 
-			<Projects projects={projects} />
+			<Projects title="Projects" projects={projects} />
 
-			<Repositories repositories={repositories} />
+			<Repositories title="Repositories" repositories={repositories} />
 		</main>
 	</>
 );
