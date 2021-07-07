@@ -1,0 +1,8 @@
+.tag {
+	@apply inline-block mx-1 py-1 px-2;
+	@apply rounded-full;
+	@apply bg-peach;
+	@apply text-red-600 text-xs font-medium;
+	@apply transition ease-in-out duration-200;
+	font-family: "Source Code Pro";
+}

@@ -1,0 +1,12 @@
+.projects {
+	@apply py-5 md:py-10;
+}
+
+.projects__container {
+	@apply max-w-screen-lg;
+}
+
+.projects__title {
+	@apply pb-5;
+	@apply text-center uppercase;
+}

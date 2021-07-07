@@ -1,16 +1,16 @@
-.projectsList {
+.repositories {
 	@apply py-5 md:py-10;
 }
 
-.projectsList__container {
+.repositories__container {
 	@apply max-w-screen-xl;
 }
 
-.projectsList__title {
-	@apply pb-10;
+.repositories__title {
+	@apply pb-5;
 	@apply text-center uppercase;
 }
 
-.projectsList__cards {
+.repositories__cards {
 	@apply grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5;
 }

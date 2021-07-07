@@ -1,3 +1,8 @@
 .contact {
 	@apply bg-oatmeal;
 }
+
+.contact__title {
+	@apply max-w-screen-lg pt-5 md:pt-10;
+	@apply text-center;
+}

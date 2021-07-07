@@ -1,6 +1,6 @@
 .hero {
 	@apply py-5 md:py-10 w-full;
-	@apply flex items-stretch;
+	@apply flex flex-grow items-stretch;
 }
 
 .hero__container {

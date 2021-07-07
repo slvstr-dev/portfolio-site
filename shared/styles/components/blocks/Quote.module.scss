@@ -1,11 +1,11 @@
-.intro {
-	@apply py-10;
+.quote {
+	@apply pt-5 pb-10 md:pt-0;
 }
 
-.intro__container {
+.quote__container {
 	@apply max-w-screen-sm;
 }
 
-.intro__text {
-	@apply text-center text-2xl;
+.quote__text {
+	@apply text-center text-xl md:text-2xl;
 }

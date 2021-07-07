@@ -31,7 +31,7 @@ const About: React.FC<About> = ({ user }) => (
 		<Meta title="About" description="About description" />
 
 		<main className={styles.about}>
-			<Quote text="Als ‘self-taught’ frontend developer vind ik het belangrijk om met een moderne stack te werken binnen een creatieve en open organisatie, waarin persoonlijke ontwikkeling actief wordt gestimuleerd." />
+			<h1 className={styles.about__title}>About</h1>
 
 			<Profile user={user} />
 		</main>

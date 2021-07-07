@@ -7,6 +7,8 @@ const Contact: React.FC = () => (
 		<Meta title="Contact" description="Contact description" />
 
 		<main className={styles.contact}>
+			<h1 className={styles.contact__title}>Contact</h1>
+
 			<Postcard />
 		</main>
 	</>

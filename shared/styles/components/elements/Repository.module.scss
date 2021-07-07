@@ -1,11 +1,11 @@
-.project__card {
+.repository__card {
 	@apply relative w-full h-0;
 	@apply transform hover:scale-97 active:scale-95;
 	@apply transition-transform ease-in-out duration-200;
 	padding-bottom: 100%;
 }
 
-.project__overlay {
+.repository__overlay {
 	@apply absolute w-full h-full;
 	@apply rounded-xl;
 	@apply opacity-0 bg-gradient-to-t from-gray-900;
@@ -13,11 +13,11 @@
 	@apply transition-opacity ease-in-out duration-200;
 }
 
-.project__image {
+.repository__image {
 	@apply rounded-xl;
 }
 
-.project__title {
+.repository__title {
 	@apply absolute top-1/2 left-1/2 w-11/12;
 	@apply pointer-events-none;
 	@apply text-center text-white;

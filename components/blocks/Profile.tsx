@@ -1,7 +1,6 @@
 import { linkedInUrl } from "../../config";
 import { Container } from "../elements/Container";
 import { Button } from "../elements/Button";
-import Chevron from "../../public/svg/chevron.svg";
 import styles from "../../shared/styles/components/blocks/Profile.module.scss";
 
 interface Profile {
@@ -37,10 +36,12 @@ export const Profile: React.FC<Profile> = ({ user }) => (
 					</ul>
 				</div>
 
-				<Button classNames={styles.profile__button} href={linkedInUrl}>
-					Bekijk LinkedIn-profiel
-					<Chevron />
-				</Button>
+				<Button
+					classNames={styles.profile__button}
+					href={linkedInUrl}
+					displayChevron={true}
+					title="Bekijk LinkedIn-profiel"
+				/>
 			</div>
 		</Container>
 	</section>
