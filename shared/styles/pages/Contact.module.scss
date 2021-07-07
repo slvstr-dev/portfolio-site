@@ -1,20 +1,3 @@
 .contact {
-	@apply bg-peach;
-}
-
-.contact__container {
-	@apply py-10;
-	@apply flex justify-between items-center;
-}
-
-.contact__logo {
-	@apply mr-10;
-}
-
-.contact__postcard {
-	@apply flex-auto;
-}
-
-.contact__title {
-	@apply text-red-600 text-xl font-extrabold;
+	@apply bg-oatmeal;
 }

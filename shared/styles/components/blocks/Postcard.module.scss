@@ -1,0 +1,20 @@
+.postcard {
+	@apply bg-peach;
+	@apply py-10;
+}
+
+.postcard__container {
+	@apply flex justify-between items-center;
+}
+
+.postcard__logo {
+	@apply mr-10;
+}
+
+.postcard__postcard {
+	@apply flex-auto;
+}
+
+.postcard__title {
+	@apply text-red-600 text-xl font-extrabold;
+}

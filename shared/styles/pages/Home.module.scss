@@ -1,20 +1,4 @@
 .home {
-	@apply mb-5 md:mb-10;
+	@apply bg-oatmeal;
 	@apply flex items-stretch;
-}
-
-.home__container {
-	@apply max-w-screen-2xl w-full;
-	@apply flex items-stretch;
-}
-
-.home__hero {
-	@apply w-full p-5;
-	@apply rounded-xl;
-	@apply bg-green-500 bg-no-repeat bg-cover bg-center;
-	@apply flex justify-center items-center;
-}
-
-.home__title {
-	@apply text-lemon text-4xl xs:text-5xl text-center uppercase;
 }

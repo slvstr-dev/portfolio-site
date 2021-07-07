@@ -1,6 +1,6 @@
-import styles from "../../shared/styles/components/Project.module.scss";
+import styles from "../../shared/styles/components/blocks/ProjectItem.module.scss";
 
-interface Project {
+interface ProjectItem {
 	project: {
 		id: number;
 		name: string;
@@ -8,7 +8,7 @@ interface Project {
 	};
 }
 
-export const Project: React.FC<Project> = ({ project }) => (
+export const ProjectItem: React.FC<ProjectItem> = ({ project }) => (
 	<a
 		href={project.url}
 		title={project.name}

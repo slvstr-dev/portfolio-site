@@ -1,4 +1,4 @@
-import styles from "../../shared/styles/components/Form.module.scss";
+import styles from "../../shared/styles/components/elements/Form.module.scss";
 
 export const Form: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 	<form>

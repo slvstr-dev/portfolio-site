@@ -6,7 +6,7 @@ import { Logo } from "../elements/Logo";
 import { Navbar } from "./Navbar";
 import LinkedIn from "../../public/svg/linkedin.svg";
 import GitHub from "../../public/svg/github.svg";
-import styles from "../../shared/styles/components/Header.module.scss";
+import styles from "../../shared/styles/components/blocks/Header.module.scss";
 
 export const Header: React.FC = () => (
 	<header className={styles.header}>

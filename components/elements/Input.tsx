@@ -1,4 +1,4 @@
-import styles from "../../shared/styles/components/Input.module.scss";
+import styles from "../../shared/styles/components/elements/Input.module.scss";
 
 interface Input {
 	type: string;

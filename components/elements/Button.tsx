@@ -1,4 +1,4 @@
-import styles from "../../shared/styles/components/Button.module.scss";
+import styles from "../../shared/styles/components/elements/Button.module.scss";
 
 interface Button {
 	href: string;

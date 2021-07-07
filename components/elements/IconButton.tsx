@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "../../shared/styles/components/IconButton.module.scss";
+import styles from "../../shared/styles/components/elements/IconButton.module.scss";
 
 interface IconButton {
 	href?: string;
