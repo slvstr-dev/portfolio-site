@@ -26,15 +26,15 @@
 }
 
 .project__subtitle {
-	@apply text-white text-xs sm:text-sm font-bold uppercase;
+	@apply text-white text-sm font-bold uppercase;
 }
 
 .project__title {
+	@apply pb-5;
 	@apply text-white text-2xl sm:text-4xl font-extrabold uppercase;
 }
 
 .project__button {
-	@apply mt-5;
 	@apply bg-white hover:bg-red-600;
 	@apply text-red-600 hover:text-white text-sm font-semibold uppercase;
 }
@@ -45,7 +45,7 @@
 
 .project__description {
 	@apply max-w-screen-md mx-auto pb-5;
-	@apply text-left;
+	@apply text-left sm:text-lg;
 
 	&:first-letter {
 		@apply float-left;

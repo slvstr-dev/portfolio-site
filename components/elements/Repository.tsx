@@ -1,6 +1,10 @@
+import { Button } from "../elements/Button";
+import { Tag } from "../elements/Tag";
 import styles from "../../shared/styles/components/elements/Repository.module.scss";
+import { Project } from "./Project";
 
 interface Repository {
+	reverseRow: boolean;
 	repository: {
 		id: number;
 		name: string;
@@ -11,24 +15,37 @@ interface Repository {
 	};
 }
 
-export const Repository: React.FC<Repository> = ({ repository }) => (
-	<a
-		href={repository.html_url}
-		title={repository.name}
-		target="_blank"
-		rel="noreferrer noopener"
-		key={repository.id}
+export const Repository: React.FC<Repository> = ({
+	reverseRow,
+	repository,
+}) => (
+	<article
+		className={reverseRow ? styles.repositoryReversed : styles.repository}
 	>
-		<article className={styles.repository__card}>
-			<div className={styles.repository__overlay} />
+		<img
+			className={styles.repository__image}
+			src="https://via.placeholder.com/500x500.png"
+			alt={repository.name}
+		/>
 
-			<img
-				className={styles.repository__image}
-				src="https://via.placeholder.com/750"
-				alt={repository.name}
-			/>
+		<div className={styles.repository__content}>
+			<h4 className={styles.repository__subtitle}>
+				{repository.created_at}
+			</h4>
 
 			<h3 className={styles.repository__title}>{repository.name}</h3>
-		</article>
-	</a>
+
+			<p className={styles.repository__description}>
+				{repository.description}
+			</p>
+
+			<Button
+				classNames={styles.repository__button}
+				title="Bekijk op GitHub"
+				href={repository.html_url}
+			/>
+
+			{/* <Tag tag={tag} /> */}
+		</div>
+	</article>
 );
