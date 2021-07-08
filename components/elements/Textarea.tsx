@@ -1,25 +1,20 @@
 import styles from "../../shared/styles/components/elements/Textarea.module.scss";
 
 interface Textarea {
-	id: string;
 	name: string;
 	placeholder: string;
-	rows: number;
-	cols: number;
+	required?: boolean;
 }
 
 export const Textarea: React.FC<Textarea> = ({
-	id,
 	name,
 	placeholder,
-	rows,
-	cols,
+	required = false,
 }) => (
 	<textarea
-		id={id}
+		className={styles.textarea}
 		name={name}
 		placeholder={placeholder}
-		rows={rows}
-		cols={cols}
+		required={required}
 	/>
 );

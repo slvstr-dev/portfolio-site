@@ -1,0 +1,10 @@
+.textarea {
+	@apply w-full h-full;
+	@apply bg-gray-100 p-4;
+	@apply text-gray-600 text-sm font-normal;
+	font-family: "Source Code Pro";
+
+	&::placeholder {
+		@apply text-gray-400;
+	}
+}

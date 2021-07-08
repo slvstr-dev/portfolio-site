@@ -1,20 +1,54 @@
 .postcard {
-	@apply bg-peach;
-	@apply py-10;
+	@apply pb-10;
 }
 
 .postcard__container {
-	@apply flex justify-between items-center;
+	@apply max-w-screen-xs md:max-w-screen-md;
 }
 
-.postcard__logo {
-	@apply mr-10;
+.postcard__content {
+	@apply p-2;
+	background-image: repeating-linear-gradient(
+		45deg,
+		#f87171,
+		#f87171 10px,
+		#ffffff 10px,
+		#ffffff 20px,
+		#60a5fa 20px,
+		#60a5fa 30px,
+		#ffffff 30px,
+		#ffffff 40px
+	);
 }
 
-.postcard__postcard {
-	@apply flex-auto;
+.postcard__form {
+	@apply bg-white p-6;
+	@apply flex flex-col md:flex-row;
 }
 
-.postcard__title {
-	@apply text-red-600 text-xl font-extrabold;
+.postcard__message {
+	@apply w-full h-60 md:h-96;
+	@apply pb-4 md:pb-0 md:pr-6;
+	@apply border-gray-100 md:border-r;
+}
+
+.postcard__contact {
+	@apply relative;
+	@apply flex flex-col md:justify-end gap-6;
+	@apply w-full;
+	@apply pt-4 md:pt-0 md:pl-6;
+	@apply border-gray-100 md:border-l;
+}
+
+.postcard__stamp {
+	@apply hidden md:block;
+	@apply absolute top-0 right-0;
+	@apply p-1;
+	@apply text-gray-200 text-xl text-center font-extrabold align-middle;
+	@apply border-gray-100 border-dotted border-4;
+}
+
+.postcard__buttons {
+	@apply flex justify-around;
+	@apply md:mt-16;
 }

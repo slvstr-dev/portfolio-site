@@ -15,7 +15,6 @@ module.exports = {
 			colors: {
 				lemon: "#FCF175",
 				peach: "#FAD0C0",
-				oatmeal: "#F8F3E5",
 				olive: "#87aa7f",
 			},
 			fontSize: {

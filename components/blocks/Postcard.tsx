@@ -1,8 +1,5 @@
-import Link from "next/link";
 import { Container } from "../elements/Container";
-import { Logo } from "../elements/Logo";
 import { Form } from "../elements/Form";
-import { Label } from "../elements/Label";
 import { Input } from "../elements/Input";
 import { Textarea } from "../elements/Textarea";
 import useTranslation from "next-translate/useTranslation";
@@ -14,53 +11,49 @@ export const Postcard: React.FC = () => {
 	return (
 		<section className={styles.postcard}>
 			<Container classNames={styles.postcard__container}>
-				<Link href="/" passHref>
-					<a>
-						<Logo className={styles.postcard__logo} />
-					</a>
-				</Link>
-
-				<div className={styles.postcard__postcard}>
-					<h4 className={styles.postcard__title}>
-						{t("postcard_title")}
-					</h4>
-
+				<div className={styles.postcard__content}>
 					<Form
+						classNames={styles.postcard__form}
 						action={`mailto:hello@slvstr.dev?subject=${t(
 							"form_subject"
 						)}`}
 						method="post"
 					>
-						<Label htmlFor="name" title={t("form_name_label")} />
+						<div className={styles.postcard__message}>
+							<Textarea
+								name={t("form_message_label")}
+								placeholder={t("form_message_placeholder")}
+								required={true}
+							/>
+						</div>
 
-						<Input
-							type="text"
-							name={t("form_name_label")}
-							id="name"
-							placeholder={t("form_name_placeholder")}
-						/>
+						<div className={styles.postcard__contact}>
+							<span className={styles.postcard__stamp}>
+								SLV
+								<br />
+								STR
+							</span>
 
-						<Label htmlFor="email" title={t("form_email_label")} />
+							<Input
+								type="text"
+								name={t("form_name_label")}
+								placeholder={t("form_name_placeholder")}
+								required={true}
+							/>
 
-						<Input
-							type="email"
-							name={t("form_email_label")}
-							id="email"
-							placeholder={t("form_email_placeholder")}
-						/>
+							<Input
+								type="tel"
+								name={t("form_tel_label")}
+								placeholder={t("form_tel_placeholder")}
+								required={false}
+							/>
 
-						<Label
-							htmlFor="comment"
-							title={t("form_comment_label")}
-						/>
+							<div className={styles.postcard__buttons}>
+								<Input type="submit" value={t("form_submit")} />
 
-						<Textarea
-							id="comment"
-							name={t("form_comment_label")}
-							rows={5}
-							cols={33}
-							placeholder={t("form_comment_placeholder")}
-						/>
+								<Input type="reset" value={t("form_reset")} />
+							</div>
+						</div>
 					</Form>
 				</div>
 			</Container>
