@@ -1,7 +1,6 @@
 import { Button } from "../elements/Button";
-import { Tag } from "../elements/Tag";
 import useTranslation from "next-translate/useTranslation";
-import styles from "../../shared/styles/components/elements/Repository.module.scss";
+import styles from "../../shared/styles/components/blocks/Repository.module.scss";
 
 interface Repository {
 	reverseRow: boolean;
@@ -19,7 +18,9 @@ export const Repository: React.FC<Repository> = ({
 	reverseRow,
 	repository,
 }) => {
-	const { t } = useTranslation("portfolio");
+	const { t } = useTranslation("repositories");
+	const date = new Date(repository.created_at);
+	const formattedCreatedAtDate = `${date.getDate()}-${date.getMonth()}-${date.getFullYear()}`;
 
 	return (
 		<article
@@ -35,7 +36,7 @@ export const Repository: React.FC<Repository> = ({
 
 			<div className={styles.repository__content}>
 				<h4 className={styles.repository__subtitle}>
-					{repository.created_at}
+					{`${t("repository_createdAt")} ${formattedCreatedAtDate}`}
 				</h4>
 
 				<h3 className={styles.repository__title}>{repository.name}</h3>
@@ -45,12 +46,9 @@ export const Repository: React.FC<Repository> = ({
 				</p>
 
 				<Button
-					classNames={styles.repository__button}
 					title={t("repository_cta")}
 					href={repository.html_url}
 				/>
-
-				{/* <Tag tag={tag} /> */}
 			</div>
 		</article>
 	);

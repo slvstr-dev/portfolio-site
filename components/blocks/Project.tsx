@@ -1,6 +1,6 @@
 import { Button } from "../elements/Button";
 import { Tag } from "../elements/Tag";
-import styles from "../../shared/styles/components/elements/Project.module.scss";
+import styles from "../../shared/styles/components/blocks/Project.module.scss";
 
 interface Project {
 	project: {

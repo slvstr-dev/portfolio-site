@@ -3,7 +3,8 @@
 	"header_linkedin": "Bekijk GitHub-profiel",
 	"navbar_home": "Home",
 	"navbar_about": "Over",
-	"navbar_portfolio": "Portfolio",
+	"navbar_projects": "Projecten",
+	"navbar_repositories": "Repositories",
 	"navbar_contact": "Contact",
 	"footer_copyright": "Gebouwd door Sylvester Hofstra & geinspireerd door "
 }

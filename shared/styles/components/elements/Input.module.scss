@@ -7,7 +7,7 @@
 	font-family: "Source Code Pro";
 
 	&::placeholder {
-		@apply text-gray-400;
+		@apply text-gray-500;
 	}
 
 	&[type="submit"],
@@ -19,8 +19,8 @@
 	}
 
 	&[type="submit"] {
-		@apply border-blue-400;
-		@apply bg-blue-400;
+		@apply border-blue-500;
+		@apply bg-blue-500;
 		@apply text-white;
 
 		&:hover {
@@ -35,8 +35,8 @@
 	}
 
 	&[type="reset"] {
-		@apply border-red-400;
-		@apply bg-red-400;
+		@apply border-red-500;
+		@apply bg-red-500;
 		@apply text-white;
 
 		&:hover {

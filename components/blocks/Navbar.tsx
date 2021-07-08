@@ -17,7 +17,11 @@ export const Navbar: React.FC = () => {
 				</li>
 
 				<li>
-					<Link href="/portfolio">{t("navbar_portfolio")}</Link>
+					<Link href="/projects">{t("navbar_projects")}</Link>
+				</li>
+
+				<li>
+					<Link href="/repositories">{t("navbar_repositories")}</Link>
 				</li>
 
 				<li>

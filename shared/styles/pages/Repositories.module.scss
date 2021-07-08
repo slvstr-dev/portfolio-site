@@ -1,0 +1,16 @@
+.repositories {
+	@apply bg-yellow-50;
+}
+
+.repositories__title {
+	@apply max-w-screen-lg mx-auto py-5 md:py-10;
+	@apply text-yellow-200 text-center;
+}
+
+.repositories__section {
+	@apply pb-5 md:pb-10;
+}
+
+.repositories__container {
+	@apply max-w-screen-lg mx-auto;
+}

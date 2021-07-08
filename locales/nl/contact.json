@@ -1,7 +1,7 @@
 {
 	"meta_title": "Contact",
 	"meta_description": "Contact description",
-	"meta_keywords": ["contact", "keywords", "placeholder"],
+	"meta_keywords": "contact, keywords, placeholder",
 	"h1": "Contact opnemen",
 	"form_subject": "Contactformulier slvstr.dev",
 	"form_message_label": "Bericht",

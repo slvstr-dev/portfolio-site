@@ -5,7 +5,8 @@
 		"*": ["common"],
 		"/": ["home"],
 		"/about": ["about"],
-		"/portfolio": ["portfolio"],
+		"/projects": ["projects"],
+		"/repositories": ["repositories"],
 		"/contact": ["contact"]
 	}
 }

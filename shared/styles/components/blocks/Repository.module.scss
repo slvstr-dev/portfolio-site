@@ -4,6 +4,10 @@
 	@apply rounded-xl;
 	@apply text-center sm:text-left;
 	@apply flex flex-col sm:flex-row justify-center items-center;
+
+	&:last-of-type {
+		@apply pb-0;
+	}
 }
 
 .repositoryReversed {
@@ -37,6 +41,8 @@
 }
 
 .repository__description {
-	@apply pb-5;
+	@apply mb-5 sm:p-5;
 	@apply sm:text-lg;
+	@apply rounded-xl;
+	@apply sm:bg-white;
 }

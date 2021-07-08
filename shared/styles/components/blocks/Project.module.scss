@@ -2,6 +2,10 @@
 	@apply mb-5 md:mb-10 rounded-xl;
 	@apply bg-white;
 	@apply text-center;
+
+	&:last-of-type {
+		@apply mb-0;
+	}
 }
 
 .project__banner {
