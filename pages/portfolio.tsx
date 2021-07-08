@@ -3,6 +3,7 @@ import projects from "../shared/data/projects.json";
 import { Meta } from "../components/blocks/Meta";
 import { Projects } from "../components/blocks/Projects";
 import { Repositories } from "../components/blocks/Repositories";
+import useTranslation from "next-translate/useTranslation";
 import styles from "../shared/styles/pages/Portfolio.module.scss";
 
 interface Portfolio {
@@ -40,18 +41,25 @@ export const getStaticProps: GetStaticProps = async () => {
 	};
 };
 
-const Portfolio: React.FC<Portfolio> = ({ projects, repositories }) => (
-	<>
-		<Meta title="Home placeholder" />
+const Portfolio: React.FC<Portfolio> = ({ projects, repositories }) => {
+	const { t } = useTranslation("portfolio");
 
-		<main className={styles.portfolio}>
-			<h1 className={styles.portfolio__title}>Projects & repositories</h1>
+	return (
+		<>
+			<Meta title={t("meta_title")} description={t("meta_description")} />
 
-			<Projects title="Projects" projects={projects} />
+			<main className={styles.portfolio}>
+				<h1 className={styles.portfolio__title}>{t("h1")}</h1>
 
-			<Repositories title="Repositories" repositories={repositories} />
-		</main>
-	</>
-);
+				<Projects title={t("projects_title")} projects={projects} />
+
+				<Repositories
+					title={t("repositories_title")}
+					repositories={repositories}
+				/>
+			</main>
+		</>
+	);
+};
 
 export default Portfolio;

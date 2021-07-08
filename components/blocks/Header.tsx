@@ -6,28 +6,33 @@ import { Logo } from "../elements/Logo";
 import { Navbar } from "./Navbar";
 import LinkedIn from "../../public/svg/linkedin.svg";
 import GitHub from "../../public/svg/github.svg";
+import useTranslation from "next-translate/useTranslation";
 import styles from "../../shared/styles/components/blocks/Header.module.scss";
 
-export const Header: React.FC = () => (
-	<header className={styles.header}>
-		<Container classNames={styles.header__container}>
-			<div className={styles.header__socials}>
-				<IconButton href={gitHubUrl}>
-					<GitHub />
-				</IconButton>
+export const Header: React.FC = () => {
+	const { t } = useTranslation("common");
 
-				<IconButton href={linkedInUrl}>
-					<LinkedIn />
-				</IconButton>
-			</div>
+	return (
+		<header className={styles.header}>
+			<Container classNames={styles.header__container}>
+				<div className={styles.header__socials}>
+					<IconButton href={gitHubUrl} title={t("header_github")}>
+						<GitHub />
+					</IconButton>
 
-			<Link href="/" passHref>
-				<a>
-					<Logo />
-				</a>
-			</Link>
+					<IconButton href={linkedInUrl} title={t("header_linkedin")}>
+						<LinkedIn />
+					</IconButton>
+				</div>
 
-			<Navbar />
-		</Container>
-	</header>
-);
+				<Link href="/" passHref>
+					<a>
+						<Logo />
+					</a>
+				</Link>
+
+				<Navbar />
+			</Container>
+		</header>
+	);
+};

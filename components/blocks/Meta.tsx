@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { domain } from "../../config/index";
+import useTranslation from "next-translate/useTranslation";
 
 interface Meta {
 	title?: string;
@@ -11,13 +12,17 @@ interface Meta {
 
 export const Meta: React.FC<Meta> = ({
 	title = "slvstr.dev",
-	description = "Layout placeholder description",
-	keywords = "Layout, Placeholder, Keywords",
-	featuredImage = "Layout featuredImage",
+	description,
+	keywords,
+	featuredImage = "https://via.placeholder.com/600x400",
 }) => {
 	const router = useRouter();
 	const url = router.asPath ? router.asPath : undefined;
 	const canonical = url === "/" ? domain : domain + url;
+	const { t } = useTranslation("common");
+
+	description !== undefined ? description : t("description");
+	keywords !== undefined ? keywords : t("keywords");
 
 	return (
 		<Head>
@@ -42,7 +47,7 @@ export const Meta: React.FC<Meta> = ({
 			<meta content={canonical} property="og:url" />
 
 			<meta
-				content="ba5YSBirz0WlzChuiNgTgh83L6RJVE7aBWdsNtxGgOQ"
+				content={`${process.env.NEXT_PUBLIC_G_SITE_VERIFICATION_ID}`}
 				name="google-site-verification"
 			/>
 
@@ -92,9 +97,8 @@ export const Meta: React.FC<Meta> = ({
                                 window.dataLayer = window.dataLayer || [];
                                 function gtag(){dataLayer.push(arguments);}
                                 gtag("js", new Date());
-
                                 gtag("config", "${process.env.NEXT_PUBLIC_GA_TRACKING_ID}");
-                                `,
+                            `,
 						}}
 					/>
 				</>

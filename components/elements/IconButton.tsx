@@ -4,12 +4,14 @@ import styles from "../../shared/styles/components/elements/IconButton.module.sc
 interface IconButton {
 	href?: string;
 	classNames?: string;
+	title: string;
 	children: React.ReactNode;
 }
 
 export const IconButton: React.FC<IconButton> = ({
 	href,
 	classNames,
+	title,
 	children,
 }) => (
 	<>
@@ -17,6 +19,7 @@ export const IconButton: React.FC<IconButton> = ({
 			<Link href={href} passHref>
 				<a
 					className={`${styles.button} ${classNames}`}
+					title={title}
 					target="_blank"
 					rel="noreferrer noopener"
 				>

@@ -1,17 +1,22 @@
 import { Meta } from "../components/blocks/Meta";
 import { Postcard } from "../components/blocks/Postcard";
+import useTranslation from "next-translate/useTranslation";
 import styles from "../shared/styles/pages/Contact.module.scss";
 
-const Contact: React.FC = () => (
-	<>
-		<Meta title="Contact" description="Contact description" />
+const Contact: React.FC = () => {
+	const { t } = useTranslation("contact");
 
-		<main className={styles.contact}>
-			<h1 className={styles.contact__title}>Contact</h1>
+	return (
+		<>
+			<Meta title={t("meta_title")} description={t("meta_description")} />
 
-			<Postcard />
-		</main>
-	</>
-);
+			<main className={styles.contact}>
+				<h1 className={styles.contact__title}>{t("h1")}</h1>
+
+				<Postcard />
+			</main>
+		</>
+	);
+};
 
 export default Contact;

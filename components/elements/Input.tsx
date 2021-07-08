@@ -2,7 +2,7 @@ import styles from "../../shared/styles/components/elements/Input.module.scss";
 
 interface Input {
 	type: string;
-	placeholder?: string;
+	placeholder: string;
 }
 
 export const Input: React.FC<Input> = ({ type, placeholder }) => (

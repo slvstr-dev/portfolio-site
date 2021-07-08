@@ -1,7 +1,7 @@
-import useTranslation from "next-translate/useTranslation";
 import { linkedInUrl } from "../../config";
 import { Container } from "../elements/Container";
 import { Button } from "../elements/Button";
+import useTranslation from "next-translate/useTranslation";
 import styles from "../../shared/styles/components/blocks/Profile.module.scss";
 
 interface Profile {
@@ -35,13 +35,13 @@ export const Profile: React.FC<Profile> = ({ user }) => {
 
 						<ul>
 							<li>
-								{t("company")} {user.company}
+								{t("profile_company")} {user.company}
 							</li>
 							<li>
-								{t("location")} {user.location}
+								{t("profile_location")} {user.location}
 							</li>
 							<li>
-								{t("github")} {user.html_url}
+								{t("profile_github")} {user.html_url}
 							</li>
 						</ul>
 					</div>
@@ -50,7 +50,7 @@ export const Profile: React.FC<Profile> = ({ user }) => {
 						classNames={styles.profile__button}
 						href={linkedInUrl}
 						displayChevron={true}
-						title={t("cta_linkedin")}
+						title={t("profile_cta")}
 					/>
 				</div>
 			</Container>

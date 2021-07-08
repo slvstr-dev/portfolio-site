@@ -1,18 +1,23 @@
 import { Meta } from "../components/blocks/Meta";
 import { Hero } from "../components/blocks/Hero";
 import { Quote } from "../components/blocks/Quote";
+import useTranslation from "next-translate/useTranslation";
 import styles from "../shared/styles/pages/Home.module.scss";
 
-const Home: React.FC = () => (
-	<>
-		<Meta title="Home placeholder" />
+const Home: React.FC = () => {
+	const { t } = useTranslation("home");
 
-		<main className={styles.home}>
-			<Hero h1="Eat, code, sleep, repeat" />
+	return (
+		<>
+			<Meta title={t("meta_title")} description={t("meta_description")} />
 
-			<Quote quote="Als ‘self-taught’ frontend developer vind ik het belangrijk om met een moderne stack te werken binnen een creatieve en open organisatie, waarin persoonlijke ontwikkeling actief wordt gestimuleerd." />
-		</main>
-	</>
-);
+			<main className={styles.home}>
+				<Hero h1={t("hero_h1")} />
+
+				<Quote quote={t("quote_text")} />
+			</main>
+		</>
+	);
+};
 
 export default Home;

@@ -1,5 +1,5 @@
-import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
+import useTranslation from "next-translate/useTranslation";
 import styles from "../../shared/styles/components/blocks/Navbar.module.scss";
 
 export const Navbar: React.FC = () => {
@@ -9,19 +9,19 @@ export const Navbar: React.FC = () => {
 		<nav className={styles.navbar}>
 			<ul>
 				<li>
-					<Link href="/">{t("home")}</Link>
+					<Link href="/">{t("navbar_home")}</Link>
 				</li>
 
 				<li>
-					<Link href="/about">{t("about")}</Link>
+					<Link href="/about">{t("navbar_about")}</Link>
 				</li>
 
 				<li>
-					<Link href="/portfolio">{t("portfolio")}</Link>
+					<Link href="/portfolio">{t("navbar_portfolio")}</Link>
 				</li>
 
 				<li>
-					<Link href="/contact">{t("contact")}</Link>
+					<Link href="/contact">{t("navbar_contact")}</Link>
 				</li>
 			</ul>
 		</nav>

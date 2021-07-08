@@ -1,7 +1,11 @@
 {
-	"home": "Home",
-	"about": "Over",
-	"portfolio": "Portfolio",
-	"contact": "Contact",
-	"copyright": "Gebouwd door Sylvester Hofstra & geinspireerd door "
+	"meta_description": "Placeholder description",
+	"meta_keywords": "Placeholder, Keywords",
+	"header_github": "Bekijk LinkedIn-profiel",
+	"header_linkedin": "Bekijk GitHub-profiel",
+	"navbar_home": "Home",
+	"navbar_about": "Over",
+	"navbar_portfolio": "Portfolio",
+	"navbar_contact": "Contact",
+	"footer_copyright": "Gebouwd door Sylvester Hofstra & geinspireerd door "
 }
