@@ -4,9 +4,9 @@ import { domain } from "../../config/index";
 import useTranslation from "next-translate/useTranslation";
 
 interface Meta {
-	title?: string;
-	description?: string;
-	keywords?: string;
+	title: string;
+	description: string;
+	keywords: string;
 	featuredImage?: string;
 }
 
@@ -20,9 +20,6 @@ export const Meta: React.FC<Meta> = ({
 	const url = router.asPath ? router.asPath : undefined;
 	const canonical = url === "/" ? domain : domain + url;
 	const { t } = useTranslation("common");
-
-	description !== undefined ? description : t("description");
-	keywords !== undefined ? keywords : t("keywords");
 
 	return (
 		<Head>

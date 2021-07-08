@@ -8,7 +8,11 @@ const Contact: React.FC = () => {
 
 	return (
 		<>
-			<Meta title={t("meta_title")} description={t("meta_description")} />
+			<Meta
+				title={t("meta_title")}
+				description={t("meta_description")}
+				keywords={t("meta_keywords")}
+			/>
 
 			<main className={styles.contact}>
 				<h1 className={styles.contact__title}>{t("h1")}</h1>

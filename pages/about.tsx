@@ -31,7 +31,11 @@ const About: React.FC<About> = ({ user }) => {
 
 	return (
 		<>
-			<Meta title={t("meta_title")} description={t("meta_title")} />
+			<Meta
+				title={t("meta_title")}
+				description={t("meta_description")}
+				keywords={t("meta_keywords")}
+			/>
 
 			<main className={styles.about}>
 				<h1 className={styles.about__title}>{t("h1")}</h1>

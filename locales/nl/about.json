@@ -1,6 +1,7 @@
 {
 	"meta_title": "About",
 	"meta_description": "About description",
+	"meta_keywords": ["about", "keywords", "placeholder"],
 	"h1": "About",
 	"profile_company": "Bedrijf:",
 	"profile_location": "Plaats:",

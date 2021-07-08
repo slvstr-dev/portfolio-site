@@ -2,7 +2,9 @@ import Link from "next/link";
 import { Container } from "../elements/Container";
 import { Logo } from "../elements/Logo";
 import { Form } from "../elements/Form";
+import { Label } from "../elements/Label";
 import { Input } from "../elements/Input";
+import { Textarea } from "../elements/Textarea";
 import useTranslation from "next-translate/useTranslation";
 import styles from "../../shared/styles/components/blocks/Postcard.module.scss";
 
@@ -23,10 +25,41 @@ export const Postcard: React.FC = () => {
 						{t("postcard_title")}
 					</h4>
 
-					<Form>
+					<Form
+						action={`mailto:hello@slvstr.dev?subject=${t(
+							"form_subject"
+						)}`}
+						method="post"
+					>
+						<Label htmlFor="name" title={t("form_name_label")} />
+
+						<Input
+							type="text"
+							name={t("form_name_label")}
+							id="name"
+							placeholder={t("form_name_placeholder")}
+						/>
+
+						<Label htmlFor="email" title={t("form_email_label")} />
+
 						<Input
 							type="email"
-							placeholder={t("postcard_email_placeholder")}
+							name={t("form_email_label")}
+							id="email"
+							placeholder={t("form_email_placeholder")}
+						/>
+
+						<Label
+							htmlFor="comment"
+							title={t("form_comment_label")}
+						/>
+
+						<Textarea
+							id="comment"
+							name={t("form_comment_label")}
+							rows={5}
+							cols={33}
+							placeholder={t("form_comment_placeholder")}
 						/>
 					</Form>
 				</div>

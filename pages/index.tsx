@@ -9,7 +9,11 @@ const Home: React.FC = () => {
 
 	return (
 		<>
-			<Meta title={t("meta_title")} description={t("meta_description")} />
+			<Meta
+				title={t("meta_title")}
+				description={t("meta_description")}
+				keywords={t("meta_keywords")}
+			/>
 
 			<main className={styles.home}>
 				<Hero h1={t("hero_h1")} />

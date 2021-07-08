@@ -46,7 +46,11 @@ const Portfolio: React.FC<Portfolio> = ({ projects, repositories }) => {
 
 	return (
 		<>
-			<Meta title={t("meta_title")} description={t("meta_description")} />
+			<Meta
+				title={t("meta_title")}
+				description={t("meta_description")}
+				keywords={t("meta_keywords")}
+			/>
 
 			<main className={styles.portfolio}>
 				<h1 className={styles.portfolio__title}>{t("h1")}</h1>
