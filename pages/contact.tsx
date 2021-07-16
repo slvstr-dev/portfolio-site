@@ -1,4 +1,5 @@
 import { Meta } from "../components/blocks/Meta";
+import { Container } from "../components/elements/Container";
 import { Postcard } from "../components/blocks/Postcard";
 import useTranslation from "next-translate/useTranslation";
 import styles from "../shared/styles/pages/Contact.module.scss";
@@ -15,9 +16,11 @@ const Contact: React.FC = () => {
 			/>
 
 			<main className={styles.contact}>
-				<h1 className={styles.contact__title}>{t("h1")}</h1>
+				<Container classNames={styles.contact__container}>
+					<h1 className={styles.contact__title}>{t("h1")}</h1>
 
-				<Postcard />
+					<Postcard />
+				</Container>
 			</main>
 		</>
 	);

@@ -1,7 +1,9 @@
 import { GetStaticProps } from "next";
 import { Meta } from "../components/blocks/Meta";
-import { Profile } from "../components/blocks/Profile";
+import { Container } from "../components/elements/Container";
+import { Bio } from "../components/blocks/Bio";
 import { Text } from "../components/blocks/Text";
+import { Skills } from "../components/blocks/Skills";
 import useTranslation from "next-translate/useTranslation";
 import styles from "../shared/styles/pages/About.module.scss";
 
@@ -39,11 +41,17 @@ const About: React.FC<About> = ({ user }) => {
 			/>
 
 			<main className={styles.about}>
-				<h1 className={styles.about__title}>{t("h1")}</h1>
+				<Container classNames={styles.about__container}>
+					<h1 className={styles.about__title}>{t("h1")}</h1>
+				</Container>
 
-				<Profile user={user} />
+				<Bio user={user} />
 
-				<Text content={t("text_content")} />
+				<Container>
+					<Text content={t("text_content")} />
+
+					<Skills />
+				</Container>
 			</main>
 		</>
 	);

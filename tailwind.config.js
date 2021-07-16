@@ -33,7 +33,11 @@ module.exports = {
 		},
 	},
 	variants: {
-		extend: { opacity: ["active"], scale: ["active"] },
+		extend: {
+			opacity: ["active"],
+			scale: ["active"],
+			backdropSaturate: ["hover"],
+		},
 	},
 	plugins: [],
 };

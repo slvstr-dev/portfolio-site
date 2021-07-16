@@ -1,5 +1,6 @@
 import { Meta } from "../components/blocks/Meta";
 import { Hero } from "../components/blocks/Hero";
+import { Container } from "../components/elements/Container";
 import { Text } from "../components/blocks/Text";
 import { Button } from "../components/elements/Button";
 import useTranslation from "next-translate/useTranslation";
@@ -24,18 +25,20 @@ const Home: React.FC = () => {
 			<main className={styles.home}>
 				<Hero h1={t("hero_h1")} />
 
-				<Text content={t("text_content")}>
-					{buttons.map((button, index) => {
-						return (
-							<Button
-								title={t(`button_${button.title}`)}
-								href={button.path}
-								key={index}
-								displayChevron
-							/>
-						);
-					})}
-				</Text>
+				<Container>
+					<Text content={t("text_content")}>
+						{buttons.map((button, index) => {
+							return (
+								<Button
+									title={t(`button_${button.title}`)}
+									href={button.path}
+									key={index}
+									displayChevron
+								/>
+							);
+						})}
+					</Text>
+				</Container>
 			</main>
 		</>
 	);

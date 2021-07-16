@@ -2,11 +2,8 @@
 	@apply pb-10;
 }
 
-.postcard__container {
-	@apply max-w-screen-xs md:max-w-screen-md;
-}
-
 .postcard__content {
+	@apply rounded-sm;
 	@apply p-2;
 	background-image: repeating-linear-gradient(
 		45deg,
@@ -23,6 +20,7 @@
 
 .postcard__form {
 	@apply bg-white p-6;
+	@apply rounded-sm;
 	@apply flex flex-col md:flex-row;
 }
 

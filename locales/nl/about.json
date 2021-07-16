@@ -6,5 +6,10 @@
 	"profile_bio": "Momenteel werkzaam als {{job}} bij {{company}} in {{location}}.",
 	"profile_github-cta": "Bekijk GitHub-profiel",
 	"profile_linkedin-cta": "Bekijk LinkedIn-profiel",
-	"text_content": "Als ‘self-taught’ frontend developer vind ik het belangrijk om met een moderne stack te werken binnen een creatieve en open organisatie, waarin persoonlijke ontwikkeling actief wordt gestimuleerd."
+	"text_content": "Als ‘self-taught’ frontend developer vind ik het belangrijk om met een moderne stack te werken binnen een creatieve en open organisatie, waarin persoonlijke ontwikkeling actief wordt gestimuleerd.",
+	"skills_title_misc": "Overige vaardigheden",
+	"skills_description_html": "HTML description",
+	"skills_description_css": "CSS description",
+	"skills_description_javascript": "JavaScript description",
+	"skills_description_misc": "Misc description"
 }

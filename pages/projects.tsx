@@ -39,18 +39,16 @@ const Projects: React.FC<Repositories> = ({ repositories }) => {
 			/>
 
 			<main className={styles.projects}>
-				<h1 className={styles.projects__title}>{t("h1")}</h1>
+				<Container classNames={styles.projects__container}>
+					<h1 className={styles.projects__title}>{t("h1")}</h1>
 
-				<section className={styles.projects__section}>
-					<Container classNames={styles.projects__container}>
+					<section className={styles.projects__section}>
 						{projects.map((project, index) => {
 							return <Project key={index} project={project} />;
 						})}
-					</Container>
-				</section>
+					</section>
 
-				<section className={styles.projects__section}>
-					<Container classNames={styles.projects__container}>
+					<section className={styles.projects__section}>
 						<div className={styles.projects__flexbox}>
 							{repositories.map((repository, index) => {
 								return (
@@ -61,8 +59,8 @@ const Projects: React.FC<Repositories> = ({ repositories }) => {
 								);
 							})}
 						</div>
-					</Container>
-				</section>
+					</section>
+				</Container>
 			</main>
 		</>
 	);

@@ -6,6 +6,16 @@
 	&:last-of-type {
 		@apply mb-0;
 	}
+
+	&:hover {
+		.project__overlay {
+			@apply opacity-40;
+		}
+
+		.project__header {
+			@apply backdrop-saturate-100;
+		}
+	}
 }
 
 .project__banner {
@@ -17,8 +27,7 @@
 
 .project__overlay {
 	@apply absolute w-full h-full;
-	@apply opacity-50 bg-gradient-to-t from-gray-900;
-	@apply transform hover:opacity-20 active:opacity-40;
+	@apply opacity-30 bg-gradient-to-t from-gray-900;
 	@apply transition-opacity ease-in-out duration-200;
 }
 
@@ -27,6 +36,8 @@
 	@apply absolute top-1/2 left-1/2 h-full w-full;
 	@apply transform -translate-x-1/2 -translate-y-1/2;
 	@apply flex flex-col justify-center items-center gap-1;
+	@apply backdrop-filter backdrop-saturate-50;
+	@apply transition ease-in-out duration-200;
 }
 
 .project__subtitle {

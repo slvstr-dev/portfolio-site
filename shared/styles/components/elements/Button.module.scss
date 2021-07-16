@@ -1,5 +1,5 @@
 .button {
-	@apply inline-block py-1 px-3;
+	@apply inline-block py-1 px-2 md:py-2 md:px-3;
 	@apply rounded-full;
 	@apply bg-red-600 border-2 border-red-600 hover:bg-white;
 	@apply text-white hover:text-red-600 text-xs font-semibold uppercase;

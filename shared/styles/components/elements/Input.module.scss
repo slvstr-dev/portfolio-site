@@ -4,6 +4,7 @@
 	@apply bg-gray-100;
 	@apply py-1 px-3;
 	@apply text-gray-600 text-sm font-normal;
+	@apply rounded-sm;
 	font-family: "Source Code Pro";
 
 	&::placeholder {

@@ -2,9 +2,9 @@ import { linkedInUrl } from "../../config";
 import { Container } from "../elements/Container";
 import { Button } from "../elements/Button";
 import useTranslation from "next-translate/useTranslation";
-import styles from "../../shared/styles/components/blocks/Profile.module.scss";
+import styles from "../../shared/styles/components/blocks/Bio.module.scss";
 
-interface Profile {
+interface Bio {
 	user: {
 		avatar_url: string;
 		name: string;
@@ -15,22 +15,22 @@ interface Profile {
 	};
 }
 
-export const Profile: React.FC<Profile> = ({ user }) => {
+export const Bio: React.FC<Bio> = ({ user }) => {
 	const { t } = useTranslation("about");
 
 	return (
-		<section className={styles.profile}>
-			<Container classNames={styles.profile__container}>
+		<section className={styles.bio}>
+			<Container classNames={styles.bio__container}>
 				<img
-					className={styles.profile__image}
+					className={styles.bio__image}
 					src={user.avatar_url}
 					alt={user.name}
 				/>
 
-				<div className={styles.profile__info}>
+				<div className={styles.bio__info}>
 					<h2>{user.name}</h2>
 
-					<div className={styles.profile__content}>
+					<div className={styles.bio__content}>
 						<p>
 							{t("profile_bio", {
 								job: user.bio,
@@ -40,7 +40,7 @@ export const Profile: React.FC<Profile> = ({ user }) => {
 						</p>
 					</div>
 
-					<div className={styles.profile__buttons}>
+					<div className={styles.bio__buttons}>
 						<Button
 							href={linkedInUrl}
 							title={t("profile_linkedin-cta")}

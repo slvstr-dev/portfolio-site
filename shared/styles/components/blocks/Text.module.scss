@@ -1,14 +1,10 @@
 .text {
-	@apply py-10 md:py-20;
-}
-
-.text__container {
-	@apply max-w-screen-md;
-	@apply flex flex-col gap-5 items-center;
+	@apply flex flex-col gap-5 sm:gap-10 items-center;
+	@apply py-10 xs:py-20;
 }
 
 .text__content {
-	@apply text-center text-xl md:text-2xl;
+	@apply text-center text-xl sm:text-2xl;
 }
 
 .text__buttons {

@@ -3,7 +3,7 @@
 		"title": "Wolwinkel Elitt",
 		"subtitle": "Webshop:",
 		"url": "https://www.wolwinkelelitt.nl",
-		"image": "https://via.placeholder.com/1024x300.png",
+		"image": "images/project-wolwinkel-elitt.jpg",
 		"description": "Vivamus mollis dignissim mi vel scelerisque. Nullam ullamcorper dignissim turpis, et tempor ligula. Cras ac condimentum diam. Quisque eros sem, imperdiet non facilisis at, tristique eget eros. Aenean tellus lectus, commodo vitae tortor eu, auctor dapibus tortor. Ut eu est arcu. Integer sed sagittis lacus.",
 		"tags": ["HTML", "CSS", "JavaScript"]
 	},
@@ -11,7 +11,7 @@
 		"title": "Dubbel Drents Goed",
 		"subtitle": "Platform:",
 		"url": "https://www.dubbeldrentsgoed.nl",
-		"image": "https://via.placeholder.com/1024x300.png",
+		"image": "images/project-dubbel-drents-goed.jpg",
 		"description": "Vivamus mollis dignissim mi vel scelerisque. Nullam ullamcorper dignissim turpis, et tempor ligula. Cras ac condimentum diam. Quisque eros sem, imperdiet non facilisis at, tristique eget eros. Aenean tellus lectus, commodo vitae tortor eu, auctor dapibus tortor. Ut eu est arcu. Integer sed sagittis lacus.",
 		"tags": ["HTML", "CSS", "JavaScript"]
 	},
@@ -19,7 +19,7 @@
 		"title": "Ineke Vedder",
 		"subtitle": "Profiel:",
 		"url": "https://www.inekevedder.nl",
-		"image": "https://via.placeholder.com/1024x300.png",
+		"image": "images/project-ineke-vedder.jpg",
 		"description": "Vivamus mollis dignissim mi vel scelerisque. Nullam ullamcorper dignissim turpis, et tempor ligula. Cras ac condimentum diam. Quisque eros sem, imperdiet non facilisis at, tristique eget eros. Aenean tellus lectus, commodo vitae tortor eu, auctor dapibus tortor. Ut eu est arcu. Integer sed sagittis lacus.",
 		"tags": ["HTML", "CSS", "JavaScript"]
 	}
