@@ -19,7 +19,7 @@ export const Repository: React.FC<Repository> = ({ repository }) => {
 			<Button
 				title={t("repository_cta")}
 				href={repository.html_url}
-				displayChevron
+				displayExternal
 			/>
 		</article>
 	);

@@ -1,5 +1,5 @@
 .hero {
-	@apply py-5 md:py-10 w-full;
+	@apply pt-5 md:pt-10 w-full;
 	@apply flex flex-grow items-stretch;
 }
 
@@ -11,10 +11,13 @@
 .hero__hero {
 	@apply w-full p-5;
 	@apply rounded-xl;
-	@apply bg-green-500 bg-no-repeat bg-cover bg-center;
+	@apply bg-olive bg-no-repeat bg-cover bg-center;
 	@apply flex justify-center items-center;
+
+	background-image: url("../../../../public/images/slvstr-hero-image.jpg");
 }
 
 .hero__title {
-	@apply text-lemon text-5xl xs:text-6xl md:text-7xl text-center uppercase;
+	@apply max-w-xl;
+	@apply text-lemon text-4xl xs:text-5xl md:text-6xl text-center uppercase;
 }

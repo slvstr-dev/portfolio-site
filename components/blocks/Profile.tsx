@@ -27,31 +27,32 @@ export const Profile: React.FC<Profile> = ({ user }) => {
 					alt={user.name}
 				/>
 
-				<div className={styles.about__info}>
+				<div className={styles.profile__info}>
 					<h2>{user.name}</h2>
 
 					<div className={styles.profile__content}>
-						<p>{user.bio}</p>
-
-						<ul>
-							<li>
-								{t("profile_company")} {user.company}
-							</li>
-							<li>
-								{t("profile_location")} {user.location}
-							</li>
-							<li>
-								{t("profile_github")} {user.html_url}
-							</li>
-						</ul>
+						<p>
+							{t("profile_bio", {
+								job: user.bio,
+								company: user.company,
+								location: user.location,
+							})}
+						</p>
 					</div>
 
-					<Button
-						classNames={styles.profile__button}
-						href={linkedInUrl}
-						title={t("profile_cta")}
-						displayChevron
-					/>
+					<div className={styles.profile__buttons}>
+						<Button
+							href={linkedInUrl}
+							title={t("profile_linkedin-cta")}
+							displayExternal
+						/>
+
+						<Button
+							href={user.html_url}
+							title={t("profile_github-cta")}
+							displayExternal
+						/>
+					</div>
 				</div>
 			</Container>
 		</section>

@@ -3,8 +3,8 @@
 	"meta_description": "Profiel description",
 	"meta_keywords": "profiel, keywords, placeholder",
 	"h1": "Profiel",
-	"profile_company": "Bedrijf:",
-	"profile_location": "Plaats:",
-	"profile_github": "GitHub:",
-	"profile_cta": "Bekijk LinkedIn-profiel"
+	"profile_bio": "Momenteel werkzaam als {{job}} bij {{company}} in {{location}}.",
+	"profile_github-cta": "Bekijk GitHub-profiel",
+	"profile_linkedin-cta": "Bekijk LinkedIn-profiel",
+	"text_content": "Als ‘self-taught’ frontend developer vind ik het belangrijk om met een moderne stack te werken binnen een creatieve en open organisatie, waarin persoonlijke ontwikkeling actief wordt gestimuleerd."
 }

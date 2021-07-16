@@ -36,7 +36,7 @@ export const Project: React.FC<Project> = ({ project }) => {
 						classNames={styles.project__button}
 						title={t("project_cta")}
 						href={project.url}
-						displayChevron
+						displayExternal
 					/>
 				</div>
 			</div>

@@ -14,7 +14,11 @@
 
 .profile__content {
 	@apply py-6;
-	@apply text-2xl;
+	@apply text-lg md:text-xl;
+}
+
+.profile__buttons {
+	@apply flex justify-center md:justify-start flex-wrap  gap-5;
 }
 
 .profile__image {

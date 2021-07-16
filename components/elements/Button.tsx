@@ -1,4 +1,5 @@
 import Chevron from "../../public/svg/chevron.svg";
+import External from "../../public/svg/external.svg";
 import styles from "../../shared/styles/components/elements/Button.module.scss";
 
 interface Button {
@@ -6,6 +7,7 @@ interface Button {
 	classNames?: string;
 	title: string;
 	displayChevron?: boolean;
+	displayExternal?: boolean;
 }
 
 export const Button: React.FC<Button> = ({
@@ -13,6 +15,7 @@ export const Button: React.FC<Button> = ({
 	classNames,
 	title,
 	displayChevron = false,
+	displayExternal = false,
 }) => (
 	<a
 		className={`${styles.button} ${classNames}`}
@@ -20,8 +23,7 @@ export const Button: React.FC<Button> = ({
 		target="_blank"
 		rel="noreferrer noopener"
 	>
-		{title}
-
-		{displayChevron && <Chevron />}
+		{title} {displayChevron && <Chevron />}{" "}
+		{displayExternal && <External />}
 	</a>
 );

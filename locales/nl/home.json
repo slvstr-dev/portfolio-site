@@ -2,6 +2,8 @@
 	"meta_title": "Home",
 	"meta_description": "Home description",
 	"meta_keywords": "home, keywords, placeholder",
-	"hero_h1": "Eat, code, sleep, repeat",
-	"quote_text": "Als ‘self-taught’ frontend developer vind ik het belangrijk om met een moderne stack te werken binnen een creatieve en open organisatie, waarin persoonlijke ontwikkeling actief wordt gestimuleerd."
+	"hero_h1": "'Self-taught' frontend developer",
+	"text_content": "In de zomer van 2019 heb ik het roer omgegooid om antwoord te krijgen op de vraag: \"Wat voor werk wil ik doen én motiveert mij om dit dagelijks te doen?\". Inmiddels mag ik mijzelf frontend developer noemen en laat dan ook graag zien hoe ik dit bereikt heb.",
+	"button_about": "Bekijk profiel",
+	"button_projects": "Bekijk projecten"
 }
