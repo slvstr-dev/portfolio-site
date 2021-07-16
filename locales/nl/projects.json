@@ -2,5 +2,7 @@
 	"meta_title": "Projecten",
 	"meta_description": "Projecten description",
 	"meta_keywords": "projecten, keywords, placeholder",
-	"h1": "Projecten"
+	"h1": "Projecten",
+	"project_cta": "Bekijk website",
+	"repository_cta": "Bekijk op GitHub"
 }

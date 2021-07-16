@@ -1,32 +1,26 @@
 [
 	{
-		"id": 0,
 		"title": "Wolwinkel Elitt",
 		"subtitle": "Webshop:",
 		"url": "https://www.wolwinkelelitt.nl",
 		"image": "https://via.placeholder.com/1024x300.png",
 		"description": "Vivamus mollis dignissim mi vel scelerisque. Nullam ullamcorper dignissim turpis, et tempor ligula. Cras ac condimentum diam. Quisque eros sem, imperdiet non facilisis at, tristique eget eros. Aenean tellus lectus, commodo vitae tortor eu, auctor dapibus tortor. Ut eu est arcu. Integer sed sagittis lacus.",
-		"button_text": "wolwinkelelitt.nl",
 		"tags": ["HTML", "CSS", "JavaScript"]
 	},
 	{
-		"id": 1,
 		"title": "Dubbel Drents Goed",
 		"subtitle": "Platform:",
 		"url": "https://www.dubbeldrentsgoed.nl",
 		"image": "https://via.placeholder.com/1024x300.png",
 		"description": "Vivamus mollis dignissim mi vel scelerisque. Nullam ullamcorper dignissim turpis, et tempor ligula. Cras ac condimentum diam. Quisque eros sem, imperdiet non facilisis at, tristique eget eros. Aenean tellus lectus, commodo vitae tortor eu, auctor dapibus tortor. Ut eu est arcu. Integer sed sagittis lacus.",
-		"button_text": "dubbeldrentsgoed.nl",
 		"tags": ["HTML", "CSS", "JavaScript"]
 	},
 	{
-		"id": 2,
 		"title": "Ineke Vedder",
 		"subtitle": "Profiel:",
 		"url": "https://www.inekevedder.nl",
 		"image": "https://via.placeholder.com/1024x300.png",
 		"description": "Vivamus mollis dignissim mi vel scelerisque. Nullam ullamcorper dignissim turpis, et tempor ligula. Cras ac condimentum diam. Quisque eros sem, imperdiet non facilisis at, tristique eget eros. Aenean tellus lectus, commodo vitae tortor eu, auctor dapibus tortor. Ut eu est arcu. Integer sed sagittis lacus.",
-		"button_text": "inekevedder.nl",
 		"tags": ["HTML", "CSS", "JavaScript"]
 	}
 ]

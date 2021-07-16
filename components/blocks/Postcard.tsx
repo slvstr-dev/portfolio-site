@@ -23,7 +23,7 @@ export const Postcard: React.FC = () => {
 							<Textarea
 								name={t("form_message_label")}
 								placeholder={t("form_message_placeholder")}
-								required={true}
+								required
 							/>
 						</div>
 
@@ -38,7 +38,7 @@ export const Postcard: React.FC = () => {
 								type="text"
 								name={t("form_name_label")}
 								placeholder={t("form_name_placeholder")}
-								required={true}
+								required
 							/>
 
 							<Input

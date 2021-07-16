@@ -49,8 +49,8 @@ export const Profile: React.FC<Profile> = ({ user }) => {
 					<Button
 						classNames={styles.profile__button}
 						href={linkedInUrl}
-						displayChevron={true}
 						title={t("profile_cta")}
+						displayChevron
 					/>
 				</div>
 			</Container>

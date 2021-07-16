@@ -1,10 +1,10 @@
 .projects {
-	@apply bg-yellow-50;
+	@apply bg-oatmeal;
 }
 
 .projects__title {
 	@apply max-w-screen-lg mx-auto py-5 md:py-10;
-	@apply text-yellow-200 text-center;
+	@apply text-center;
 }
 
 .projects__section {
@@ -13,4 +13,8 @@
 
 .projects__container {
 	@apply max-w-screen-md;
+}
+
+.projects__flexbox {
+	@apply grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5 md:gap-10;
 }
