@@ -7,14 +7,12 @@ interface Meta {
 	title: string;
 	description: string;
 	keywords: string;
-	featuredImage?: string;
 }
 
 export const Meta: React.FC<Meta> = ({
 	title = "slvstr.dev",
 	description,
 	keywords,
-	featuredImage = "https://via.placeholder.com/600x400",
 }) => {
 	const router = useRouter();
 	const url = router.asPath ? router.asPath : undefined;
@@ -38,7 +36,10 @@ export const Meta: React.FC<Meta> = ({
 			<meta content="nl_NL" property="og:locale" />
 			<meta content={title} property="og:title" />
 			<meta content={description} property="og:description" />
-			<meta content={featuredImage} property="og:image" />
+			<meta
+				content={`${canonical}/images/featured-image.jpg`}
+				property="og:image"
+			/>
 			<meta content={description} property="og:image:alt" />
 			<meta content="summary_large_image" name="twitter:card" />
 			<meta content={canonical} property="og:url" />
@@ -52,33 +53,39 @@ export const Meta: React.FC<Meta> = ({
 			<meta name="theme-color" content="#ffffff" />
 			<meta
 				name="msapplication-config"
-				content="/favicons/browserconfig.xml"
+				content={`${canonical}/favicons/browserconfig.xml`}
 			/>
 
 			<link
 				rel="apple-touch-icon"
 				sizes="180x180"
-				href="/favicons/apple-touch-icon.png"
+				href={`${canonical}/favicons/apple-touch-icon.png`}
 			/>
 			<link
 				rel="icon"
 				type="image/png"
 				sizes="32x32"
-				href="/favicons/favicon-32x32.png"
+				href={`${canonical}/favicons/favicon-32x32.png`}
 			/>
 			<link
 				rel="icon"
 				type="image/png"
 				sizes="16x16"
-				href="/favicons/favicon-16x16.png"
+				href={`${canonical}/favicons/favicon-16x16.png`}
 			/>
-			<link rel="manifest" href="/favicons/site.webmanifest" />
+			<link
+				rel="manifest"
+				href={`${canonical}/favicons/site.webmanifest`}
+			/>
 			<link
 				rel="mask-icon"
-				href="/favicons/safari-pinned-tab.svg"
+				href={`${canonical}/favicons/safari-pinned-tab.svg`}
 				color="#5bbad5"
 			/>
-			<link rel="shortcut icon" href="/favicons/favicon.ico" />
+			<link
+				rel="shortcut icon"
+				href={`${canonical}/favicons/favicon.ico`}
+			/>
 			<link href={canonical} rel="canonical" />
 
 			{process.env.NODE_ENV === "production" && (
