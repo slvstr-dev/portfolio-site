@@ -1,15 +1,13 @@
 {
-	"meta_title": "Profiel",
-	"meta_description": "Profiel description",
-	"meta_keywords": "profiel, keywords, placeholder",
+	"meta_title": "profiel - slvstr.dev",
+	"meta_description": "Profiel pagina met info over mijn huidige werkzaamheden en ervaringen met HTML, CSS, JavaScript en andere libraries/frameworks/tools.",
+	"meta_keywords": "sylvester hofstra, frontend developer, profiel, html, css, scss, jquery, javascript, react, next js, tailwind",
 	"h1": "Profiel",
-	"profile_bio": "Momenteel werkzaam als {{job}} bij {{company}} in {{location}}.",
+	"profile_bio": "Ik ben momenteel werkzaam als {{job}} bij {{company}} in {{location}}. Hier werk ik aan de websites van Fotofabriek, Studentendrukwerk & Drukwerknodig. In mijn vrije tijd werk ik aan projecten om mij verder te ontwikkelen.",
 	"profile_github-cta": "Bekijk GitHub-profiel",
 	"profile_linkedin-cta": "Bekijk LinkedIn-profiel",
 	"text_content": "Als ‘self-taught’ frontend developer vind ik het belangrijk om met een moderne stack te werken binnen een creatieve en open organisatie, waarin persoonlijke ontwikkeling actief wordt gestimuleerd.",
-	"skills_title_misc": "Overige vaardigheden",
-	"skills_description_html": "HTML description",
-	"skills_description_css": "CSS description",
-	"skills_description_javascript": "JavaScript description",
-	"skills_description_misc": "Misc description"
+	"skills_description_html": "Mijn huidige werkgever heeft een eigen CMS in C# gebouwd, waardoor ik veel ervaring op heb kunnen doen in het maken van HTML-templates in Razor. Naast het toevoegen van nieuwe templates, zoals de '/corona-drukwerk' voor Drukwerknodig, heb ik veel van de bestaande pagina's van Fotofabriek & Studentendrukwerk overgezet naar dit CMS.",
+	"skills_description_css": "Naast het opmaken van templates en het omzetten nieuwe features heb ik voor de CMS-implementatie van Studentendrukwerk een klein re-design omgezet in CSS. Hierdoor heb ik BEM & SCSS leren toepassen. Voor een andere feature hebben we Tailwind ingezet, waar ik de mogelijkheden verder heb benut bij het maken van deze website.",
+	"skills_description_javascript": "Bij Fotofabriek heb ik leren werken met een grote codebase door features toe te voegen en bugs te fixen binnen de tools van de sites. In mijn vrije tijd ben ik mij hier verder in het ontwikkelen en heb ik recentelijk een Full-Stack JavaScript cursus bij Team Treehouse afgerond. Hierdoor ben ik redelijk bekend met jQuery, (vanilla) JavaScript en ben ik momenteel React & Next.js aan het ontdekken."
 }

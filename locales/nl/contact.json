@@ -1,8 +1,8 @@
 {
-	"meta_title": "Contact",
-	"meta_description": "Contact description",
-	"meta_keywords": "contact, keywords, placeholder",
-	"h1": "Contact opnemen",
+	"meta_title": "contact - slvstr.dev",
+	"meta_description": "Contact opnemen? Stuur mij een mail of bekijk mijn GitHub of LinkedIn profiel.",
+	"meta_keywords": "sylvester hofstra, frontend developer, contact, linkedin, github",
+	"h1": "Contact",
 	"form_subject": "Contactformulier slvstr.dev",
 	"form_message_label": "Bericht",
 	"form_message_placeholder": "Waarover wil je contact opnemen?",

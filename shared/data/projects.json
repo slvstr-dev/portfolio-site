@@ -4,23 +4,31 @@
 		"subtitle": "Webshop:",
 		"url": "https://www.wolwinkelelitt.nl",
 		"image": "images/project-wolwinkel-elitt.jpg",
-		"description": "Vivamus mollis dignissim mi vel scelerisque. Nullam ullamcorper dignissim turpis, et tempor ligula. Cras ac condimentum diam. Quisque eros sem, imperdiet non facilisis at, tristique eget eros. Aenean tellus lectus, commodo vitae tortor eu, auctor dapibus tortor. Ut eu est arcu. Integer sed sagittis lacus.",
-		"tags": ["HTML", "CSS", "JavaScript"]
+		"description": "Voor Wolwinkel Elitt heb ik WordPress/WooCommerce-webshop ontworpen & gebouwd met een aangepast UnderStrap-thema. Het doel van de webshop is het vergroten van de online zichtbaarheid door potentiele klanten, zo laagdrempelig mogelijk, bekend te maken met de winkel en het actuele aanbod. Ik heb de betaalmogelijkheden van Mollie & Zettle geïntegreerd, zodat het aanbod in de winkel, webshop en op een beurs altijd met elkaar gesynchroniseerd zijn.",
+		"tags": [
+			"WordPress",
+			"WooCommerce",
+			"UnderStrap",
+			"HTML",
+			"CSS",
+			"Bootstrap",
+			"jQuery"
+		]
 	},
 	{
 		"title": "Dubbel Drents Goed",
 		"subtitle": "Platform:",
 		"url": "https://www.dubbeldrentsgoed.nl",
 		"image": "images/project-dubbel-drents-goed.jpg",
-		"description": "Vivamus mollis dignissim mi vel scelerisque. Nullam ullamcorper dignissim turpis, et tempor ligula. Cras ac condimentum diam. Quisque eros sem, imperdiet non facilisis at, tristique eget eros. Aenean tellus lectus, commodo vitae tortor eu, auctor dapibus tortor. Ut eu est arcu. Integer sed sagittis lacus.",
-		"tags": ["HTML", "CSS", "JavaScript"]
+		"description": "Dubbel Drents Goed is een nieuw platform dat de voedselketen tussen boer en burger moet verkleinen. Voor dit initiatief ben ik gevraagd in korte tijd een site te bouwen, waarop de organisatie informatie, activiteiten, aangesloten partners en andere updates kan plaatsen. Ik heb daarom gekozen voor een WordPress site, zodat de content gemakkelijk beheerd kan worden. Het ontwerp heb ik snel kunnen realiseren met de Elementor pagebuilder-plugin.",
+		"tags": ["WordPress", "Elementor", "HTML", "CSS"]
 	},
 	{
 		"title": "Ineke Vedder",
 		"subtitle": "Profiel:",
 		"url": "https://www.inekevedder.nl",
 		"image": "images/project-ineke-vedder.jpg",
-		"description": "Vivamus mollis dignissim mi vel scelerisque. Nullam ullamcorper dignissim turpis, et tempor ligula. Cras ac condimentum diam. Quisque eros sem, imperdiet non facilisis at, tristique eget eros. Aenean tellus lectus, commodo vitae tortor eu, auctor dapibus tortor. Ut eu est arcu. Integer sed sagittis lacus.",
-		"tags": ["HTML", "CSS", "JavaScript"]
+		"description": "Ineke Vedder heeft mij benaderd om een academische profiel website te bouwen, waarop ze zelf eenvoudig nieuwe publicaties en activiteiten kan plaatsen. De scope en tijd van de opdracht heb ik benut om hiervoor een custom thema en plugin te bouwen. Om het toevoegen laagdrempelig te houden heb ik gebruik gemaakt van WordPress en de accountrol van Ineke gelimiteerd tot wat noodzakelijk is.",
+		"tags": ["WordPress", "HTML", "CSS", "SCSS", "jQuery", "Gulp"]
 	}
 ]

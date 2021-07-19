@@ -1,5 +1,5 @@
 .skills {
-	@apply mx-auto mb-5 md:mb-10 p-5 md:p-10;
+	@apply mx-auto mb-5 md:mb-10 p-5 sm:p-10;
 	@apply max-w-screen-md;
 	@apply sm:flex sm:justify-between sm:items-center sm:gap-10;
 	@apply rounded-xl;
@@ -23,7 +23,7 @@
 }
 
 .skills__svg {
-	@apply w-16 sm:w-1/5 mb-0 mx-auto;
+	@apply w-16 sm:w-full mx-auto pb-2 sm:pb-0;
 	@apply text-yellow-600;
 	@apply stroke-1;
 }
