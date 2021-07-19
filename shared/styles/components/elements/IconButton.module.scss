@@ -1,5 +1,5 @@
-.button svg {
-	@apply inline w-5 h-5;
+.button {
+	@apply w-5 h-5;
 	@apply rounded-md;
 	@apply hover:bg-red-600;
 	@apply text-red-600 hover:text-white;

@@ -1,5 +1,6 @@
 import { GetStaticProps } from "next";
 import projects from "../shared/data/projects.json";
+import { motion } from "framer-motion";
 import { Meta } from "../components/blocks/Meta";
 import { Container } from "../components/elements/Container";
 import { Project } from "../components/blocks/Project";
@@ -38,7 +39,12 @@ const Projects: React.FC<Repositories> = ({ repositories }) => {
 				keywords={t("meta_keywords")}
 			/>
 
-			<main className={styles.projects}>
+			<motion.main
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				exit={{ opacity: 0 }}
+				className={styles.projects}
+			>
 				<Container classNames={styles.projects__container}>
 					<h1 className={styles.projects__title}>{t("h1")}</h1>
 
@@ -61,7 +67,7 @@ const Projects: React.FC<Repositories> = ({ repositories }) => {
 						</div>
 					</section>
 				</Container>
-			</main>
+			</motion.main>
 		</>
 	);
 };

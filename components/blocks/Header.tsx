@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { linkedInUrl, gitHubUrl } from "../../config";
+import { portfolioRepoUrl, gitHubUrl, linkedInUrl } from "../../config";
 import { Container } from "../elements/Container";
 import { IconButton } from "../elements/IconButton";
 import { Logo } from "../elements/Logo";
 import { Navbar } from "./Navbar";
+import Code from "../../public/svg/code.svg";
 import LinkedIn from "../../public/svg/linkedin.svg";
 import GitHub from "../../public/svg/github.svg";
 import useTranslation from "next-translate/useTranslation";
@@ -15,6 +16,14 @@ export const Header: React.FC = () => {
 	return (
 		<header className={styles.header}>
 			<Container classNames={styles.header__container}>
+				<IconButton
+					classNames={styles.header__cta}
+					href={portfolioRepoUrl}
+					title={t("header_portfolio")}
+				>
+					<Code />
+				</IconButton>
+
 				<div className={styles.header__socials}>
 					<IconButton href={gitHubUrl} title={t("header_github")}>
 						<GitHub />
@@ -26,7 +35,7 @@ export const Header: React.FC = () => {
 				</div>
 
 				<Link href="/" passHref>
-					<a>
+					<a className={styles.header__logo}>
 						<Logo />
 					</a>
 				</Link>

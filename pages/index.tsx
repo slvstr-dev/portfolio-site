@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Meta } from "../components/blocks/Meta";
 import { Hero } from "../components/blocks/Hero";
 import { Container } from "../components/elements/Container";
@@ -22,7 +23,12 @@ const Home: React.FC = () => {
 				keywords={t("meta_keywords")}
 			/>
 
-			<main className={styles.home}>
+			<motion.main
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				exit={{ opacity: 0 }}
+				className={styles.home}
+			>
 				<Hero h1={t("hero_h1")} />
 
 				<Container>
@@ -39,7 +45,7 @@ const Home: React.FC = () => {
 						})}
 					</Text>
 				</Container>
-			</main>
+			</motion.main>
 		</>
 	);
 };

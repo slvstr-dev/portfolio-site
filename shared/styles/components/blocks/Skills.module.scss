@@ -2,7 +2,7 @@
 	@apply mx-auto mb-5 md:mb-10 p-5 md:p-10;
 	@apply max-w-screen-md;
 	@apply sm:flex sm:justify-between sm:items-center sm:gap-10;
-	@apply rounded-md;
+	@apply rounded-xl;
 
 	&:nth-child(odd) {
 		@apply sm:flex-row-reverse;

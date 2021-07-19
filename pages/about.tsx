@@ -1,4 +1,5 @@
 import { GetStaticProps } from "next";
+import { motion } from "framer-motion";
 import { Meta } from "../components/blocks/Meta";
 import { Container } from "../components/elements/Container";
 import { Bio } from "../components/blocks/Bio";
@@ -40,7 +41,12 @@ const About: React.FC<About> = ({ user }) => {
 				keywords={t("meta_keywords")}
 			/>
 
-			<main className={styles.about}>
+			<motion.main
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				exit={{ opacity: 0 }}
+				className={styles.about}
+			>
 				<Container classNames={styles.about__container}>
 					<h1 className={styles.about__title}>{t("h1")}</h1>
 				</Container>
@@ -52,7 +58,7 @@ const About: React.FC<About> = ({ user }) => {
 
 					<Skills />
 				</Container>
-			</main>
+			</motion.main>
 		</>
 	);
 };
