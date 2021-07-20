@@ -20,7 +20,7 @@ export const Repository: React.FC<Repository> = ({ repository }) => {
 				classNames={styles.repository__button}
 				title={t("repository_cta")}
 				href={repository.html_url}
-				displayExternal
+				isExternal
 			/>
 		</article>
 	);

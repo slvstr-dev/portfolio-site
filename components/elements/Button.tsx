@@ -6,24 +6,26 @@ interface Button {
 	href: string;
 	classNames?: string;
 	title: string;
-	displayChevron?: boolean;
-	displayExternal?: boolean;
+	isExternal?: boolean;
 }
 
 export const Button: React.FC<Button> = ({
 	href,
 	classNames,
 	title,
-	displayChevron = false,
-	displayExternal = false,
-}) => (
-	<a
-		className={`${styles.button} ${classNames}`}
-		href={href}
-		target="_blank"
-		rel="noreferrer noopener"
-	>
-		{title} {displayChevron && <Chevron />}{" "}
-		{displayExternal && <External />}
-	</a>
-);
+	isExternal = false,
+}) =>
+	isExternal ? (
+		<a
+			className={`${styles.button} ${classNames}`}
+			href={href}
+			target="_blank"
+			rel="noreferrer noopener"
+		>
+			{title} <External />
+		</a>
+	) : (
+		<a className={`${styles.button} ${classNames}`} href={href}>
+			{title} <Chevron />
+		</a>
+	);

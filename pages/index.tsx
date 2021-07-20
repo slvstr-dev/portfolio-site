@@ -7,11 +7,6 @@ import { Button } from "../components/elements/Button";
 import useTranslation from "next-translate/useTranslation";
 import styles from "../shared/styles/pages/Home.module.scss";
 
-const buttons = [
-	{ title: "about", path: "/about" },
-	{ title: "projects", path: "/projects" },
-];
-
 const Home: React.FC = () => {
 	const { t } = useTranslation("home");
 
@@ -33,16 +28,9 @@ const Home: React.FC = () => {
 
 				<Container>
 					<Text content={t("text_content")}>
-						{buttons.map((button, index) => {
-							return (
-								<Button
-									title={t(`button_${button.title}`)}
-									href={button.path}
-									key={index}
-									displayChevron
-								/>
-							);
-						})}
+						<Button href="/about" title={t("button_about")} />
+
+						<Button href="/projects" title={t("button_projects")} />
 					</Text>
 				</Container>
 			</motion.main>

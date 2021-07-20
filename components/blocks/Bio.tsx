@@ -44,13 +44,13 @@ export const Bio: React.FC<Bio> = ({ user }) => {
 						<Button
 							href={linkedInUrl}
 							title={t("profile_linkedin-cta")}
-							displayExternal
+							isExternal
 						/>
 
 						<Button
 							href={user.html_url}
 							title={t("profile_github-cta")}
-							displayExternal
+							isExternal
 						/>
 					</div>
 				</div>
