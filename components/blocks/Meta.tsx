@@ -9,11 +9,7 @@ interface Meta {
 	keywords: string;
 }
 
-export const Meta: React.FC<Meta> = ({
-	title = "slvstr.dev",
-	description,
-	keywords,
-}) => {
+export const Meta: React.FC<Meta> = ({ title, description, keywords }) => {
 	const router = useRouter();
 	const url = router.asPath ? router.asPath : undefined;
 	const canonical = url === "/" ? domain : domain + url;
@@ -37,7 +33,7 @@ export const Meta: React.FC<Meta> = ({
 			<meta content={title} property="og:title" />
 			<meta content={description} property="og:description" />
 			<meta
-				content={`${canonical}/images/featured-image.jpg`}
+				content={`${domain}/images/featured-image.jpg`}
 				property="og:image"
 			/>
 			<meta content={description} property="og:image:alt" />
@@ -53,39 +49,33 @@ export const Meta: React.FC<Meta> = ({
 			<meta name="theme-color" content="#ffffff" />
 			<meta
 				name="msapplication-config"
-				content={`${canonical}/favicons/browserconfig.xml`}
+				content={`${domain}/favicons/browserconfig.xml`}
 			/>
 
 			<link
 				rel="apple-touch-icon"
 				sizes="180x180"
-				href={`${canonical}/favicons/apple-touch-icon.png`}
+				href={`${domain}/favicons/apple-touch-icon.png`}
 			/>
 			<link
 				rel="icon"
 				type="image/png"
 				sizes="32x32"
-				href={`${canonical}/favicons/favicon-32x32.png`}
+				href={`${domain}/favicons/favicon-32x32.png`}
 			/>
 			<link
 				rel="icon"
 				type="image/png"
 				sizes="16x16"
-				href={`${canonical}/favicons/favicon-16x16.png`}
+				href={`${domain}/favicons/favicon-16x16.png`}
 			/>
-			<link
-				rel="manifest"
-				href={`${canonical}/favicons/site.webmanifest`}
-			/>
+			<link rel="manifest" href={`${domain}/favicons/site.webmanifest`} />
 			<link
 				rel="mask-icon"
-				href={`${canonical}/favicons/safari-pinned-tab.svg`}
+				href={`${domain}/favicons/safari-pinned-tab.svg`}
 				color="#5bbad5"
 			/>
-			<link
-				rel="shortcut icon"
-				href={`${canonical}/favicons/favicon.ico`}
-			/>
+			<link rel="shortcut icon" href={`${domain}/favicons/favicon.ico`} />
 			<link href={canonical} rel="canonical" />
 
 			{process.env.NODE_ENV === "production" && (
