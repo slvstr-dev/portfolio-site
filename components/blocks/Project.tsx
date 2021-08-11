@@ -5,10 +5,11 @@ import styles from "../../shared/styles/components/blocks/Project.module.scss";
 
 interface Project {
 	project: {
-		url: string;
-		image: string;
 		title: string;
 		subtitle: string;
+		projectUrl: string;
+		repositoryUrl: string;
+		image: string;
 		description: string;
 		tags: string[];
 	};
@@ -32,12 +33,25 @@ export const Project: React.FC<Project> = ({ project }) => {
 
 					<h2 className={styles.project__title}>{project.title}</h2>
 
-					<Button
-						classNames={styles.project__button}
-						title={t("project_cta")}
-						href={project.url}
-						isExternal
-					/>
+					<div className={styles.project__buttons}>
+						{project.projectUrl != "" && (
+							<Button
+								classNames={styles.project__button}
+								title={t("project_cta")}
+								href={project.projectUrl}
+								isExternal
+							/>
+						)}
+
+						{project.repositoryUrl != "" && (
+							<Button
+								classNames={styles.project__button}
+								title={t("repository_cta")}
+								href={project.repositoryUrl}
+								isExternal
+							/>
+						)}
+					</div>
 				</div>
 			</div>
 

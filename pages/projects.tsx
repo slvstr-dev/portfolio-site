@@ -1,34 +1,12 @@
-import { GetStaticProps } from "next";
 import projects from "../shared/data/projects.json";
 import { motion } from "framer-motion";
 import { Meta } from "../components/blocks/Meta";
 import { Container } from "../components/elements/Container";
 import { Project } from "../components/blocks/Project";
-import { Repository } from "../components/blocks/Repository";
 import useTranslation from "next-translate/useTranslation";
 import styles from "../shared/styles/pages/Projects.module.scss";
 
-interface Repositories {
-	repositories: {
-		name: string;
-		html_url: string;
-	}[];
-}
-
-export const getStaticProps: GetStaticProps = async () => {
-	const response = await fetch(
-		"https://api.github.com/users/slvstr-dev/repos"
-	);
-	const repositories = await response.json();
-
-	return {
-		props: {
-			repositories,
-		},
-	};
-};
-
-const Projects: React.FC<Repositories> = ({ repositories }) => {
+const Projects: React.FC = () => {
 	const { t } = useTranslation("projects");
 
 	return (
@@ -52,19 +30,6 @@ const Projects: React.FC<Repositories> = ({ repositories }) => {
 						{projects.map((project, index) => {
 							return <Project key={index} project={project} />;
 						})}
-					</section>
-
-					<section className={styles.projects__section}>
-						<div className={styles.projects__flexbox}>
-							{repositories.map((repository, index) => {
-								return (
-									<Repository
-										key={index}
-										repository={repository}
-									/>
-								);
-							})}
-						</div>
 					</section>
 				</Container>
 			</motion.main>

@@ -2,19 +2,16 @@
 	@apply bg-oatmeal;
 }
 
+.projects__container {
+	@apply max-w-screen-2xl;
+}
+
 .projects__title {
 	@apply py-10;
-	@apply text-center;
+	@apply text-center uppercase;
 }
 
 .projects__section {
 	@apply pb-5 md:pb-10;
-}
-
-.projects__container {
-	@apply max-w-screen-md;
-}
-
-.projects__flexbox {
-	@apply grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5 md:gap-10;
+	@apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-10;
 }

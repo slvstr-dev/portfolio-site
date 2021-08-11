@@ -12,6 +12,10 @@
 	@apply text-center md:text-left;
 }
 
+.bio__title {
+	@apply text-red-600 uppercase;
+}
+
 .bio__content {
 	@apply py-5;
 	@apply text-lg md:text-xl;

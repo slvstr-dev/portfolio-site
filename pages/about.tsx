@@ -4,7 +4,7 @@ import { Meta } from "../components/blocks/Meta";
 import { Container } from "../components/elements/Container";
 import { Bio } from "../components/blocks/Bio";
 import { Text } from "../components/blocks/Text";
-import { Skills } from "../components/blocks/Skills";
+import { Skill } from "../components/blocks/Skill";
 import useTranslation from "next-translate/useTranslation";
 import styles from "../shared/styles/pages/About.module.scss";
 
@@ -32,6 +32,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const About: React.FC<About> = ({ user }) => {
 	const { t } = useTranslation("about");
+	const skills = ["HTML", "CSS", "JavaScript", "Tools"];
 
 	return (
 		<>
@@ -55,8 +56,14 @@ const About: React.FC<About> = ({ user }) => {
 
 				<Container>
 					<Text content={t("text_content")} />
+				</Container>
 
-					<Skills />
+				<Container classNames={styles.about__container}>
+					<section className={styles.about__section}>
+						{skills.map((skill, index) => {
+							return <Skill key={index} skill={skill} />;
+						})}
+					</section>
 				</Container>
 			</motion.main>
 		</>

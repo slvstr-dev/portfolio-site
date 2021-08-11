@@ -1,14 +1,50 @@
 [
 	{
+		"title": "slvstr.dev",
+		"subtitle": "Portfolio:",
+		"projectUrl": "",
+		"repositoryUrl": "https://github.com/slvstr-dev/portfolio-site",
+		"image": "images/project-portfolio-site.jpg",
+		"description": "Voor het maken van mijn portfolio heb ik gebruik gemaakt van Tailwind, React & Typescript om hier beter in te worden. Om de website ook zoekmachine vriendelijk te maken heb ik er voor gekozen om Next.js te leren en toe te passen.",
+		"tags": [
+			"HTML",
+			"CSS",
+			"SCSS",
+			"Tailwind",
+			"JavaScript",
+			"TypeScript",
+			"React",
+			"Next.js"
+		]
+	},
+	{
+		"title": "Password Generator",
+		"subtitle": "App:",
+		"projectUrl": "https://slvstr-dev.github.io/password-generator",
+		"repositoryUrl": "https://github.com/slvstr-dev/password-generator",
+		"image": "images/project-password-generator.jpg",
+		"description": "Niet elk wachtwoordveld kan door een browser/app goed herkend worden. Om snel een veilig wachtwoord dat aan de voorwaarden voldoet te genereren heb ik een React-app gebouwd.",
+		"tags": [
+			"HTML",
+			"CSS",
+			"SCSS",
+			"Tailwind",
+			"JavaScript",
+			"TypeScript",
+			"React"
+		]
+	},
+	{
 		"title": "Wolwinkel Elitt",
 		"subtitle": "Webshop:",
-		"url": "https://www.wolwinkelelitt.nl",
+		"projectUrl": "https://www.wolwinkelelitt.nl",
+		"repositoryUrl": "",
 		"image": "images/project-wolwinkel-elitt.jpg",
-		"description": "Voor Wolwinkel Elitt heb ik WordPress/WooCommerce-webshop ontworpen & gebouwd met een aangepast UnderStrap-thema. Het doel van de webshop is het vergroten van de online zichtbaarheid door potentiele klanten, zo laagdrempelig mogelijk, bekend te maken met de winkel en het actuele aanbod. Ik heb de betaalmogelijkheden van Mollie & Zettle geïntegreerd, zodat het aanbod in de winkel, webshop en op een beurs altijd met elkaar gesynchroniseerd zijn.",
+		"description": "Voor Wolwinkel Elitt heb ik een WordPress/WooCommerce-webshop heb gebouwd. Naast een de online winkel functionaliteit is de voornaamste functie het tonen van een up-to-date aanbod. Hiervoor heb ik met Bootstrap & jQuery een UnderStrap-thema aangepast.",
 		"tags": [
 			"WordPress",
 			"WooCommerce",
-			"UnderStrap",
+			"PHP",
 			"HTML",
 			"CSS",
 			"Bootstrap",
@@ -16,19 +52,21 @@
 		]
 	},
 	{
-		"title": "Dubbel Drents Goed",
-		"subtitle": "Platform:",
-		"url": "https://www.dubbeldrentsgoed.nl",
-		"image": "images/project-dubbel-drents-goed.jpg",
-		"description": "Dubbel Drents Goed is een nieuw platform dat de voedselketen tussen boer en burger moet verkleinen. Voor dit initiatief ben ik gevraagd in korte tijd een site te bouwen, waarop de organisatie informatie, activiteiten, aangesloten partners en andere updates kan plaatsen. Ik heb daarom gekozen voor een WordPress site, zodat de content gemakkelijk beheerd kan worden. Het ontwerp heb ik snel kunnen realiseren met de Elementor pagebuilder-plugin.",
-		"tags": ["WordPress", "Elementor", "HTML", "CSS"]
-	},
-	{
 		"title": "Ineke Vedder",
 		"subtitle": "Profiel:",
-		"url": "https://www.inekevedder.nl",
+		"projectUrl": "https://www.inekevedder.nl",
+		"repositoryUrl": "",
 		"image": "images/project-ineke-vedder.jpg",
-		"description": "Ineke Vedder heeft mij benaderd om een academische profiel website te bouwen, waarop ze zelf eenvoudig nieuwe publicaties en activiteiten kan plaatsen. De scope en tijd van de opdracht heb ik benut om hiervoor een custom thema en plugin te bouwen. Om het toevoegen laagdrempelig te houden heb ik gebruik gemaakt van WordPress en de accountrol van Ineke gelimiteerd tot wat noodzakelijk is.",
-		"tags": ["WordPress", "HTML", "CSS", "SCSS", "jQuery", "Gulp"]
+		"description": "Ineke Vedder heeft mij benaderd om een academische profiel website te bouwen, waarop ze zelf nieuwe publicaties en activiteiten kan plaatsen. Ik heb deze mogelijkheid benut voor deze Wordpress site mijn eerste custom thema en plugin te maken.",
+		"tags": ["WordPress", "PHP", "HTML", "CSS", "SCSS", "jQuery", "Gulp"]
+	},
+	{
+		"title": "Dubbel Drents Goed",
+		"subtitle": "Platform:",
+		"projectUrl": "https://www.dubbeldrentsgoed.nl",
+		"repositoryUrl": "",
+		"image": "images/project-dubbel-drents-goed.jpg",
+		"description": "Voor het nieuwe platform Dubbel Drents Goed ben ik gevraagd een site te bouwen, waarop de organisatie informatie, activiteiten, aangesloten partners en andere updates kan plaatsen. Om de content gemakkelijk te kunnen beheren heb ik gebruik gemaakt van WordPress.",
+		"tags": ["WordPress", "Elementor", "HTML", "CSS"]
 	}
 ]

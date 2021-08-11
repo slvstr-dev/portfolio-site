@@ -28,7 +28,7 @@ export const Bio: React.FC<Bio> = ({ user }) => {
 				/>
 
 				<div className={styles.bio__info}>
-					<h2>{user.name}</h2>
+					<h2 className={styles.bio__title}>{user.name}</h2>
 
 					<div className={styles.bio__content}>
 						<p>

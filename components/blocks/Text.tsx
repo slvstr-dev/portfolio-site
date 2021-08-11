@@ -1,4 +1,3 @@
-import { Container } from "../elements/Container";
 import styles from "../../shared/styles/components/blocks/Text.module.scss";
 
 interface Text {
