@@ -5,9 +5,9 @@ import styles from "../../shared/styles/components/blocks/Project.module.scss";
 
 interface Project {
 	project: {
-		title: string;
-		subtitle: string;
-		projectUrl: string;
+		name: string;
+		type: string;
+		liveUrl: string;
 		repositoryUrl: string;
 		image: string;
 		description: string;
@@ -28,22 +28,22 @@ export const Project: React.FC<Project> = ({ project }) => {
 
 				<div className={styles.project__header}>
 					<h4 className={styles.project__subtitle}>
-						{project.subtitle}
+						{project.type}:
 					</h4>
 
-					<h2 className={styles.project__title}>{project.title}</h2>
+					<h2 className={styles.project__title}>{project.name}</h2>
 
 					<div className={styles.project__buttons}>
-						{project.projectUrl != "" && (
+						{project.liveUrl != null && (
 							<Button
 								classNames={styles.project__button}
 								title={t("project_cta")}
-								href={project.projectUrl}
+								href={project.liveUrl}
 								isExternal
 							/>
 						)}
 
-						{project.repositoryUrl != "" && (
+						{project.repositoryUrl != null && (
 							<Button
 								classNames={styles.project__button}
 								title={t("repository_cta")}

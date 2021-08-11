@@ -1,4 +1,5 @@
-import projects from "../shared/data/projects.json";
+import { GetStaticProps } from "next";
+import { supabase } from "../supabaseClient";
 import { motion } from "framer-motion";
 import { Meta } from "../components/blocks/Meta";
 import { Container } from "../components/elements/Container";
@@ -6,7 +7,31 @@ import { Project } from "../components/blocks/Project";
 import useTranslation from "next-translate/useTranslation";
 import styles from "../shared/styles/pages/Projects.module.scss";
 
-const Projects: React.FC = () => {
+interface Projects {
+	projects: [
+		{
+			name: string;
+			type: string;
+			liveUrl: string;
+			repositoryUrl: string;
+			image: string;
+			description: string;
+			tags: string[];
+		}
+	];
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+	const { data: projects } = await supabase.from("projects").select("*");
+
+	return {
+		props: {
+			projects,
+		},
+	};
+};
+
+const Projects: React.FC<Projects> = ({ projects }) => {
 	const { t } = useTranslation("projects");
 
 	return (
