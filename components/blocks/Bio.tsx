@@ -1,8 +1,7 @@
-import { gitHubUrl, linkedInUrl, portfolioUrl } from "../../config";
 import { Container } from "../elements/Container";
 import { Button } from "../elements/Button";
 import useTranslation from "next-translate/useTranslation";
-import styles from "../../shared/styles/components/blocks/Bio.module.scss";
+import styles from "../../styles/components/blocks/Bio.module.scss";
 
 interface Bio {
 	developer: {
@@ -32,13 +31,13 @@ export const Bio: React.FC<Bio> = ({ developer }) => {
 
 					<div className={styles.bio__buttons}>
 						<Button
-							href={gitHubUrl}
+							href={`${process.env.NEXT_PUBLIC_GITHUB_URL}`}
 							text={t("profile_github-cta")}
 							isExternal
 						/>
 
 						<Button
-							href={linkedInUrl}
+							href={`${process.env.NEXT_PUBLIC_LINKEDIN_URL}`}
 							text={t("profile_linkedin-cta")}
 							isExternal
 						/>

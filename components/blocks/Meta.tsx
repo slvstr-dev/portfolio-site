@@ -1,7 +1,5 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { domain } from "../../config/index";
-import useTranslation from "next-translate/useTranslation";
 
 interface Meta {
 	title: string;
@@ -9,11 +7,15 @@ interface Meta {
 	keywords: string;
 }
 
+const domain =
+	process.env.NODE_ENV === "production"
+		? `${process.env.NEXT_PUBLIC_PRODUCTION_DOMAIN}`
+		: "http://localhost:3000";
+
 export const Meta: React.FC<Meta> = ({ title, description, keywords }) => {
 	const router = useRouter();
 	const url = router.asPath ? router.asPath : undefined;
 	const canonical = url === "/" ? domain : domain + url;
-	const { t } = useTranslation("common");
 
 	return (
 		<Head>
