@@ -10,7 +10,6 @@ interface Project {
 		type: string;
 		live_url: string;
 		repository_url: string;
-		certificate_url: string;
 		image_url: string;
 		description: string;
 		tags: string[];
@@ -48,15 +47,6 @@ export const Project: React.FC<Project> = ({ project }) => {
 								classNames={styles.project__button}
 								text={t("repository_cta")}
 								href={project.repository_url}
-								isExternal
-							/>
-						)}
-
-						{project.certificate_url !== null && (
-							<Button
-								classNames={styles.project__button}
-								text={t("certificate_cta")}
-								href={project.certificate_url}
 								isExternal
 							/>
 						)}
