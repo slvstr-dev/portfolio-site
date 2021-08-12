@@ -5,5 +5,6 @@
 	"h1": "Projecten",
 	"project_cta": "Website",
 	"repository_cta": "Repository",
-	"certificate_cta": "Certificaat"
+	"certificate_cta": "Certificaat",
+	"error_message": "Mijn projecten kunnen op dit moment niet worden geladen. Probeer het nog een keer of bekijk de projecten op mijn GitHub-profiel."
 }

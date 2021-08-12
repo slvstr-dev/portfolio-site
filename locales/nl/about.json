@@ -4,5 +4,6 @@
 	"meta_keywords": "sylvester hofstra, frontend developer, profiel, html, css, scss, jquery, javascript, react, next js, tailwind",
 	"h1": "Profiel",
 	"profile_github-cta": "GitHub-profiel",
-	"profile_linkedin-cta": "LinkedIn-profiel"
+	"profile_linkedin-cta": "LinkedIn-profiel",
+	"error_message": "Mijn profiel informatie kan op dit moment niet worden geladen. Probeer het nog een keer of bekijk de informatie op mijn LinkedIn-profiel."
 }

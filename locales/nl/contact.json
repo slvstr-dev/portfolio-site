@@ -13,5 +13,7 @@
 	"form_phone": "Telefoon",
 	"form_phone_placeholder": "Telefoonnummer (optioneel)",
 	"form_submit": "Verstuur",
-	"form_reset": "Reset"
+	"form_reset": "Reset",
+	"form_submitted": "Bedankt voor je bericht! Ik neem z.s.m. contact met je op.",
+	"error_message": "Er is iets mis gegaan tijdens het versturen van het contactformulier. Probeer het nog een keer of benader mij via mijn LinkedIn-profiel."
 }
