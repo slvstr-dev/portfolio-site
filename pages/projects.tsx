@@ -6,15 +6,18 @@ import { Container } from "../components/elements/Container";
 import { Project } from "../components/blocks/Project";
 import useTranslation from "next-translate/useTranslation";
 import styles from "../shared/styles/pages/Projects.module.scss";
+import { Error } from "../components/blocks/Error";
 
 interface Projects {
 	projects: [
 		{
+			id: number;
 			name: string;
 			type: string;
-			liveUrl: string;
-			repositoryUrl: string;
-			image: string;
+			live_url: string;
+			repository_url: string;
+			certificate_url: string;
+			image_url: string;
 			description: string;
 			tags: string[];
 		}
@@ -22,7 +25,18 @@ interface Projects {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-	const { data: projects } = await supabase.from("projects").select("*");
+	const {
+		data: projects,
+		status,
+		error,
+	} = await supabase
+		.from("projects")
+		.select()
+		.order("id", { ascending: false });
+
+	if (status !== 200 || error) {
+		return { props: {} };
+	}
 
 	return {
 		props: {
@@ -51,11 +65,20 @@ const Projects: React.FC<Projects> = ({ projects }) => {
 				<Container classNames={styles.projects__container}>
 					<h1 className={styles.projects__title}>{t("h1")}</h1>
 
-					<section className={styles.projects__section}>
-						{projects.map((project, index) => {
-							return <Project key={index} project={project} />;
-						})}
-					</section>
+					{projects ? (
+						<section className={styles.projects__section}>
+							{projects.map((project) => {
+								return (
+									<Project
+										key={project.id}
+										project={project}
+									/>
+								);
+							})}
+						</section>
+					) : (
+						<Error />
+					)}
 				</Container>
 			</motion.main>
 		</>

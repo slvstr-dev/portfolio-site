@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { portfolioRepoUrl, gitHubUrl, linkedInUrl } from "../../config";
+import { gitHubUrl, linkedInUrl, portfolioUrl } from "../../config";
 import { Container } from "../elements/Container";
 import { IconButton } from "../elements/IconButton";
 import { Logo } from "../elements/Logo";
@@ -18,7 +18,7 @@ export const Header: React.FC = () => {
 			<Container classNames={styles.header__container}>
 				<IconButton
 					classNames={styles.header__cta}
-					href={portfolioRepoUrl}
+					href={portfolioUrl}
 					title={t("header_portfolio")}
 				>
 					<Code />

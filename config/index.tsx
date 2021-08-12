@@ -3,8 +3,8 @@ export const domain =
 		? "http://localhost:3000"
 		: "https://www.slvstr.dev";
 
-export const portfolioRepoUrl = "https://github.com/slvstr-dev/portfolio-site";
+export const gitHubUrl = "https://github.com/slvstr-dev";
 
 export const linkedInUrl = "https://www.linkedin.com/in/sylvesterhofstra";
 
-export const gitHubUrl = "https://github.com/slvstr-dev";
+export const portfolioUrl = "https://github.com/slvstr-dev/portfolio-site";

@@ -1,21 +1,19 @@
-import { linkedInUrl } from "../../config";
+import { gitHubUrl, linkedInUrl, portfolioUrl } from "../../config";
 import { Container } from "../elements/Container";
 import { Button } from "../elements/Button";
 import useTranslation from "next-translate/useTranslation";
 import styles from "../../shared/styles/components/blocks/Bio.module.scss";
 
 interface Bio {
-	user: {
-		avatar_url: string;
+	developer: {
 		name: string;
-		bio: string;
-		company: string;
-		location: string;
-		html_url: string;
+		description: string;
+		image_url: string;
+		about_quote: string;
 	};
 }
 
-export const Bio: React.FC<Bio> = ({ user }) => {
+export const Bio: React.FC<Bio> = ({ developer }) => {
 	const { t } = useTranslation("about");
 
 	return (
@@ -23,33 +21,25 @@ export const Bio: React.FC<Bio> = ({ user }) => {
 			<Container classNames={styles.bio__container}>
 				<img
 					className={styles.bio__image}
-					src={user.avatar_url}
-					alt={user.name}
+					src={developer.image_url}
+					alt={developer.name}
 				/>
 
 				<div className={styles.bio__info}>
-					<h2 className={styles.bio__title}>{user.name}</h2>
+					<h2 className={styles.bio__title}>{developer.name}</h2>
 
-					<div className={styles.bio__content}>
-						<p>
-							{t("profile_bio", {
-								job: user.bio,
-								company: user.company,
-								location: user.location,
-							})}
-						</p>
-					</div>
+					<p className={styles.bio__text}>{developer.description}</p>
 
 					<div className={styles.bio__buttons}>
 						<Button
-							href={linkedInUrl}
-							title={t("profile_linkedin-cta")}
+							href={gitHubUrl}
+							text={t("profile_github-cta")}
 							isExternal
 						/>
 
 						<Button
-							href={user.html_url}
-							title={t("profile_github-cta")}
+							href={linkedInUrl}
+							text={t("profile_linkedin-cta")}
 							isExternal
 						/>
 					</div>

@@ -3,7 +3,6 @@
 	"meta_description": "slvstr.dev is mijn portfolio website, waarop ik laat zien hoe ik mijzelf heb omgeschoold tot frontend developer en wat ik tot nu toe bereikt heb.",
 	"meta_keywords": "sylvester hofstra, frontend developer, portfolio, html, css, scss, tailwind, bootstrap, javascript, react, next js, gulp, webpack, framer motion, tablericons",
 	"hero_h1": "'Self-taught' frontend developer",
-	"text_content": "In de zomer van 2019 heb ik mijzelf de vraag gesteld: \"Welk beroep motiveert mij om dagelijks te doen?\". Hierop heb ik het antwoord gevonden en laat je daarom graag zien wat ik tot nu toe als frontend developer gedaan heb.",
-	"button_about": "Bekijk profiel",
-	"button_projects": "Bekijk projecten"
+	"button_about": "Profiel",
+	"button_projects": "Projecten"
 }

@@ -1,4 +1,5 @@
 import { GetStaticProps } from "next";
+import { supabase } from "../supabaseClient";
 import { motion } from "framer-motion";
 import { Meta } from "../components/blocks/Meta";
 import { Container } from "../components/elements/Container";
@@ -7,32 +8,54 @@ import { Text } from "../components/blocks/Text";
 import { Skill } from "../components/blocks/Skill";
 import useTranslation from "next-translate/useTranslation";
 import styles from "../shared/styles/pages/About.module.scss";
+import { Error } from "../components/blocks/Error";
 
 interface About {
-	user: {
-		avatar_url: string;
+	developer: {
 		name: string;
-		bio: string;
-		company: string;
-		location: string;
-		html_url: string;
+		description: string;
+		image_url: string;
+		about_quote: string;
 	};
+	skills: [{ id: number; name: string; description: string }];
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-	const response = await fetch("https://api.github.com/users/slvstr-dev");
-	const user = await response.json();
+	const {
+		data: developer,
+		status: developerStatus,
+		error: developerError,
+	} = await supabase
+		.from("developer")
+		.select("name, description, image_url, about_quote")
+		.limit(1)
+		.single();
+
+	const {
+		data: skills,
+		status: skillsStatus,
+		error: skillserror,
+	} = await supabase.from("skills").select();
+
+	if (
+		developerStatus !== 200 ||
+		skillsStatus !== 200 ||
+		developerError ||
+		skillserror
+	) {
+		return { props: {} };
+	}
 
 	return {
 		props: {
-			user,
+			developer,
+			skills,
 		},
 	};
 };
 
-const About: React.FC<About> = ({ user }) => {
+const About: React.FC<About> = ({ developer, skills }) => {
 	const { t } = useTranslation("about");
-	const skills = ["HTML", "CSS", "JavaScript", "Tools"];
 
 	return (
 		<>
@@ -52,19 +75,29 @@ const About: React.FC<About> = ({ user }) => {
 					<h1 className={styles.about__title}>{t("h1")}</h1>
 				</Container>
 
-				<Bio user={user} />
+				{developer && skills ? (
+					<>
+						<Bio developer={developer} />
 
-				<Container>
-					<Text content={t("text_content")} />
-				</Container>
+						<Container>
+							<Text content={developer.about_quote} />
+						</Container>
 
-				<Container classNames={styles.about__container}>
-					<section className={styles.about__section}>
-						{skills.map((skill, index) => {
-							return <Skill key={index} skill={skill} />;
-						})}
-					</section>
-				</Container>
+						<Container classNames={styles.about__container}>
+							<section className={styles.about__section}>
+								{skills.map((skill) => {
+									return (
+										<Skill key={skill.id} skill={skill} />
+									);
+								})}
+							</section>
+						</Container>
+					</>
+				) : (
+					<Container classNames={styles.about__container}>
+						<Error />
+					</Container>
+				)}
 			</motion.main>
 		</>
 	);

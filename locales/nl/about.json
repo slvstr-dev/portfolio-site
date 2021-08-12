@@ -3,12 +3,6 @@
 	"meta_description": "Profiel pagina met info over mijn huidige werkzaamheden en ervaringen met HTML, CSS, JavaScript en andere libraries/frameworks/tools.",
 	"meta_keywords": "sylvester hofstra, frontend developer, profiel, html, css, scss, jquery, javascript, react, next js, tailwind",
 	"h1": "Profiel",
-	"profile_bio": "Ik ben momenteel werkzaam als {{job}} bij {{company}} in {{location}}. Hier werk ik aan de websites en tools van Fotofabriek, Studentendrukwerk & Drukwerknodig. In mijn vrije tijd werk ik aan projecten om mij verder te ontwikkelen.",
-	"profile_github-cta": "Bekijk GitHub-profiel",
-	"profile_linkedin-cta": "Bekijk LinkedIn-profiel",
-	"text_content": "Ik vind het belangrijk om met een moderne stack te werken binnen een creatieve en open organisatie, waarin persoonlijke ontwikkeling actief wordt gestimuleerd.",
-	"skill_description_html": "Bij Fotofabriek is een eigen CMS in C# gebouwd. Ik heb voor Fotofabriek, Studentendrukwerk & Drukwerknodig meerdere pagina's omgezet naar templates, waardoor ik veel ervaring op heb kunnen doen in het bouwen templates in Razor en de semantiek daarvan.",
-	"skill_description_css": "Voor de CMS-implementatie van Studentendrukwerk heb ik een redesign geïmplementeerd en daardoor leren werken met SCSS volgens BEM. Recentelijk heb ik voor een nieuwe tool gewerkt met Tailwind, waar ik de mogelijkheden verder heb benut bij het maken van deze website.",
-	"skill_description_javascript": "De verschillende sites hebben een grote codebase met vanilla JavaScript, jQuery, Vue & React applicaties. Hier werk ik dagelijks in om nieuwe features toe te voegen en bugs te fixen. In mijn vrije tijd ontwikkel ik mij verder in TypeScript, React & Next.js.",
-	"skill_description_tools": "Ik programmeer in Visual Studio Code, doe mijn versiebeheer via Git, build mijn code met Webpack en zet dit live via de ftp. Tijdens mijn werk plan ik mijn taken van de huidige sprint met Azure DevOps, waarmee ik ook mijn features via een automatische pipeline release."
+	"profile_github-cta": "GitHub-profiel",
+	"profile_linkedin-cta": "LinkedIn-profiel"
 }

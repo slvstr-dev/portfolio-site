@@ -5,14 +5,14 @@ import styles from "../../shared/styles/components/elements/Button.module.scss";
 interface Button {
 	href: string;
 	classNames?: string;
-	title: string;
+	text: string;
 	isExternal?: boolean;
 }
 
 export const Button: React.FC<Button> = ({
 	href,
 	classNames,
-	title,
+	text,
 	isExternal = false,
 }) =>
 	isExternal ? (
@@ -22,10 +22,10 @@ export const Button: React.FC<Button> = ({
 			target="_blank"
 			rel="noreferrer noopener"
 		>
-			{title} <External />
+			{text} <External />
 		</a>
 	) : (
 		<a className={`${styles.button} ${classNames}`} href={href}>
-			{title} <Chevron />
+			{text} <Chevron />
 		</a>
 	);

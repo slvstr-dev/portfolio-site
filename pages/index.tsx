@@ -1,3 +1,5 @@
+import { GetStaticProps } from "next";
+import { supabase } from "../supabaseClient";
 import { motion } from "framer-motion";
 import { Meta } from "../components/blocks/Meta";
 import { Hero } from "../components/blocks/Hero";
@@ -7,7 +9,27 @@ import { Button } from "../components/elements/Button";
 import useTranslation from "next-translate/useTranslation";
 import styles from "../shared/styles/pages/Home.module.scss";
 
-const Home: React.FC = () => {
+interface Home {
+	developer: {
+		home_quote: string;
+	};
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+	const { data: developer } = await supabase
+		.from("developer")
+		.select("home_quote")
+		.limit(1)
+		.single();
+
+	return {
+		props: {
+			developer,
+		},
+	};
+};
+
+const Home: React.FC<Home> = ({ developer }) => {
 	const { t } = useTranslation("home");
 
 	return (
@@ -27,10 +49,10 @@ const Home: React.FC = () => {
 				<Hero h1={t("hero_h1")} />
 
 				<Container>
-					<Text content={t("text_content")}>
-						<Button href="/about" title={t("button_about")} />
+					<Text content={developer.home_quote}>
+						<Button href="/about" text={t("button_about")} />
 
-						<Button href="/projects" title={t("button_projects")} />
+						<Button href="/projects" text={t("button_projects")} />
 					</Text>
 				</Container>
 			</motion.main>
