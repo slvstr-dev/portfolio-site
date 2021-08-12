@@ -1,13 +1,12 @@
 import { GetStaticProps } from "next";
 import { supabase } from "../supabaseClient";
-import { motion } from "framer-motion";
 import { Meta } from "../components/blocks/Meta";
 import { Hero } from "../components/blocks/Hero";
 import { Container } from "../components/elements/Container";
 import { Text } from "../components/blocks/Text";
 import { Button } from "../components/elements/Button";
 import useTranslation from "next-translate/useTranslation";
-import styles from "../shared/styles/pages/Home.module.scss";
+import styles from "../styles/pages/Home.module.scss";
 
 interface Home {
 	developer: {
@@ -40,12 +39,7 @@ const Home: React.FC<Home> = ({ developer }) => {
 				keywords={t("meta_keywords")}
 			/>
 
-			<motion.main
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				exit={{ opacity: 0 }}
-				className={styles.home}
-			>
+			<main className={styles.home}>
 				<Hero h1={t("hero_h1")} />
 
 				<Container>
@@ -55,7 +49,7 @@ const Home: React.FC<Home> = ({ developer }) => {
 						<Button href="/projects" text={t("button_projects")} />
 					</Text>
 				</Container>
-			</motion.main>
+			</main>
 		</>
 	);
 };

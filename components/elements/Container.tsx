@@ -1,4 +1,4 @@
-import styles from "../../shared/styles/components/elements/Container.module.scss";
+import styles from "../../styles/components/elements/Container.module.scss";
 
 interface Container {
 	classNames?: string;

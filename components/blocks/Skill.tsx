@@ -2,7 +2,7 @@ import Html from "../../public/svg/html.svg";
 import Css from "../../public/svg/css.svg";
 import JavaScript from "../../public/svg/javascript.svg";
 import Tools from "../../public/svg/tools.svg";
-import styles from "../../shared/styles/components/blocks/Skill.module.scss";
+import styles from "../../styles/components/blocks/Skill.module.scss";
 
 interface Skill {
 	skill: { id: number; name: string; description: string };

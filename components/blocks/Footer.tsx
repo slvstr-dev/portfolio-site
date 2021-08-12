@@ -1,6 +1,6 @@
 import { Container } from "../elements/Container";
 import useTranslation from "next-translate/useTranslation";
-import styles from "../../shared/styles/components/blocks/Footer.module.scss";
+import styles from "../../styles/components/blocks/Footer.module.scss";
 
 export const Footer: React.FC = () => {
 	const { t } = useTranslation("common");

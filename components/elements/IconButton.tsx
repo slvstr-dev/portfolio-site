@@ -1,5 +1,4 @@
-import Link from "next/link";
-import styles from "../../shared/styles/components/elements/IconButton.module.scss";
+import styles from "../../styles/components/elements/IconButton.module.scss";
 
 interface IconButton {
 	href: string;
@@ -14,14 +13,13 @@ export const IconButton: React.FC<IconButton> = ({
 	title,
 	children,
 }) => (
-	<Link href={href} passHref>
-		<a
-			className={`${styles.button} ${classNames}`}
-			title={title}
-			target="_blank"
-			rel="noreferrer noopener"
-		>
-			{children}
-		</a>
-	</Link>
+	<a
+		className={`${styles.button} ${classNames}`}
+		title={title}
+		href={href}
+		target="_blank"
+		rel="noreferrer noopener"
+	>
+		{children}
+	</a>
 );

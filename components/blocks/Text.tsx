@@ -1,4 +1,4 @@
-import styles from "../../shared/styles/components/blocks/Text.module.scss";
+import styles from "../../styles/components/blocks/Text.module.scss";
 
 interface Text {
 	content: string;

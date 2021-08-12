@@ -1,4 +1,4 @@
-import styles from "../../shared/styles/components/elements/Tag.module.scss";
+import styles from "../../styles/components/elements/Tag.module.scss";
 
 interface Tag {
 	tag: string;

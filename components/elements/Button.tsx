@@ -1,6 +1,6 @@
 import Chevron from "../../public/svg/chevron.svg";
 import External from "../../public/svg/external.svg";
-import styles from "../../shared/styles/components/elements/Button.module.scss";
+import styles from "../../styles/components/elements/Button.module.scss";
 
 interface Button {
 	href: string;

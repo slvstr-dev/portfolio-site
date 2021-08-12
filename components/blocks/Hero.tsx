@@ -1,5 +1,5 @@
 import { Container } from "../elements/Container";
-import styles from "../../shared/styles/components/blocks/Hero.module.scss";
+import styles from "../../styles/components/blocks/Hero.module.scss";
 
 export const Hero: React.FC<{ h1: string }> = ({ h1 }) => (
 	<section className={styles.hero}>

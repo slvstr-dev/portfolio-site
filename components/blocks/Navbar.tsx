@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
 import useTranslation from "next-translate/useTranslation";
-import styles from "../../shared/styles/components/blocks/Navbar.module.scss";
+import styles from "../../styles/components/blocks/Navbar.module.scss";
 
 const pages = [
 	{ title: "home", path: "/" },

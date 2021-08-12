@@ -1,11 +1,10 @@
 import { GetStaticProps } from "next";
 import { supabase } from "../supabaseClient";
-import { motion } from "framer-motion";
 import { Meta } from "../components/blocks/Meta";
 import { Container } from "../components/elements/Container";
 import { Project } from "../components/blocks/Project";
 import useTranslation from "next-translate/useTranslation";
-import styles from "../shared/styles/pages/Projects.module.scss";
+import styles from "../styles/pages/Projects.module.scss";
 import { Error } from "../components/blocks/Error";
 
 interface Projects {
@@ -56,12 +55,7 @@ const Projects: React.FC<Projects> = ({ projects }) => {
 				keywords={t("meta_keywords")}
 			/>
 
-			<motion.main
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				exit={{ opacity: 0 }}
-				className={styles.projects}
-			>
+			<main className={styles.projects}>
 				<Container classNames={styles.projects__container}>
 					<h1 className={styles.projects__title}>{t("h1")}</h1>
 
@@ -77,10 +71,10 @@ const Projects: React.FC<Projects> = ({ projects }) => {
 							})}
 						</section>
 					) : (
-						<Error />
+						<Error message={t("error_message")} />
 					)}
 				</Container>
-			</motion.main>
+			</main>
 		</>
 	);
 };

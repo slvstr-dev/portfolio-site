@@ -1,4 +1,4 @@
-import styles from "../../shared/styles/components/elements/Logo.module.scss";
+import styles from "../../styles/components/elements/Logo.module.scss";
 
 export const Logo: React.FC<{ className?: string }> = ({ className }) => (
 	<div className={`${styles.logo} ${className}`}>
