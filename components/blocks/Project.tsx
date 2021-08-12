@@ -10,6 +10,7 @@ interface Project {
 		type: string;
 		live_url: string;
 		repository_url: string;
+		certificate_url: string;
 		image_url: string;
 		description: string;
 		tags: string[];
@@ -28,7 +29,7 @@ export const Project: React.FC<Project> = ({ project }) => {
 				<div className={styles.project__overlay} />
 
 				<div className={styles.project__header}>
-					<h4 className={styles.project__subtitle}>{project.type}</h4>
+					<h3 className={styles.project__type}>{project.type}</h3>
 
 					<h2 className={styles.project__title}>{project.name}</h2>
 
@@ -47,6 +48,15 @@ export const Project: React.FC<Project> = ({ project }) => {
 								classNames={styles.project__button}
 								text={t("repository_cta")}
 								href={project.repository_url}
+								isExternal
+							/>
+						)}
+
+						{project.certificate_url !== null && (
+							<Button
+								classNames={styles.project__button}
+								text={t("certificate_cta")}
+								href={project.certificate_url}
 								isExternal
 							/>
 						)}

@@ -15,6 +15,7 @@ interface Projects {
 			type: string;
 			live_url: string;
 			repository_url: string;
+			certificate_url: string;
 			image_url: string;
 			description: string;
 			tags: string[];
