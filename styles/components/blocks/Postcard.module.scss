@@ -18,6 +18,13 @@
 	);
 }
 
+.postcard__notification {
+	@apply bg-white p-6;
+	@apply rounded-sm;
+	@apply text-xs text-center font-normal;
+	font-family: "Source Code Pro";
+}
+
 .postcard__form {
 	@apply bg-white p-6;
 	@apply rounded-sm;
