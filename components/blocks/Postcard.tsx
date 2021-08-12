@@ -1,26 +1,38 @@
-import { Form } from "../elements/Form";
-import { Input } from "../elements/Input";
-import { Textarea } from "../elements/Textarea";
+import { useState } from "react";
 import useTranslation from "next-translate/useTranslation";
 import styles from "../../shared/styles/components/blocks/Postcard.module.scss";
 
 export const Postcard: React.FC = () => {
 	const { t } = useTranslation("contact");
 
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [message, setMessage] = useState("");
+	const [phone, setPhone] = useState("");
+
+	const handleSubmit = (e: any) => {
+		e.preventDefault();
+
+		const formData = {
+			name,
+			email,
+			phone,
+			message,
+		};
+
+		console.log(formData);
+	};
+
 	return (
 		<section className={styles.postcard}>
 			<div className={styles.postcard__content}>
-				<Form
-					classNames={styles.postcard__form}
-					action={`mailto:hello@slvstr.dev?subject=${t(
-						"form_subject"
-					)}`}
-					method="post"
-				>
+				<form className={styles.postcard__form} onSubmit={handleSubmit}>
 					<div className={styles.postcard__message}>
-						<Textarea
-							name={t("form_message_label")}
+						<textarea
+							className={styles.postcard__textarea}
+							name={t("form_message")}
 							placeholder={t("form_message_placeholder")}
+							onChange={(e) => setMessage(e.target.value)}
 							required
 						/>
 					</div>
@@ -32,27 +44,48 @@ export const Postcard: React.FC = () => {
 							STR
 						</span>
 
-						<Input
+						<input
+							className={styles.postcard__input}
 							type="text"
-							name={t("form_name_label")}
+							name={t("form_name")}
 							placeholder={t("form_name_placeholder")}
+							onChange={(e) => setName(e.target.value)}
 							required
 						/>
 
-						<Input
+						<input
+							className={styles.postcard__input}
+							type="email"
+							name={t("form_email")}
+							placeholder={t("form_email_placeholder")}
+							onChange={(e) => setEmail(e.target.value)}
+							required
+						/>
+
+						<input
+							className={styles.postcard__input}
 							type="tel"
-							name={t("form_tel_label")}
-							placeholder={t("form_tel_placeholder")}
-							required={false}
+							name={t("form_phone")}
+							placeholder={t("form_phone_placeholder")}
+							onChange={(e) => setPhone(e.target.value)}
 						/>
 
 						<div className={styles.postcard__buttons}>
-							<Input type="submit" value={t("form_submit")} />
+							<button
+								className={styles.postcard__input}
+								type="submit"
+							>
+								{t("form_submit")}
+							</button>
 
-							<Input type="reset" value={t("form_reset")} />
+							<input
+								className={styles.postcard__input}
+								type="reset"
+								value={t("form_reset")}
+							/>
 						</div>
 					</div>
-				</Form>
+				</form>
 			</div>
 		</section>
 	);

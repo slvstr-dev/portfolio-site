@@ -4,12 +4,14 @@
 	"meta_keywords": "sylvester hofstra, frontend developer, contact, linkedin, github",
 	"h1": "Contact",
 	"form_subject": "Contactformulier slvstr.dev",
-	"form_message_label": "Bericht",
+	"form_message": "Bericht",
 	"form_message_placeholder": "Waarover wil je contact opnemen?",
-	"form_name_label": "Naam",
+	"form_name": "Naam",
 	"form_name_placeholder": "Naam",
-	"form_tel_label": "Telefoon",
-	"form_tel_placeholder": "Telefoonnummer (optioneel)",
+	"form_email": "Email",
+	"form_email_placeholder": "E-mailadres",
+	"form_phone": "Telefoon",
+	"form_phone_placeholder": "Telefoonnummer (optioneel)",
 	"form_submit": "Verstuur",
 	"form_reset": "Reset"
 }

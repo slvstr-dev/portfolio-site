@@ -1,5 +1,5 @@
 .postcard {
-	@apply pb-10;
+	@apply pb-5 sm:pb-10;
 }
 
 .postcard__content {
@@ -26,16 +26,28 @@
 
 .postcard__message {
 	@apply w-full h-60 md:h-96;
-	@apply pb-4 md:pb-0 md:pr-6;
-	@apply border-gray-200 md:border-r;
+	@apply pb-6 md:pb-0 md:pr-6;
+	@apply border-gray-200 border-b md:border-b-0 md:border-r;
+}
+
+.postcard__textarea {
+	@apply w-full h-full;
+	@apply bg-gray-100 p-4;
+	@apply text-gray-600 text-sm font-normal;
+	@apply rounded-sm;
+	font-family: "Source Code Pro";
+
+	&::placeholder {
+		@apply text-gray-500;
+	}
 }
 
 .postcard__contact {
 	@apply relative;
 	@apply flex flex-col md:justify-end gap-6;
 	@apply w-full;
-	@apply pt-4 md:pt-0 md:pl-6;
-	@apply border-gray-200 md:border-l;
+	@apply pt-6 md:pt-0 md:pl-6;
+	@apply border-gray-200 border-t md:border-t-0  md:border-l;
 }
 
 .postcard__stamp {
@@ -46,7 +58,61 @@
 	@apply border-gray-200 border-dotted border-4;
 }
 
+.postcard__input {
+	@apply p-1;
+	@apply bg-transparent;
+	@apply bg-gray-100;
+	@apply py-1 px-3;
+	@apply text-gray-600 text-sm font-normal;
+	@apply rounded-sm;
+	font-family: "Source Code Pro";
+
+	&::placeholder {
+		@apply text-gray-500;
+	}
+
+	&[type="submit"],
+	&[type="reset"] {
+		@apply min-w-min w-1/3;
+		@apply bg-transparent;
+		@apply border-2;
+		@apply transition ease-in-out duration-200;
+	}
+
+	&[type="submit"] {
+		@apply border-blue-500;
+		@apply bg-blue-500;
+		@apply text-white;
+
+		&:hover {
+			@apply border-blue-600;
+			@apply bg-blue-600;
+		}
+
+		&:active {
+			@apply bg-white;
+			@apply text-blue-600;
+		}
+	}
+
+	&[type="reset"] {
+		@apply border-red-500;
+		@apply bg-red-500;
+		@apply text-white;
+
+		&:hover {
+			@apply border-red-600;
+			@apply bg-red-600;
+		}
+
+		&:active {
+			@apply bg-white;
+			@apply text-red-600;
+		}
+	}
+}
+
 .postcard__buttons {
 	@apply flex justify-around;
-	@apply md:mt-16;
+	@apply md:mt-14;
 }
