@@ -4,6 +4,11 @@
 	@apply xl:flex xl:justify-between xl:items-center xl:gap-10;
 	@apply rounded-xl;
 
+	&:hover {
+		@apply ring-8 ring-yellow-600;
+		@apply transition ease-in-out duration-200;
+	}
+
 	&:nth-child(even) {
 		@apply xl:flex-row-reverse;
 	}

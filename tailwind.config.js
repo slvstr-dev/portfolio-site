@@ -5,7 +5,6 @@ module.exports = {
 		"./pages/**/*.{js,ts,jsx,tsx}",
 		"./components/**/*.{js,ts,jsx,tsx}",
 	],
-	darkMode: false,
 	theme: {
 		screens: {
 			xs: "480px",
@@ -16,6 +15,7 @@ module.exports = {
 				lemon: "#FCF175",
 				peach: "#FAD0C0",
 				oatmeal: "#F8F3E4",
+				olive: "#87AA7F",
 			},
 			fontSize: {
 				xxs: "0.65rem",
@@ -38,5 +38,4 @@ module.exports = {
 			backdropSaturate: ["hover"],
 		},
 	},
-	plugins: [],
 };
