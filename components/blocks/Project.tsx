@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "../elements/Button";
 import { Tag } from "../elements/Tag";
 import useTranslation from "next-translate/useTranslation";
@@ -22,10 +23,15 @@ export const Project: React.FC<Project> = ({ project }) => {
 
 	return (
 		<article className={styles.project}>
-			<div
-				className={styles.project__banner}
-				style={{ backgroundImage: `url(${project.image_url})` }}
-			>
+			<div className={styles.project__banner}>
+				<Image
+					className={styles.project__image}
+					src={project.image_url}
+					layout="fill"
+					objectFit="cover"
+					objectPosition="center"
+				/>
+
 				<div className={styles.project__overlay} />
 
 				<div className={styles.project__header}>

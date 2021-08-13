@@ -15,9 +15,11 @@
 
 .project__banner {
 	@apply relative;
-	@apply rounded-t-xl;
 	@apply h-60;
-	@apply bg-no-repeat bg-cover bg-center;
+}
+
+.project__image {
+	@apply rounded-t-xl;
 }
 
 .project__overlay {
@@ -28,9 +30,9 @@
 
 .project__header {
 	@apply flex flex-col justify-center items-center gap-1;
-	@apply p-4;
 	@apply absolute top-1/2 left-1/2 h-full w-full;
 	@apply transform -translate-x-1/2 -translate-y-1/2;
+	@apply p-4;
 }
 
 .project__type {

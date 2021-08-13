@@ -1,23 +1,23 @@
 .hero {
-	@apply pt-5 md:pt-10 w-full;
-	@apply flex flex-grow items-stretch;
+	@apply pt-5 md:pt-10;
 }
 
 .hero__container {
-	@apply max-w-screen-2xl w-full;
-	@apply flex items-stretch;
+	@apply relative max-w-screen-2xl;
 }
 
-.hero__hero {
-	@apply w-full p-5;
+.hero__imageWrapper {
+	@apply relative h-60 xs:h-80 md:h-96;
 	@apply rounded-xl;
-	@apply bg-gray-800 bg-no-repeat bg-cover bg-center;
-	@apply flex justify-center items-center;
+	@apply bg-gray-800;
+}
 
-	background-image: url("../../../public/images/hero-vs-code.jpg");
+.hero__image {
+	@apply rounded-xl;
 }
 
 .hero__title {
-	@apply max-w-xl;
+	@apply absolute top-1/2 left-1/2 max-w-xl;
+	@apply transform -translate-x-1/2 -translate-y-1/2;
 	@apply text-lemon text-4xl xs:text-5xl md:text-6xl text-center uppercase;
 }
