@@ -81,6 +81,7 @@ export const Postcard: React.FC = () => {
 							<input
 								className={styles.postcard__input}
 								type="tel"
+								pattern="[0-9-]{10,11}"
 								name={t("form_phone")}
 								placeholder={t("form_phone_placeholder")}
 								onChange={(e) => setPhone(e.target.value)}
