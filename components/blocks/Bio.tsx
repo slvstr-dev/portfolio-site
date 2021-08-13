@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "../elements/Container";
 import { Button } from "../elements/Button";
 import useTranslation from "next-translate/useTranslation";
@@ -18,11 +19,15 @@ export const Bio: React.FC<Bio> = ({ developer }) => {
 	return (
 		<section className={styles.bio}>
 			<Container classNames={styles.bio__container}>
-				<img
-					className={styles.bio__image}
-					src={developer.image_url}
-					alt={developer.name}
-				/>
+				<div className={styles.bio__imageWrapper}>
+					<Image
+						className={styles.bio__image}
+						src={developer.image_url}
+						alt={developer.name}
+						width={465}
+						height={465}
+					/>
+				</div>
 
 				<div className={styles.bio__info}>
 					<h2 className={styles.bio__title}>{developer.name}</h2>
