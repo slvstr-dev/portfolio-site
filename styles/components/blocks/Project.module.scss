@@ -42,7 +42,7 @@
 }
 
 .project__button {
-	@apply bg-white border-white hover:bg-red-600 hover:border-red-600;
+	@apply bg-white hover:bg-red-600 hover:border-red-600;
 	@apply text-red-600 hover:text-white;
 }
 
