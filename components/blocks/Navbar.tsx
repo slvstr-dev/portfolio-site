@@ -17,22 +17,20 @@ export const Navbar: React.FC = () => {
 	return (
 		<nav className={styles.navbar}>
 			<ul>
-				{pages.map((page, index) => {
-					return (
-						<li
-							className={
-								router.pathname == page.path
-									? styles.activeLink
-									: styles.inactiveLink
-							}
-							key={index}
-						>
-							<Link href={page.path}>
-								{t(`navbar_${page.title}`)}
-							</Link>
-						</li>
-					);
-				})}
+				{pages.map((page, index) => (
+					<li
+						className={
+							router.pathname == page.path
+								? styles.activeLink
+								: styles.inactiveLink
+						}
+						key={index}
+					>
+						<Link href={page.path}>
+							{t(`navbar_${page.title}`)}
+						</Link>
+					</li>
+				))}
 			</ul>
 		</nav>
 	);
