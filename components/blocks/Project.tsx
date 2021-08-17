@@ -7,18 +7,22 @@ import styles from "../../styles/components/blocks/Project.module.scss";
 interface Project {
 	project: {
 		id: number;
-		name: string;
-		type: string;
+		name_nl: string;
+		name_en: string;
+		type_nl: string;
+		type_en: string;
+		description_nl: string;
+		description_en: string;
+		tags: string[];
 		live_url: string;
 		repository_url: string;
 		certificate_url: string;
 		image_url: string;
-		description: string;
-		tags: string[];
 	};
+	locale: string;
 }
 
-export const Project: React.FC<Project> = ({ project }) => {
+export const Project: React.FC<Project> = ({ project, locale }) => {
 	const { t } = useTranslation("projects");
 
 	return (
@@ -27,6 +31,11 @@ export const Project: React.FC<Project> = ({ project }) => {
 				<Image
 					className={styles.project__image}
 					src={project.image_url}
+					alt={
+						project.name_nl.includes(locale)
+							? project.name_nl
+							: project.name_en
+					}
 					layout="fill"
 					objectFit="cover"
 					objectPosition="center"
@@ -35,9 +44,17 @@ export const Project: React.FC<Project> = ({ project }) => {
 				<div className={styles.project__overlay} />
 
 				<div className={styles.project__header}>
-					<h3 className={styles.project__type}>{project.type}</h3>
+					<h3 className={styles.project__type}>
+						{project.type_nl.includes(locale)
+							? project.type_nl
+							: project.type_en}
+					</h3>
 
-					<h2 className={styles.project__title}>{project.name}</h2>
+					<h2 className={styles.project__title}>
+						{project.name_nl.includes(locale)
+							? project.name_nl
+							: project.name_en}
+					</h2>
 
 					<div className={styles.project__buttons}>
 						{project.live_url !== null && (
@@ -72,7 +89,9 @@ export const Project: React.FC<Project> = ({ project }) => {
 
 			<div className={styles.project__content}>
 				<p className={styles.project__description}>
-					{project.description}
+					{project.description_nl.includes(locale)
+						? project.description_nl
+						: project.description_en}
 				</p>
 
 				{project.tags.map((tag, index) => {

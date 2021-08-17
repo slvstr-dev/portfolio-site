@@ -5,10 +5,16 @@ import Tools from "../../public/svg/tools.svg";
 import styles from "../../styles/components/blocks/Skill.module.scss";
 
 interface Skill {
-	skill: { id: number; name: string; description: string };
+	skill: {
+		id: number;
+		name: string;
+		description_nl: string;
+		description_en: string;
+	};
+	locale: string;
 }
 
-export const Skill: React.FC<Skill> = ({ skill }) => (
+export const Skill: React.FC<Skill> = ({ skill, locale }) => (
 	<div className={styles.skill}>
 		{skill.name === "HTML" && <Html className={styles.skill__svg} />}
 
@@ -23,7 +29,11 @@ export const Skill: React.FC<Skill> = ({ skill }) => (
 		<div className={styles.skill__info}>
 			<h3 className={styles.skill__title}>{skill.name}</h3>
 
-			<p className={styles.skill__text}>{skill.description}</p>
+			<p className={styles.skill__text}>
+				{skill.description_nl.includes(locale)
+					? skill.description_nl
+					: skill.description_en}
+			</p>
 		</div>
 	</div>
 );

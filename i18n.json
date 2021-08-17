@@ -2,7 +2,7 @@
 	"locales": ["nl"],
 	"defaultLocale": "nl",
 	"pages": {
-		"*": ["common"],
+		"*": ["common", "404", "500"],
 		"/": ["home"],
 		"/about": ["about"],
 		"/projects": ["projects"],

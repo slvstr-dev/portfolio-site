@@ -3,27 +3,31 @@ import { supabase } from "../supabaseClient";
 import { Meta } from "../components/blocks/Meta";
 import { Container } from "../components/elements/Container";
 import { Project } from "../components/blocks/Project";
+import { Error } from "../components/blocks/Error";
 import useTranslation from "next-translate/useTranslation";
 import styles from "../styles/pages/Projects.module.scss";
-import { Error } from "../components/blocks/Error";
 
 interface Projects {
 	projects: [
 		{
 			id: number;
-			name: string;
-			type: string;
+			name_nl: string;
+			name_en: string;
+			type_nl: string;
+			type_en: string;
+			description_nl: string;
+			description_en: string;
+			tags: string[];
 			live_url: string;
 			repository_url: string;
 			certificate_url: string;
 			image_url: string;
-			description: string;
-			tags: string[];
 		}
 	];
+	locale: string;
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
 	const {
 		data: projects,
 		status,
@@ -40,11 +44,12 @@ export const getStaticProps: GetStaticProps = async () => {
 	return {
 		props: {
 			projects,
+			locale,
 		},
 	};
 };
 
-const Projects: React.FC<Projects> = ({ projects }) => {
+const Projects: React.FC<Projects> = ({ projects, locale }) => {
 	const { t } = useTranslation("projects");
 
 	return (
@@ -66,6 +71,7 @@ const Projects: React.FC<Projects> = ({ projects }) => {
 									<Project
 										key={project.id}
 										project={project}
+										locale={locale}
 									/>
 								);
 							})}

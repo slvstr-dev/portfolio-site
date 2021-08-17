@@ -5,6 +5,7 @@ interface Meta {
 	title: string;
 	description: string;
 	keywords: string;
+	follow?: boolean;
 }
 
 const domain =
@@ -12,7 +13,12 @@ const domain =
 		? `${process.env.NEXT_PUBLIC_PRODUCTION_DOMAIN}`
 		: "http://localhost:3000";
 
-export const Meta: React.FC<Meta> = ({ title, description, keywords }) => {
+export const Meta: React.FC<Meta> = ({
+	title,
+	description,
+	keywords,
+	follow = true,
+}) => {
 	const router = useRouter();
 	const url = router.asPath ? router.asPath : undefined;
 	const canonical = url === "/" ? domain : domain + url;
@@ -29,7 +35,10 @@ export const Meta: React.FC<Meta> = ({ title, description, keywords }) => {
 			/>
 			<meta name="description" content={description} />
 			<meta name="keywords" content={keywords} />
-			<meta content="follow, index" name="robots" />
+			<meta
+				content={follow ? "follow, index" : "nofollow, noindex"}
+				name="robots"
+			/>
 
 			<meta content="nl_NL" property="og:locale" />
 			<meta content={title} property="og:title" />

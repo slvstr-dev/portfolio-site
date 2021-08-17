@@ -10,6 +10,7 @@ export const Hero: React.FC<{ h1: string }> = ({ h1 }) => (
 				<Image
 					className={styles.hero__image}
 					src={hero}
+					alt=""
 					layout="fill"
 					objectFit="cover"
 					objectPosition="center"

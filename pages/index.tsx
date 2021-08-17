@@ -10,25 +10,28 @@ import styles from "../styles/pages/Home.module.scss";
 
 interface Home {
 	developer: {
-		home_quote: string;
+		home_quote_nl: string;
+		home_quote_en: string;
 	};
+	locale: string;
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
 	const { data: developer } = await supabase
 		.from("developer")
-		.select("home_quote")
+		.select("home_quote_nl, home_quote_en")
 		.limit(1)
 		.single();
 
 	return {
 		props: {
 			developer,
+			locale,
 		},
 	};
 };
 
-const Home: React.FC<Home> = ({ developer }) => {
+const Home: React.FC<Home> = ({ developer, locale }) => {
 	const { t } = useTranslation("home");
 
 	return (
@@ -43,7 +46,13 @@ const Home: React.FC<Home> = ({ developer }) => {
 				<Hero h1={t("hero_h1")} />
 
 				<Container>
-					<Text content={developer.home_quote}>
+					<Text
+						content={
+							developer.home_quote_nl.includes(locale)
+								? developer.home_quote_nl
+								: developer.home_quote_en
+						}
+					>
 						<Button href="/about" text={t("button_about")} />
 
 						<Button href="/projects" text={t("button_projects")} />
