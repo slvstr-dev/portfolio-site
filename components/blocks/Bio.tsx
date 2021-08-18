@@ -2,7 +2,6 @@ import Image from "next/image";
 import { Container } from "../elements/Container";
 import { Button } from "../elements/Button";
 import useTranslation from "next-translate/useTranslation";
-import avatar from "../../public/images/avatar-sylvester.jpg";
 import styles from "../../styles/components/blocks/Bio.module.scss";
 
 interface Bio {
@@ -12,6 +11,7 @@ interface Bio {
 		description_en: string;
 		about_quote_nl: string;
 		about_quote_en: string;
+		image_url: string;
 	};
 	locale: string;
 }
@@ -25,7 +25,7 @@ export const Bio: React.FC<Bio> = ({ developer, locale }) => {
 				<div className={styles.bio__imageWrapper}>
 					<Image
 						className={styles.bio__image}
-						src={avatar}
+						src={developer.image_url}
 						alt={developer.name}
 						width={465}
 						height={465}

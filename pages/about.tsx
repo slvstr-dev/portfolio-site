@@ -16,6 +16,7 @@ interface About {
 		description_en: string;
 		about_quote_nl: string;
 		about_quote_en: string;
+		image_url: string;
 	};
 	skills: [
 		{
