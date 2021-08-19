@@ -1,11 +1,11 @@
 {
-	"header_switch_locale": "Verander de taal van deze website",
-	"header_portfolio": "Bekijk de GitHub-repository van deze website",
-	"header_github": "Bekijk LinkedIn-profiel",
-	"header_linkedin": "Bekijk GitHub-profiel",
+	"header_switch_locale": "Change the language of this website",
+	"header_portfolio": "View the GitHub repository of this website",
+	"header_github": "View LinkedIn profile",
+	"header_linkedin": "View GitHub profile",
 	"navbar_home": "Home",
-	"navbar_about": "Profiel",
-	"navbar_projects": "Projecten",
+	"navbar_about": "Profile",
+	"navbar_projects": "Projects",
 	"navbar_contact": "Contact",
-	"footer_copyright": "Gebouwd door Sylvester Hofstra, geïnspireerd door "
+	"footer_copyright": "Built by Sylvester Hofstra, inspired by "
 }
