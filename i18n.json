@@ -1,6 +1,7 @@
 {
 	"locales": ["nl", "en"],
 	"defaultLocale": "nl",
+	"localeDetection": false,
 	"pages": {
 		"*": ["common", "404", "500"],
 		"/": ["home"],
