@@ -31,11 +31,7 @@ export const Project: React.FC<Project> = ({ project, locale }) => {
 				<Image
 					className={styles.project__image}
 					src={project.image_url}
-					alt={
-						project.name_nl.includes(locale)
-							? project.name_nl
-							: project.name_en
-					}
+					alt={locale === "nl" ? project.name_nl : project.name_en}
 					layout="fill"
 					objectFit="cover"
 					objectPosition="center"
@@ -45,15 +41,11 @@ export const Project: React.FC<Project> = ({ project, locale }) => {
 
 				<div className={styles.project__header}>
 					<h3 className={styles.project__type}>
-						{project.type_nl.includes(locale)
-							? project.type_nl
-							: project.type_en}
+						{locale === "nl" ? project.type_nl : project.type_en}
 					</h3>
 
 					<h2 className={styles.project__title}>
-						{project.name_nl.includes(locale)
-							? project.name_nl
-							: project.name_en}
+						{locale === "nl" ? project.name_nl : project.name_en}
 					</h2>
 
 					<div className={styles.project__buttons}>
@@ -89,7 +81,7 @@ export const Project: React.FC<Project> = ({ project, locale }) => {
 
 			<div className={styles.project__content}>
 				<p className={styles.project__description}>
-					{project.description_nl.includes(locale)
+					{locale === "nl"
 						? project.description_nl
 						: project.description_en}
 				</p>

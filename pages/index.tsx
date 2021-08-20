@@ -48,7 +48,7 @@ const Home: React.FC<Home> = ({ developer, locale }) => {
 				<Container>
 					<Text
 						content={
-							developer.home_quote_nl.includes(locale)
+							locale === "nl"
 								? developer.home_quote_nl
 								: developer.home_quote_en
 						}

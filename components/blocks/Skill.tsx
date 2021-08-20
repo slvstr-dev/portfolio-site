@@ -30,9 +30,7 @@ export const Skill: React.FC<Skill> = ({ skill, locale }) => (
 			<h3 className={styles.skill__title}>{skill.name}</h3>
 
 			<p className={styles.skill__text}>
-				{skill.description_nl.includes(locale)
-					? skill.description_nl
-					: skill.description_en}
+				{locale === "nl" ? skill.description_nl : skill.description_en}
 			</p>
 		</div>
 	</div>

@@ -83,7 +83,7 @@ const About: React.FC<About> = ({ developer, skills, locale }) => {
 						<Container>
 							<Text
 								content={
-									developer.about_quote_nl.includes(locale)
+									locale === "nl"
 										? developer.about_quote_nl
 										: developer.about_quote_en
 								}

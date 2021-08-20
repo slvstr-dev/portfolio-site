@@ -36,7 +36,7 @@ export const Bio: React.FC<Bio> = ({ developer, locale }) => {
 					<h2 className={styles.bio__title}>{developer.name}</h2>
 
 					<p className={styles.bio__text}>
-						{developer.description_nl.includes(locale)
+						{locale === "nl"
 							? developer.description_nl
 							: developer.description_en}
 					</p>
