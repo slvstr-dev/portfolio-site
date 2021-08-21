@@ -9,12 +9,7 @@ const Custom500 = () => {
 
 	return (
 		<>
-			<Meta
-				title={t("meta_title")}
-				description={t("meta_description")}
-				keywords={t("meta_keywords")}
-				follow={false}
-			/>
+			<Meta title={t("meta_title")} follow={false} />
 
 			<main className={styles.error}>
 				<Container>
