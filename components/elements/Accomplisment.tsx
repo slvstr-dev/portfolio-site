@@ -35,14 +35,14 @@ export const Accomplisment: React.FC<Accomplisment> = ({
 					</span>
 
 					{locale === "nl"
-						? accomplisment[`name_${locale}`]
+						? accomplisment.name_nl
 						: accomplisment.name_en}
 				</h3>
 
 				<div className={styles.accomplisment__content}>
 					<p className={styles.accomplisment__description}>
 						{locale === "nl"
-							? accomplisment[`description_${locale}`]
+							? accomplisment.description_nl
 							: accomplisment.description_en}
 					</p>
 

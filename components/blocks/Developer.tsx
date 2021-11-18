@@ -41,7 +41,7 @@ export const Developer: React.FC<Developer> = ({ developer, locale }) => {
 
 					<p className={styles.developer__text}>
 						{locale === "nl"
-							? developer[`description_${locale}`]
+							? developer.description_nl
 							: developer.description_en}
 					</p>
 
