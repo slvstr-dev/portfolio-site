@@ -16,7 +16,6 @@ export const Footer: React.FC = () => {
 				>
 					AWA
 				</a>
-				.
 			</Container>
 		</footer>
 	);
