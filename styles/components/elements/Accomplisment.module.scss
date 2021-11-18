@@ -1,0 +1,27 @@
+.accomplisment {
+	@apply mt-5 md:mt-10;
+}
+
+.accomplisment__content {
+	@apply w-full sm:inline-block sm:w-2/3 sm:pr-5 md:pr-10;
+}
+
+.accomplisment__heading {
+	@apply pb-5;
+	@apply text-xl xs:text-2xl font-black uppercase;
+}
+
+.accomplisment__subheading {
+	@apply block pb-2;
+	@apply text-olive text-sm xs:text-base font-semibold uppercase;
+}
+
+.accomplisment__description {
+	@apply text-base md:text-lg;
+	@apply bg-white rounded-md py-2 px-4;
+}
+
+.accomplisment__buttons {
+	@apply flex flex-wrap gap-2;
+	@apply pt-5;
+}

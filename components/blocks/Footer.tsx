@@ -3,7 +3,7 @@ import useTranslation from "next-translate/useTranslation";
 import styles from "../../styles/components/blocks/Footer.module.scss";
 
 export const Footer: React.FC = () => {
-	const { t } = useTranslation("common");
+	const { t } = useTranslation("index");
 
 	return (
 		<footer className={styles.copyright}>

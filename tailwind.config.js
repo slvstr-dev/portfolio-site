@@ -12,10 +12,11 @@ module.exports = {
 		},
 		extend: {
 			colors: {
+				bordeaux: "#63252A",
 				lemon: "#FCF175",
-				peach: "#FAD0C0",
 				oatmeal: "#F8F3E4",
 				olive: "#87AA7F",
+				peach: "#FAD0C0",
 			},
 			fontSize: {
 				xxs: "0.65rem",

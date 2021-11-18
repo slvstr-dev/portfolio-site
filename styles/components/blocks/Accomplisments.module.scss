@@ -1,0 +1,13 @@
+.accomplisments {
+	@apply pt-14 md:pt-16 pb-7 md:pb-8;
+	@apply bg-oatmeal;
+}
+
+.accomplisments__container {
+	@apply max-w-screen-xl;
+}
+
+.accomplisments__heading {
+	@apply pb-6;
+	@apply text-center;
+}

@@ -1,9 +1,0 @@
-{
-	"meta_title": "profile | slvstr.dev",
-	"meta_description": "Profile page containing information about my current work activities and experience with HTML, CSS, JavaScript and other libraries/frameworks/tools.",
-	"meta_keywords": "sylvester hofstra, frontend developer, profile, html, css, scss, jquery, javascript, react, next js, tailwind",
-	"h1": "Profile",
-	"profile_github_cta": "GitHub profile",
-	"profile_linkedin_cta": "LinkedIn profile",
-	"error_message": "My profile information cannot be displayed at this time. Please try again or view the information on my LinkedIn profile."
-}

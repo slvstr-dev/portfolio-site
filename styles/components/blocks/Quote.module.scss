@@ -1,0 +1,13 @@
+.quote {
+	@apply py-10 md:py-12;
+	@apply flex flex-col gap-5 items-center;
+}
+
+.quote__container {
+	@apply max-w-screen-md;
+}
+
+.quote__content {
+	@apply rounded-full;
+	@apply text-center text-lg sm:text-xl;
+}

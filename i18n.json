@@ -2,11 +2,6 @@
 	"locales": ["nl", "en"],
 	"defaultLocale": "nl",
 	"pages": {
-		"*": ["common", "404", "500"],
-		"/": ["home"],
-		"/about": ["about"],
-		"/projects": ["projects"],
-		"/repositories": ["repositories"],
-		"/contact": ["contact"]
+		"*": ["index", "404", "500"]
 	}
 }

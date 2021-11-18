@@ -1,17 +1,9 @@
-.error {
-	@apply mx-auto p-5;
+.error__wrapper {
+	@apply mx-auto my-14 md:my-16 p-5;
 	@apply max-w-screen-sm;
 	@apply flex flex-col sm:flex-row items-center sm:justify-between gap-2 sm:gap-5;
 	@apply rounded-xl;
-	@apply text-red-600;
-
-	background-image: repeating-linear-gradient(
-		135deg,
-		#fad0c0,
-		#fad0c0 50px,
-		#f2ecde 50px,
-		#f2ecde 100px
-	);
+	@apply bg-oatmeal text-red-600;
 }
 
 .error__svg {

@@ -1,66 +1,141 @@
 import { GetStaticProps } from "next";
 import { supabase } from "../supabaseClient";
+import { Header } from "../components/blocks/Header";
+import { Footer } from "../components/blocks/Footer";
 import { Meta } from "../components/blocks/Meta";
 import { Hero } from "../components/blocks/Hero";
-import { Container } from "../components/elements/Container";
-import { Text } from "../components/blocks/Text";
-import { Button } from "../components/elements/Button";
+import { Quote } from "../components/blocks/Quote";
+import { Skills } from "../components/blocks/Skills";
+import { Accomplisments } from "../components/blocks/Accomplisments";
+import { Contact } from "../components/blocks/Contact";
+import { Developer } from "../components/blocks/Developer";
+import { Error } from "../components/blocks/Error";
 import useTranslation from "next-translate/useTranslation";
-import styles from "../styles/pages/Home.module.scss";
 
-interface Home {
+interface Index {
 	developer: {
-		home_quote_nl: string;
-		home_quote_en: string;
+		name: string;
+		description_nl: string;
+		description_en: string;
+		quote_nl: string;
+		quote_en: string;
+		image_url: string;
 	};
+	accomplisments: [
+		{
+			id: number;
+			name_nl: string;
+			name_en: string;
+			description_nl: string;
+			description_en: string;
+			category: string;
+			stack: string[];
+			website_url: string;
+			repository_url: string;
+			image_url: string;
+		}
+	];
+	skills: [
+		{
+			id: number;
+			category: string;
+			list: string[];
+		}
+	];
 	locale: string;
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
-	const { data: developer } = await supabase
-		.from("developer")
-		.select("home_quote_nl, home_quote_en")
-		.limit(1)
-		.single();
+	const {
+		data: developer,
+		status: developerStatus,
+		error: developerError,
+	} = await supabase.from("developer").select().limit(1).single();
+
+	const {
+		data: accomplisments,
+		status: accomplismentsStatus,
+		error: accomplismentsError,
+	} = await supabase
+		.from("accomplisments")
+		.select()
+		.order("id", { ascending: false });
+
+	const {
+		data: skills,
+		status: skillsStatus,
+		error: skillsError,
+	} = await supabase.from("skills").select().order("id", { ascending: true });
+
+	if (
+		developerStatus !== 200 ||
+		accomplismentsStatus !== 200 ||
+		skillsStatus !== 200 ||
+		developerError ||
+		accomplismentsError ||
+		skillsError
+	) {
+		return {
+			props: {},
+		};
+	}
 
 	return {
 		props: {
 			developer,
+			accomplisments,
+			skills,
 			locale,
 		},
 	};
 };
 
-const Home: React.FC<Home> = ({ developer, locale }) => {
-	const { t } = useTranslation("home");
+const Index: React.FC<Index> = ({
+	developer,
+	accomplisments,
+	skills,
+	locale,
+}) => {
+	const { t } = useTranslation("index");
 
 	return (
 		<>
-			<Meta
-				title={t("meta_title")}
-				description={t("meta_description")}
-				keywords={t("meta_keywords")}
-			/>
+			<Meta />
 
-			<main className={styles.home}>
-				<Hero h1={t("hero_h1")} />
+			<Header />
 
-				<Container>
-					<Text
-						content={
-							locale === "nl"
-								? developer.home_quote_nl
-								: developer.home_quote_en
-						}
-					>
-						<Button href="/about" text={t("button_about")} />
+			<main>
+				<Hero h1={t("hero_heading")} />
 
-						<Button href="/projects" text={t("button_projects")} />
-					</Text>
-				</Container>
+				{developer && accomplisments && skills ? (
+					<>
+						<Quote
+							quote={
+								locale === "nl"
+									? developer.quote_nl
+									: developer.quote_en
+							}
+						/>
+
+						<Developer developer={developer} locale={locale} />
+
+						<Accomplisments
+							accomplisments={accomplisments}
+							locale={locale}
+						/>
+
+						<Skills skills={skills} locale={locale} />
+					</>
+				) : (
+					<Error message={t("error_message")} />
+				)}
+
+				<Contact />
 			</main>
+
+			<Footer />
 		</>
 	);
 };
 
-export default Home;
+export default Index;

@@ -5,14 +5,14 @@
 	@apply transition ease-in-out duration-200;
 }
 
-.logo__title {
+.logo__heading {
 	@apply block;
 	@apply border-b-2 border-red-600 px-6;
-	@apply text-2xl text-red-600 font-semibold uppercase;
+	@apply text-2xl text-red-600 font-black uppercase;
 }
 
 .logo__subtitle {
 	@apply block;
 	@apply pt-1;
-	@apply text-xxs text-red-600 font-semibold leading-4 uppercase;
+	@apply text-xxs text-red-600 font-medium leading-4 uppercase;
 }

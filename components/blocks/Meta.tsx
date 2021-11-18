@@ -1,10 +1,9 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
+import useTranslation from "next-translate/useTranslation";
 
 interface Meta {
-	title: string;
-	description?: string;
-	keywords?: string;
+	title?: string;
 	follow?: boolean;
 }
 
@@ -13,19 +12,15 @@ const domain =
 		? `${process.env.NEXT_PUBLIC_PRODUCTION_DOMAIN}`
 		: "http://localhost:3000";
 
-export const Meta: React.FC<Meta> = ({
-	title,
-	description,
-	keywords,
-	follow = true,
-}) => {
+export const Meta: React.FC<Meta> = ({ title = "", follow = true }) => {
 	const router = useRouter();
+	const { t } = useTranslation("index");
 	const url = router.asPath ? router.asPath : undefined;
 	const canonical = url === "/" ? domain : domain + url;
 
 	return (
 		<Head>
-			<title>{title}</title>
+			<title>{title ? title : t("meta_heading")}</title>
 			<meta charSet="utf-8" />
 			<meta content="IE=edge" httpEquiv="X-UA-Compatible" />
 			<meta
@@ -38,14 +33,10 @@ export const Meta: React.FC<Meta> = ({
 			/>
 			<meta content={router.locale} property="og:locale" />
 			<meta content={title} property="og:title" />
-			{keywords && <meta name="keywords" content={keywords} />}
-			{description && (
-				<>
-					<meta content={description} property="og:description" />
-					<meta name="description" content={description} />
-					<meta content={description} property="og:image:alt" />{" "}
-				</>
-			)}
+			<meta name="keywords" content={t("meta_keywords")} />
+			<meta content={t("meta_description")} property="og:description" />
+			<meta name="description" content={t("meta_description")} />
+			<meta content={t("meta_description")} property="og:image:alt" />
 			<meta
 				content={`${domain}/images/featured-image.jpg`}
 				property="og:image"

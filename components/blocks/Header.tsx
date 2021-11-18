@@ -3,16 +3,17 @@ import { useRouter } from "next/router";
 import { Container } from "../elements/Container";
 import { IconButton } from "../elements/IconButton";
 import { Logo } from "../elements/Logo";
-import { Navbar } from "./Navbar";
 import Code from "../../public/svg/code.svg";
 import LinkedIn from "../../public/svg/linkedin.svg";
 import GitHub from "../../public/svg/github.svg";
 import useTranslation from "next-translate/useTranslation";
 import styles from "../../styles/components/blocks/Header.module.scss";
 
+const pages = ["developer", "accomplisments", "skills"];
+
 export const Header: React.FC = () => {
 	const router = useRouter();
-	const { t } = useTranslation("common");
+	const { t } = useTranslation("index");
 
 	return (
 		<header className={styles.header}>
@@ -67,7 +68,24 @@ export const Header: React.FC = () => {
 					</a>
 				</Link>
 
-				<Navbar />
+				<nav className={styles.navbar}>
+					<ul>
+						{pages.map((page, index) => (
+							<li
+								className={
+									router.pathname == page
+										? styles.activeLink
+										: styles.inactiveLink
+								}
+								key={index}
+							>
+								<Link href={`#${page}`}>
+									{t(`navbar_${page}`)}
+								</Link>
+							</li>
+						))}
+					</ul>
+				</nav>
 			</Container>
 		</header>
 	);

@@ -17,7 +17,7 @@ export const Hero: React.FC<{ h1: string }> = ({ h1 }) => (
 				/>
 			</div>
 
-			<h1 className={styles.hero__title}>{h1}</h1>
+			<h1 className={styles.hero__heading}>{h1}</h1>
 		</Container>
 	</section>
 );
