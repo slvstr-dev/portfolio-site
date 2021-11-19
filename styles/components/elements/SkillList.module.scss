@@ -1,9 +1,10 @@
-.skillList:not(:last-of-type) {
-	@apply pb-4 xs:p-0;
+.skillList {
+	@apply pb-2;
+	break-inside: avoid;
 }
 
 .skillList__heading {
-	@apply text-xs xs:text-sm text-center;
+	@apply text-xs md:text-sm text-center;
 	font-family: "Source Code Pro";
 }
 

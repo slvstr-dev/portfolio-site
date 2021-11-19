@@ -10,7 +10,7 @@
 
 .stackList__item {
 	@apply relative inline-block mr-2 mb-1 px-1 z-0;
-	@apply text-xs font-medium;
+	@apply text-xs md:text-sm font-medium;
 	font-family: "Source Code Pro";
 
 	&:before {

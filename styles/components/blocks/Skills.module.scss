@@ -1,5 +1,5 @@
 .skills {
-	@apply pt-7 md:pt-8 pb-14 md:pb-16;
+	@apply pt-7 md:pt-8 pb-12 md:pb-14;
 	@apply bg-oatmeal;
 }
 
@@ -13,5 +13,12 @@
 }
 
 .skills__content {
-	@apply grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-4;
+	@apply gap-4;
+	column-count: 2;
+}
+
+@screen sm {
+	.skills__content {
+		column-count: 3;
+	}
 }
