@@ -29,7 +29,7 @@ export const Header: React.FC = () => {
 								}
 								key={index}
 							>
-								<Link href={router.asPath} locale={locale}>
+								<Link href={router.basePath} locale={locale}>
 									<a title={t("header_switch_locale")}>
 										{locale}
 									</a>
@@ -71,14 +71,7 @@ export const Header: React.FC = () => {
 				<nav className={styles.navbar}>
 					<ul>
 						{pages.map((page, index) => (
-							<li
-								className={
-									router.pathname == page
-										? styles.activeLink
-										: styles.inactiveLink
-								}
-								key={index}
-							>
+							<li key={index}>
 								<Link href={`#${page}`}>
 									{t(`navbar_${page}`)}
 								</Link>

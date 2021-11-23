@@ -53,24 +53,9 @@
 		@apply text-xs font-normal;
 		font-family: "Source Code Pro";
 	}
+
+	li {
+		@apply active:opacity-50 hover:text-red-600;
+		@apply transition-opacity ease-in-out;
+	}
 }
-
-// .inactiveLink {
-// 	@apply hover:opacity-50;
-// 	@apply transition-opacity ease-in-out;
-// }
-
-// .activeLink {
-// 	@apply relative;
-// 	@apply text-red-600;
-
-// 	&:after {
-// 		content: url("../../../public/svg/triangle.svg");
-// 		position: absolute;
-// 		width: 10px;
-// 		height: 10px;
-// 		bottom: -12px;
-// 		left: 50%;
-// 		transform: translateX(-50%);
-// 	}
-// }

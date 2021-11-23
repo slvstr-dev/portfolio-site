@@ -3,11 +3,7 @@
 @use "./global/typography.scss";
 @use "./tools/swiper.scss";
 
-body > div {
-	@apply flex flex-col min-h-screen;
-}
-
-main {
-	@apply flex-grow;
+html {
 	@apply bg-white;
+	scroll-behavior: smooth;
 }
