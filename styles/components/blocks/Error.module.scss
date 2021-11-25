@@ -1,6 +1,5 @@
 .error__wrapper {
-	@apply mx-auto my-14 md:my-16 p-5;
-	@apply max-w-screen-sm;
+	@apply max-w-screen-sm mx-auto my-14 md:my-16 p-5;
 	@apply flex flex-col sm:flex-row items-center sm:justify-between gap-2 sm:gap-5;
 	@apply rounded-xl;
 	@apply bg-oatmeal text-red-600;
@@ -11,6 +10,5 @@
 }
 
 .error__text {
-	@apply text-xs text-center sm:text-left font-normal;
-	font-family: "Source Code Pro";
+	@apply font-mono font-normal text-xs text-center sm:text-left;
 }

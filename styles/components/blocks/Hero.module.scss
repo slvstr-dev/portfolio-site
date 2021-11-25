@@ -15,5 +15,5 @@
 .hero__heading {
 	@apply absolute top-1/2 left-1/2 max-w-xl;
 	@apply transform -translate-x-1/2 -translate-y-1/2;
-	@apply text-lemon text-3xl sm:text-5xl text-center;
+	@apply text-lemon text-3xl sm:text-5xl lg:text-7xl;
 }

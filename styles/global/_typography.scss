@@ -1,11 +1,9 @@
 body {
-	font-family: "Jost", sans-serif;
-
-	@apply font-light text-base text-gray-800;
+	@apply font-sans font-light text-base text-gray-800;
 }
 
 h1 {
-	@apply font-black text-4xl sm:text-5xl uppercase;
+	@apply font-black text-4xl sm:text-5xl text-center uppercase;
 }
 
 h2 {

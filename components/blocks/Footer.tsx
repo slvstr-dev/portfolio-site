@@ -1,9 +1,9 @@
-import { Container } from "../elements/Container";
 import useTranslation from "next-translate/useTranslation";
+import { Container } from "../elements/Container";
 import styles from "../../styles/components/blocks/Footer.module.scss";
 
 export const Footer: React.FC = () => {
-	const { t } = useTranslation("index");
+	const { t } = useTranslation("common");
 
 	return (
 		<footer className={styles.copyright}>

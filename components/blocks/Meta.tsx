@@ -3,8 +3,9 @@ import { useRouter } from "next/router";
 import useTranslation from "next-translate/useTranslation";
 
 interface Meta {
-	title?: string;
+	imageUrl?: string;
 	follow?: boolean;
+	title?: string;
 }
 
 const domain =
@@ -12,15 +13,19 @@ const domain =
 		? `${process.env.NEXT_PUBLIC_PRODUCTION_DOMAIN}`
 		: "http://localhost:3000";
 
-export const Meta: React.FC<Meta> = ({ title = "", follow = true }) => {
+export const Meta: React.FC<Meta> = ({
+	imageUrl = "",
+	title = "",
+	follow = true,
+}) => {
 	const router = useRouter();
-	const { t } = useTranslation("index");
+	const { t } = useTranslation("common");
 	const url = router.asPath ? router.asPath : undefined;
 	const canonical = url === "/" ? domain : domain + url;
 
 	return (
 		<Head>
-			<title>{title ? title : t("meta_heading")}</title>
+			<title>{title ? title : t("meta_title")}</title>
 			<meta charSet="utf-8" />
 			<meta content="IE=edge" httpEquiv="X-UA-Compatible" />
 			<meta
@@ -37,10 +42,7 @@ export const Meta: React.FC<Meta> = ({ title = "", follow = true }) => {
 			<meta content={t("meta_description")} property="og:description" />
 			<meta name="description" content={t("meta_description")} />
 			<meta content={t("meta_description")} property="og:image:alt" />
-			<meta
-				content={`${domain}/images/featured-image.jpg`}
-				property="og:image"
-			/>
+			<meta content={imageUrl} property="og:image" />
 			<meta content="summary_large_image" name="twitter:card" />
 			<meta content={canonical} property="og:url" />
 			<meta

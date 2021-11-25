@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import { Container } from "../elements/Container";
-import { Accomplisment } from "../elements/Accomplisment";
 import useTranslation from "next-translate/useTranslation";
-
+import { Accomplisment } from "../elements/Accomplisment";
+import { Container } from "../elements/Container";
 import SwiperCore, {
 	Autoplay,
 	EffectFade,
@@ -15,10 +14,9 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import styles from "../../styles/components/blocks/Accomplisments.module.scss";
 
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
-
-import styles from "../../styles/components/blocks/Accomplisments.module.scss";
 
 interface Accomplisments {
 	accomplisments: [
@@ -45,7 +43,6 @@ export const Accomplisments: React.FC<Accomplisments> = ({
 	const [activeAccomplisment, setActiveAccomplisment] = useState(
 		accomplisments[0]
 	);
-
 	const { t } = useTranslation("index");
 
 	return (

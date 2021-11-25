@@ -1,7 +1,7 @@
-import { Container } from "../elements/Container";
-import { Button } from "../elements/Button";
-import Mailbox from "../../public/svg/mailbox.svg";
 import useTranslation from "next-translate/useTranslation";
+import { Button } from "../elements/Button";
+import { Container } from "../elements/Container";
+import Mailbox from "../../public/svg/mailbox.svg";
 import styles from "../../styles/components/blocks/Contact.module.scss";
 
 export const Contact: React.FC = () => {

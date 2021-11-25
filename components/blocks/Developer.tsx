@@ -1,8 +1,7 @@
 import Image from "next/image";
-import { Container } from "../elements/Container";
 import { Button } from "../elements/Button";
+import { Container } from "../elements/Container";
 import useTranslation from "next-translate/useTranslation";
-
 import styles from "../../styles/components/blocks/Developer.module.scss";
 
 interface Developer {

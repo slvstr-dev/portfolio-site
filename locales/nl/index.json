@@ -1,18 +1,4 @@
 {
-	"meta_heading": "slvstr.dev: frontend developer",
-	"meta_description": "slvstr.dev is mijn portfolio website, waarop ik laat zien hoe ik mijzelf heb omgeschoold tot frontend developer en wat ik tot nu toe bereikt heb.",
-	"meta_keywords": "sylvester hofstra, frontend developer, portfolio, html, css, scss, tailwind, bootstrap, javascript, react, next js, gulp, webpack, tablericons",
-
-	"header_switch_locale": "Verander de taal van deze website",
-	"header_portfolio": "Bekijk de GitHub-repository van deze website",
-	"header_github": "Bekijk GitHub-profiel",
-	"header_linkedin": "Bekijk LinkedIn-profiel",
-
-	"navbar_home": "Home",
-	"navbar_developer": "Profiel",
-	"navbar_accomplisments": "Ervaring",
-	"navbar_skills": "Vaardigheden",
-
 	"hero_heading": "Self-taught frontend developer",
 
 	"error_message": "De benodigde data kan op dit moment niet geladen worden. Probeer het later nog een keer of bekijk mijn profiel op LinkedIn of Github.",
@@ -29,7 +15,5 @@
 
 	"contact_heading": "Kop koffie drinken?",
 	"contact_subheading": "Contact opnemen",
-	"contact_button": "Stuur mij een mail",
-
-	"footer_copyright": "Gebouwd door Sylvester Hofstra, ontwerp geïnspireerd door "
+	"contact_button": "Stuur mij een mail"
 }

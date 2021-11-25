@@ -6,7 +6,5 @@ interface Container {
 }
 
 export const Container: React.FC<Container> = ({ classNames, children }) => (
-	<div className={`${styles.container} ${classNames ? classNames : ""}`}>
-		{children}
-	</div>
+	<div className={`${styles.container} ${classNames}`}>{children}</div>
 );

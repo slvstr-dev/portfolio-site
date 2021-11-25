@@ -1,7 +1,7 @@
+import useTranslation from "next-translate/useTranslation";
 import { Button } from "./Button";
 import { Container } from "./Container";
 import { StackList } from "./StackList";
-import useTranslation from "next-translate/useTranslation";
 import styles from "../../styles/components/elements/Accomplisment.module.scss";
 
 interface Accomplisment {
@@ -27,7 +27,7 @@ export const Accomplisment: React.FC<Accomplisment> = ({
 	const { t } = useTranslation("index");
 
 	return (
-		<article className={styles.accomplisment}>
+		<article>
 			<Container>
 				<h3 className={styles.accomplisment__heading}>
 					<span className={styles.accomplisment__subheading}>
@@ -46,26 +46,29 @@ export const Accomplisment: React.FC<Accomplisment> = ({
 							: accomplisment.description_en}
 					</p>
 
-					<div className={styles.accomplisment__buttons}>
-						{accomplisment.website_url && (
-							<Button
-								text={accomplisment.category}
-								href={accomplisment.website_url}
-								isExternal
-							/>
-						)}
-
-						{accomplisment.repository_url && (
-							<Button
-								text={t("accomplisments_repository")}
-								href={accomplisment.repository_url}
-								isExternal
-							/>
-						)}
-					</div>
+					<StackList
+						classNames={styles.accomplisment__stackList}
+						stack={accomplisment.stack}
+					/>
 				</div>
 
-				<StackList stack={accomplisment.stack} />
+				<div className={styles.accomplisment__buttons}>
+					{accomplisment.website_url && (
+						<Button
+							text={accomplisment.category}
+							href={accomplisment.website_url}
+							isExternal
+						/>
+					)}
+
+					{accomplisment.repository_url && (
+						<Button
+							text={t("accomplisments_repository")}
+							href={accomplisment.repository_url}
+							isExternal
+						/>
+					)}
+				</div>
 			</Container>
 		</article>
 	);

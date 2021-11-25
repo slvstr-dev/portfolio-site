@@ -1,24 +1,24 @@
-import { Meta } from "../components/blocks/Meta";
-import { Header } from "../components/blocks/Header";
-import { Footer } from "../components/blocks/Footer";
+import useTranslation from "next-translate/useTranslation";
 import { Container } from "../components/elements/Container";
 import { Error } from "../components/blocks/Error";
-import useTranslation from "next-translate/useTranslation";
+import { Footer } from "../components/blocks/Footer";
+import { Header } from "../components/blocks/Header";
+import { Meta } from "../components/blocks/Meta";
 
 const Custom404 = () => {
-	const { t } = useTranslation("404");
+	const { t } = useTranslation("common");
 
 	return (
 		<>
-			<Meta title={t("meta_heading")} follow={false} />
+			<Meta follow={false} />
 
 			<Header />
 
 			<main>
 				<Container>
-					<h1>{t("h1")}</h1>
+					<h1 className="pt-14 md:pt-16">{t("404_heading")}</h1>
 
-					<Error message={t("error_message")} />
+					<Error message={t("404_message")} />
 				</Container>
 			</main>
 

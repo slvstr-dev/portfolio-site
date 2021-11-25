@@ -1,23 +1,31 @@
 import Image from "next/image";
+import useTranslation from "next-translate/useTranslation";
 import { Container } from "../elements/Container";
-import hero from "../../public/images/hero-vs-code.jpg";
 import styles from "../../styles/components/blocks/Hero.module.scss";
 
-export const Hero: React.FC<{ h1: string }> = ({ h1 }) => (
-	<section className={styles.hero}>
-		<Container classNames={styles.hero__container}>
-			<div className={styles.hero__imageWrapper}>
-				<Image
-					className={styles.hero__image}
-					src={hero}
-					alt=""
-					layout="fill"
-					objectFit="cover"
-					objectPosition="center"
-				/>
-			</div>
+interface Hero {
+	imageUrl: string;
+}
 
-			<h1 className={styles.hero__heading}>{h1}</h1>
-		</Container>
-	</section>
-);
+export const Hero: React.FC<Hero> = ({ imageUrl }) => {
+	const { t } = useTranslation("index");
+
+	return (
+		<section className={styles.hero}>
+			<Container classNames={styles.hero__container}>
+				<div className={styles.hero__imageWrapper}>
+					<Image
+						className={styles.hero__image}
+						src={imageUrl}
+						alt=""
+						layout="fill"
+						objectFit="cover"
+						objectPosition="center"
+					/>
+				</div>
+
+				<h1 className={styles.hero__heading}>{t("hero_heading")}</h1>
+			</Container>
+		</section>
+	);
+};

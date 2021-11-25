@@ -6,10 +6,6 @@ module.exports = {
 		"./components/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {
-		screens: {
-			xs: "480px",
-			...defaultTheme.screens,
-		},
 		extend: {
 			colors: {
 				bordeaux: "#63252A",
@@ -30,6 +26,40 @@ module.exports = {
 			strokeWidth: {
 				3: 3,
 			},
+		},
+		fontFamily: {
+			sans: [
+				"Jost",
+				"ui-sans-serif",
+				"system-ui",
+				"-apple-system",
+				"BlinkMacSystemFont",
+				"Segoe UI",
+				"Roboto",
+				"Helvetica Neue",
+				"Arial",
+				"Noto Sans",
+				"sans-serif",
+				"Apple Color Emoji",
+				"Segoe UI Emoji",
+				"Segoe UI Symbol",
+				"Noto Color Emoji",
+			],
+			mono: [
+				"Source Code Pro",
+				"ui-monospace",
+				"SFMono-Regular",
+				"Menlo",
+				"Monaco",
+				"Consolas",
+				"Liberation Mono",
+				"Courier New",
+				"monospace",
+			],
+		},
+		screens: {
+			xs: "480px",
+			...defaultTheme.screens,
 		},
 	},
 	variants: {

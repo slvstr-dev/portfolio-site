@@ -1,7 +1,6 @@
+import useTranslation from "next-translate/useTranslation";
 import { Container } from "../elements/Container";
 import { SkillList } from "../elements/SkillList";
-import useTranslation from "next-translate/useTranslation";
-
 import styles from "../../styles/components/blocks/Skills.module.scss";
 
 interface Skills {
@@ -12,10 +11,9 @@ interface Skills {
 			list: string[];
 		}
 	];
-	locale: string;
 }
 
-export const Skills: React.FC<Skills> = ({ skills, locale }) => {
+export const Skills: React.FC<Skills> = ({ skills }) => {
 	const { t } = useTranslation("index");
 
 	return (
@@ -27,7 +25,7 @@ export const Skills: React.FC<Skills> = ({ skills, locale }) => {
 
 				<div className={styles.skills__content}>
 					{skills.map((skill, index) => (
-						<SkillList key={index} skill={skill} locale={locale} />
+						<SkillList key={index} skill={skill} />
 					))}
 				</div>
 			</Container>

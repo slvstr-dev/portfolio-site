@@ -1,84 +1,41 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import { Container } from "../elements/Container";
-import { IconButton } from "../elements/IconButton";
+import { Locales } from "../elements/Locales";
 import { Logo } from "../elements/Logo";
-import Code from "../../public/svg/code.svg";
-import LinkedIn from "../../public/svg/linkedin.svg";
-import GitHub from "../../public/svg/github.svg";
-import useTranslation from "next-translate/useTranslation";
+import { Navbar } from "../elements/Navbar";
+import { Socials } from "../elements/Socials";
 import styles from "../../styles/components/blocks/Header.module.scss";
 
-const pages = ["developer", "accomplisments", "skills"];
-
 export const Header: React.FC = () => {
-	const router = useRouter();
-	const { t } = useTranslation("index");
+	const [positionY, setPositionY] = useState(0);
+	const [stickyHeader, setStickyHeader] = useState(false);
+
+	const updateHeaderStyling = () => {
+		const newPositionY = window.scrollY;
+
+		positionY > newPositionY && newPositionY > 0
+			? setStickyHeader(true)
+			: setStickyHeader(false);
+
+		setPositionY(newPositionY);
+	};
+
+	useEffect(() => {
+		window.addEventListener("scroll", updateHeaderStyling);
+
+		return () => window.removeEventListener("scroll", updateHeaderStyling);
+	});
 
 	return (
-		<header className={styles.header}>
+		<header className={stickyHeader ? styles.headerSticky : styles.header}>
 			<Container classNames={styles.header__container}>
-				{router.locales !== undefined && router.locales.length > 1 && (
-					<ul className={styles.header__locales}>
-						{router.locales.map((locale, index) => (
-							<li
-								className={
-									locale === router.locale
-										? styles.header__activeLocale
-										: styles.header__inactiveLocale
-								}
-								key={index}
-							>
-								<Link href={router.basePath} locale={locale}>
-									<a title={t("header_switch_locale")}>
-										{locale}
-									</a>
-								</Link>
-							</li>
-						))}
-					</ul>
-				)}
+				<Locales classNames={styles.header__locales} />
 
-				<div className={styles.header__socials}>
-					<IconButton
-						href={`${process.env.NEXT_PUBLIC_PORTFOLIO_URL}`}
-						title={t("header_portfolio")}
-					>
-						<Code />
-					</IconButton>
+				<Socials classNames={styles.header__socials} />
 
-					<IconButton
-						href={`${process.env.NEXT_PUBLIC_GITHUB_URL}`}
-						title={t("header_github")}
-					>
-						<GitHub />
-					</IconButton>
+				<Logo classNames={styles.header__logo} />
 
-					<IconButton
-						href={`${process.env.NEXT_PUBLIC_LINKEDIN_URL}`}
-						title={t("header_linkedin")}
-					>
-						<LinkedIn />
-					</IconButton>
-				</div>
-
-				<Link href="/">
-					<a className={styles.header__logo}>
-						<Logo />
-					</a>
-				</Link>
-
-				<nav className={styles.navbar}>
-					<ul>
-						{pages.map((page, index) => (
-							<li key={index}>
-								<Link href={`#${page}`}>
-									{t(`navbar_${page}`)}
-								</Link>
-							</li>
-						))}
-					</ul>
-				</nav>
+				<Navbar />
 			</Container>
 		</header>
 	);

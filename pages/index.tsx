@@ -1,18 +1,19 @@
 import { GetStaticProps } from "next";
 import { supabase } from "../supabaseClient";
-import { Header } from "../components/blocks/Header";
-import { Footer } from "../components/blocks/Footer";
-import { Meta } from "../components/blocks/Meta";
-import { Hero } from "../components/blocks/Hero";
-import { Quote } from "../components/blocks/Quote";
-import { Skills } from "../components/blocks/Skills";
 import { Accomplisments } from "../components/blocks/Accomplisments";
 import { Contact } from "../components/blocks/Contact";
 import { Developer } from "../components/blocks/Developer";
 import { Error } from "../components/blocks/Error";
-import useTranslation from "next-translate/useTranslation";
+import { Footer } from "../components/blocks/Footer";
+import { Header } from "../components/blocks/Header";
+import { Hero } from "../components/blocks/Hero";
+import { Meta } from "../components/blocks/Meta";
+import { Quote } from "../components/blocks/Quote";
+import { Skills } from "../components/blocks/Skills";
 
 interface Index {
+	meta: { image_url: string };
+	hero: { image_url: string };
 	developer: {
 		name: string;
 		description_nl: string;
@@ -47,11 +48,20 @@ interface Index {
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
 	const {
+		data: meta,
+		status: metaStatus,
+		error: metaError,
+	} = await supabase.from("meta").select().limit(1).single();
+	const {
+		data: hero,
+		status: heroStatus,
+		error: heroError,
+	} = await supabase.from("hero").select().limit(1).single();
+	const {
 		data: developer,
 		status: developerStatus,
 		error: developerError,
 	} = await supabase.from("developer").select().limit(1).single();
-
 	const {
 		data: accomplisments,
 		status: accomplismentsStatus,
@@ -60,7 +70,6 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 		.from("accomplisments")
 		.select()
 		.order("id", { ascending: false });
-
 	const {
 		data: skills,
 		status: skillsStatus,
@@ -68,9 +77,13 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 	} = await supabase.from("skills").select().order("id", { ascending: true });
 
 	if (
+		metaStatus !== 200 ||
+		heroStatus !== 200 ||
 		developerStatus !== 200 ||
 		accomplismentsStatus !== 200 ||
 		skillsStatus !== 200 ||
+		metaError ||
+		heroError ||
 		developerError ||
 		accomplismentsError ||
 		skillsError
@@ -82,6 +95,8 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 
 	return {
 		props: {
+			meta,
+			hero,
 			developer,
 			accomplisments,
 			skills,
@@ -91,51 +106,49 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 };
 
 const Index: React.FC<Index> = ({
+	meta,
+	hero,
 	developer,
 	accomplisments,
 	skills,
 	locale,
-}) => {
-	const { t } = useTranslation("index");
+}) => (
+	<>
+		<Meta imageUrl={meta.image_url} />
 
-	return (
-		<>
-			<Meta />
+		<Header />
 
-			<Header />
+		<main>
+			{hero && developer && accomplisments && skills ? (
+				<>
+					<Hero imageUrl={hero.image_url} />
 
-			<main>
-				<Hero h1={t("hero_heading")} />
+					<Quote
+						quote={
+							locale === "nl"
+								? developer.quote_nl
+								: developer.quote_en
+						}
+					/>
 
-				{developer && accomplisments && skills ? (
-					<>
-						<Quote
-							quote={
-								locale === "nl"
-									? developer.quote_nl
-									: developer.quote_en
-							}
-						/>
+					<Developer developer={developer} locale={locale} />
 
-						<Developer developer={developer} locale={locale} />
+					<Accomplisments
+						accomplisments={accomplisments}
+						locale={locale}
+					/>
 
-						<Accomplisments
-							accomplisments={accomplisments}
-							locale={locale}
-						/>
+					<Skills skills={skills} />
+				</>
+			) : (
+				<Error />
+			)}
 
-						<Skills skills={skills} locale={locale} />
-					</>
-				) : (
-					<Error message={t("error_message")} />
-				)}
+			<Contact />
+		</main>
 
-				<Contact />
-			</main>
-
-			<Footer />
-		</>
-	);
-};
+		<Footer />
+	</>
+);
 
 export default Index;

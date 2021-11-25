@@ -2,6 +2,7 @@
 	"locales": ["nl", "en"],
 	"defaultLocale": "nl",
 	"pages": {
-		"*": ["index", "404", "500"]
+		"*": ["common"],
+		"/": ["index"]
 	}
 }

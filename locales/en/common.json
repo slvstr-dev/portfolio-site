@@ -1,0 +1,23 @@
+{
+	"meta_title": "slvstr.dev | portfolio",
+	"meta_description": "slvstr.dev is my portfolio website, where I demonstrate on which projects I've worked so far.",
+	"meta_keywords": "sylvester hofstra, frontend developer, portfolio, html, css, scss, tailwind, bootstrap, javascript, react, next js, gulp, webpack, tablericons",
+
+	"header_switch_locale": "Change the language of this website",
+	"header_portfolio": "View the GitHub repository of this website",
+	"header_github": "View GitHub profile",
+	"header_linkedin": "View LinkedIn profile",
+
+	"navbar_home": "Home",
+	"navbar_developer": "Profile",
+	"navbar_accomplisments": "Accomplisments",
+	"navbar_skills": "Skills",
+
+	"404_heading": "404",
+	"404_message": "The page you are trying to visit does not exist (anymore). Please try a different page from the menu.",
+
+	"500_heading": "500",
+	"500_message": "The page you are trying to visit cannot be displayed due to technical issues. Please try again at a later time, or contact me.",
+
+	"footer_copyright": "Built by Sylvester Hofstra, design inspired by "
+}

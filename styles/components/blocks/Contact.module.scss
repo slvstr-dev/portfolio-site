@@ -1,22 +1,19 @@
 .contact {
-	@apply bg-peach;
 	@apply py-8 md:py-16;
 	@apply text-center;
 
 	background-image: repeating-linear-gradient(
 		135deg,
 		#fad0c0,
-		#fad0c0 25%,
-		#f2ecde 25%,
-		#f2ecde 50%
+		#fad0c0 20%,
+		#f2ecde 20%,
+		#f2ecde 40%
 	);
 }
 
 .contact__svg {
-	@apply pb-2;
-	@apply w-24 mx-auto;
-	@apply text-bordeaux;
-	@apply stroke-1;
+	@apply w-24 mx-auto pb-2;
+	@apply stroke-1 text-bordeaux;
 }
 
 .contact__heading {
@@ -25,7 +22,7 @@
 
 .contact__subheading {
 	@apply block pb-4;
-	@apply text-red-600 text-sm font-semibold uppercase;
+	@apply font-semibold text-red-600 text-sm uppercase;
 }
 
 .contact__button {

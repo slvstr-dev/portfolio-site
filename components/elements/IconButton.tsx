@@ -14,7 +14,7 @@ export const IconButton: React.FC<IconButton> = ({
 	children,
 }) => (
 	<a
-		className={`${styles.button} ${classNames}`}
+		className={`${styles.iconButton} ${classNames}`}
 		title={title}
 		href={href}
 		target="_blank"

@@ -1,27 +1,25 @@
-.accomplisment {
-	@apply mt-5 md:mt-10;
-}
-
-.accomplisment__content {
-	@apply w-full sm:inline-block sm:w-2/3 sm:pr-5 md:pr-10;
-}
-
 .accomplisment__heading {
-	@apply pb-5;
-	@apply text-xl xs:text-2xl font-black uppercase;
+	@apply pb-3;
+	@apply text-xl xs:text-2xl;
 }
 
 .accomplisment__subheading {
-	@apply block pb-2;
-	@apply text-olive text-sm xs:text-base font-semibold uppercase;
+	@apply block;
+	@apply font-semibold text-olive text-sm xs:text-base;
 }
 
 .accomplisment__description {
+	@apply w-full sm:inline-block sm:w-3/5 py-2 px-4;
+	@apply rounded-md;
+	@apply bg-white;
 	@apply text-base md:text-lg;
-	@apply bg-white rounded-md py-2 px-4;
+}
+
+.accomplisment__stackList {
+	@apply w-full align-top sm:inline-block mt-2 sm:mt-0 sm:w-2/5 sm:pl-3 md:pl-5;
 }
 
 .accomplisment__buttons {
-	@apply flex flex-wrap gap-2;
 	@apply pt-5;
+	@apply flex flex-wrap gap-2;
 }

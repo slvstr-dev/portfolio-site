@@ -1,4 +1,3 @@
-import useTranslation from "next-translate/useTranslation";
 import styles from "../../styles/components/elements/SkillList.module.scss";
 
 interface SkillList {
@@ -7,25 +6,20 @@ interface SkillList {
 		category: string;
 		list: string[];
 	};
-	locale: string;
 }
 
-export const SkillList: React.FC<SkillList> = ({ skill, locale }) => {
-	const { t } = useTranslation("index");
+export const SkillList: React.FC<SkillList> = ({ skill }) => (
+	<div className={styles.skillList}>
+		<h3 className={styles.skillList__heading}>{skill.category}</h3>
 
-	return (
-		<div className={styles.skillList}>
-			<h3 className={styles.skillList__heading}>{skill.category}</h3>
-
-			<ul>
-				{skill.list.map((item, index) => {
-					return (
-						<li key={index} className={styles.skillList__item}>
-							{item}
-						</li>
-					);
-				})}
-			</ul>
-		</div>
-	);
-};
+		<ul>
+			{skill.list.map((item, index) => {
+				return (
+					<li key={index} className={styles.skillList__item}>
+						{item}
+					</li>
+				);
+			})}
+		</ul>
+	</div>
+);

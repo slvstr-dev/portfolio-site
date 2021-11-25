@@ -1,21 +1,13 @@
-.stackList {
-	@apply mt-5 sm:mt-0;
-	@apply w-full sm:inline-block sm:w-1/3;
-	@apply align-top;
-}
-
 .stackList__heading {
-	@apply text-bordeaux text-base font-semibold uppercase;
+	@apply font-semibold text-bordeaux text-base;
 }
 
 .stackList__item {
 	@apply relative inline-block mr-2 mb-1 px-1 z-0;
-	@apply text-xs md:text-sm font-medium;
-	font-family: "Source Code Pro";
+	@apply font-mono font-medium text-xs md:text-sm;
 
 	&:before {
-		@apply absolute;
-		@apply left-0 right-0 bottom-0 h-1/2 w-full;
+		@apply absolute left-0 right-0 bottom-0 h-1/2 w-full;
 		@apply bg-peach;
 		content: "";
 		z-index: -1;

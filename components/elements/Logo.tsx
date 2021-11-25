@@ -1,9 +1,16 @@
+import Link from "next/link";
 import styles from "../../styles/components/elements/Logo.module.scss";
 
-export const Logo: React.FC<{ className?: string }> = ({ className }) => (
-	<div className={`${styles.logo} ${className}`}>
-		<span className={styles.logo__heading}>Slvstr</span>
+interface Logo {
+	classNames?: string;
+}
 
-		<span className={styles.logo__subtitle}>Frontend developer</span>
-	</div>
+export const Logo: React.FC<Logo> = ({ classNames }) => (
+	<Link href="/">
+		<a className={`${styles.logo} ${classNames}`}>
+			<span className={styles.logo__heading}>Slvstr</span>
+
+			<span className={styles.logo__subtitle}>Frontend developer</span>
+		</a>
+	</Link>
 );
