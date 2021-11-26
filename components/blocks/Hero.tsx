@@ -18,6 +18,7 @@ export const Hero: React.FC<Hero> = ({ imageUrl }) => {
 						className={styles.hero__image}
 						src={imageUrl}
 						alt=""
+						priority={true}
 						layout="fill"
 						objectFit="cover"
 						objectPosition="center"
