@@ -6,8 +6,8 @@ export const Footer: React.FC = () => {
 	const { t } = useTranslation("common");
 
 	return (
-		<footer className={styles.copyright}>
-			<Container classNames={styles.copyright__container}>
+		<footer className={styles.footer}>
+			<Container classNames={styles.footer__container}>
 				&copy; {new Date().getFullYear()} {t("footer_copyright")}
 				<a
 					href="https://accidentallywesanderson.com/"

@@ -13,3 +13,12 @@
 		z-index: -1;
 	}
 }
+
+:global(.dark) {
+	.stackList__heading {
+		@apply text-gray-400;
+	}
+	.stackList__item:before {
+		@apply bg-gray-900;
+	}
+}

@@ -1,9 +1,13 @@
-.copyright {
+.footer {
 	@apply bg-bordeaux;
 	@apply font-mono font-normal text-xs text-peach;
 }
 
-.copyright__container {
+.footer__container {
 	@apply py-3;
 	@apply text-center;
+}
+
+:global(.dark) .footer {
+	@apply bg-gray-900 text-gray-400;
 }

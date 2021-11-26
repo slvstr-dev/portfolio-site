@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Container } from "../elements/Container";
-import { Locales } from "../elements/Locales";
+import { Options } from "../elements/Options";
 import { Logo } from "../elements/Logo";
 import { Navbar } from "../elements/Navbar";
 import { Socials } from "../elements/Socials";
@@ -29,7 +29,7 @@ export const Header: React.FC = () => {
 	return (
 		<header className={stickyHeader ? styles.headerSticky : styles.header}>
 			<Container classNames={styles.header__container}>
-				<Locales classNames={styles.header__locales} />
+				<Options classNames={styles.header__options} />
 
 				<Socials classNames={styles.header__socials} />
 

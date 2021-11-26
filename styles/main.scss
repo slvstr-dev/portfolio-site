@@ -4,6 +4,9 @@
 @use "./tools/swiper.scss";
 
 html {
-	@apply bg-white;
 	scroll-behavior: smooth;
+}
+
+body {
+	@apply bg-white dark:bg-gray-600;
 }

@@ -29,3 +29,23 @@
 	@apply py-3 px-5 xl:py-4 xl:px-6;
 	@apply text-sm;
 }
+
+:global(.dark) {
+	.contact {
+		background-image: repeating-linear-gradient(
+			135deg,
+			#1f2937,
+			#1f2937 20%,
+			#6b7280 20%,
+			#6b7280 40%
+		);
+	}
+
+	.contact__svg {
+		@apply text-gray-400;
+	}
+
+	.contact__subheading {
+		@apply text-gray-500;
+	}
+}

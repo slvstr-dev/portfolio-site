@@ -3,7 +3,8 @@
 	"meta_description": "slvstr.dev is my portfolio website, where I demonstrate on which projects I've worked so far.",
 	"meta_keywords": "sylvester hofstra, frontend developer, portfolio, html, css, scss, tailwind, bootstrap, javascript, react, next js, gulp, webpack, tablericons",
 
-	"header_switch_locale": "Change the language of this website",
+	"header_locale_button": "Change the language",
+	"header_darkmode_toggle": "Toggle darkmode",
 	"header_portfolio": "View the GitHub repository of this website",
 	"header_github": "View GitHub profile",
 	"header_linkedin": "View LinkedIn profile",

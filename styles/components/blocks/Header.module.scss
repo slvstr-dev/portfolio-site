@@ -1,27 +1,27 @@
 .header,
 .headerSticky {
-	@apply py-2;
+	@apply py-4;
 	@apply border-b;
 	@apply bg-white;
 	@apply text-center;
 }
 
 .header {
-	@apply border-white;
+	@apply border-transparent;
 }
 
 .headerSticky {
 	@apply sticky top-0 inset-x-0 z-50;
 	@apply border-red-600;
-
 	animation: animate-top 0.4s ease-in-out;
 }
 
 .header__container {
 	@apply relative max-w-screen-2xl;
+	@apply flex flex-col items-center;
 }
 
-.header__locales {
+.header__options {
 	@apply absolute left-0 sm:bottom-0 md:left-10;
 	@apply pl-5 md:pl-0;
 }
@@ -41,5 +41,12 @@
 	}
 	to {
 		top: 0;
+	}
+}
+
+:global(.dark) {
+	.header,
+	.headerSticky {
+		@apply bg-gray-600;
 	}
 }

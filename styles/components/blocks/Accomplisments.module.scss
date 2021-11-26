@@ -11,3 +11,7 @@
 	@apply pb-6;
 	@apply text-center;
 }
+
+:global(.dark) .accomplisments {
+	@apply bg-gray-700;
+}

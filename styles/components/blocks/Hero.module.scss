@@ -17,3 +17,7 @@
 	@apply transform -translate-x-1/2 -translate-y-1/2;
 	@apply text-lemon text-3xl sm:text-5xl lg:text-7xl;
 }
+
+:global(.dark) .hero__imageWrapper {
+	@apply bg-gray-700;
+}

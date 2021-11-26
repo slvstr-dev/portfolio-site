@@ -32,3 +32,13 @@
 	@apply rounded-xl;
 	@apply bg-white;
 }
+
+:global(.dark) {
+	.developer {
+		@apply bg-gray-800;
+	}
+
+	.developer__image {
+		@apply bg-gray-700;
+	}
+}
