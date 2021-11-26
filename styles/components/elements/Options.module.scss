@@ -9,6 +9,10 @@
 	@apply flex justify-center items-center;
 	@apply rounded border border-transparent;
 	@apply transition-colors ease-in-out duration-200;
+
+	svg {
+		@apply w-5 h-5;
+	}
 }
 
 .options__active {

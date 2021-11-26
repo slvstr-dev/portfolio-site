@@ -4,7 +4,7 @@
 	.swiper-slide {
 		@apply mr-5;
 		@apply rounded-2xl;
-		@apply bg-white dark:bg-gray-700;
+		@apply bg-white dark:bg-gray-600;
 		@apply text-center;
 		width: calc((100% - theme("padding.5")) / 2);
 		padding-bottom: calc((100% - theme("padding.5")) / 2);
