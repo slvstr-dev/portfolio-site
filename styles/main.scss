@@ -9,4 +9,12 @@ html {
 
 body {
 	@apply bg-white dark:bg-gray-600;
+
+	> div {
+		@apply flex flex-col min-h-screen;
+	}
+}
+
+main {
+	@apply flex-grow;
 }

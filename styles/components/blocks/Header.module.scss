@@ -13,7 +13,7 @@
 .headerSticky {
 	@apply sticky top-0 inset-x-0 z-50;
 	@apply border-red-600;
-	animation: animate-top 0.4s ease-in-out;
+	animation: animate-top 0.2s ease-out;
 }
 
 .header__container {
@@ -37,7 +37,7 @@
 
 @keyframes animate-top {
 	from {
-		top: -100px;
+		top: -125px;
 	}
 	to {
 		top: 0;

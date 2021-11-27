@@ -12,3 +12,7 @@
 .error__text {
 	@apply font-mono font-normal text-xs text-center sm:text-left;
 }
+
+:global(.dark) .error__wrapper {
+	@apply bg-white;
+}
