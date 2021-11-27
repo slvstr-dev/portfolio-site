@@ -3,8 +3,8 @@
 
 	"error_message": "The needed data cannot be fetched at this time. Please try again, or take a look at my profile on LinkedIn/GitHub.",
 
-	"developer_github_cta": "GitHub profile",
-	"developer_linkedin_cta": "LinkedIn profile",
+	"about_github_cta": "GitHub profile",
+	"about_linkedin_cta": "LinkedIn profile",
 
 	"accomplisments_heading": "Accomplisments",
 	"accomplisments_repository": "Repository",

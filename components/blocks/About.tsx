@@ -2,9 +2,9 @@ import Image from "next/image";
 import { Button } from "../elements/Button";
 import { Container } from "../elements/Container";
 import useTranslation from "next-translate/useTranslation";
-import styles from "../../styles/components/blocks/Developer.module.scss";
+import styles from "../../styles/components/blocks/About.module.scss";
 
-interface Developer {
+interface About {
 	developer: {
 		name: string;
 		description_nl: string;
@@ -16,15 +16,15 @@ interface Developer {
 	locale: string;
 }
 
-export const Developer: React.FC<Developer> = ({ developer, locale }) => {
+export const About: React.FC<About> = ({ developer, locale }) => {
 	const { t } = useTranslation("index");
 
 	return (
-		<section id="developer" className={styles.developer}>
-			<Container classNames={styles.developer__container}>
-				<div className={styles.developer__imageWrapper}>
+		<section id="developer" className={styles.about}>
+			<Container classNames={styles.about__container}>
+				<div className={styles.about__imageWrapper}>
 					<Image
-						className={styles.developer__image}
+						className={styles.about__image}
 						src={developer.image_url}
 						alt={developer.name}
 						layout="fill"
@@ -33,27 +33,25 @@ export const Developer: React.FC<Developer> = ({ developer, locale }) => {
 					/>
 				</div>
 
-				<div className={styles.developer__info}>
-					<h2 className={styles.developer__heading}>
-						{developer.name}
-					</h2>
+				<div className={styles.about__info}>
+					<h2 className={styles.about__heading}>{developer.name}</h2>
 
-					<p className={styles.developer__text}>
+					<p className={styles.about__text}>
 						{locale === "nl"
 							? developer.description_nl
 							: developer.description_en}
 					</p>
 
-					<div className={styles.developer__buttons}>
+					<div className={styles.about__buttons}>
 						<Button
 							href={`${process.env.NEXT_PUBLIC_GITHUB_URL}`}
-							text={t("developer_github_cta")}
+							text={t("about_github_cta")}
 							isExternal
 						/>
 
 						<Button
 							href={`${process.env.NEXT_PUBLIC_LINKEDIN_URL}`}
-							text={t("developer_linkedin_cta")}
+							text={t("about_linkedin_cta")}
 							isExternal
 						/>
 					</div>

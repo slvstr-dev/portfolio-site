@@ -2,7 +2,7 @@ import { GetStaticProps } from "next";
 import { supabase } from "../supabaseClient";
 import { Accomplisments } from "../components/blocks/Accomplisments";
 import { Contact } from "../components/blocks/Contact";
-import { Developer } from "../components/blocks/Developer";
+import { About } from "../components/blocks/About";
 import { Error } from "../components/blocks/Error";
 import { Footer } from "../components/blocks/Footer";
 import { Header } from "../components/blocks/Header";
@@ -131,7 +131,7 @@ const Index: React.FC<Index> = ({
 						}
 					/>
 
-					<Developer developer={developer} locale={locale} />
+					<About developer={developer} locale={locale} />
 
 					<Accomplisments
 						accomplisments={accomplisments}

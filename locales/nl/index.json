@@ -3,8 +3,8 @@
 
 	"error_message": "De benodigde data kan op dit moment niet geladen worden. Probeer het later nog een keer of bekijk mijn profiel op LinkedIn of Github.",
 
-	"developer_github_cta": "GitHub-profiel",
-	"developer_linkedin_cta": "LinkedIn-profiel",
+	"about_github_cta": "GitHub-profiel",
+	"about_linkedin_cta": "LinkedIn-profiel",
 
 	"accomplisments_heading": "Ervaring",
 	"accomplisments_repository": "Repository",

@@ -1,44 +1,44 @@
-.developer {
+.about {
 	@apply mt-32 md:m-0 py-8 md:py-16;
 	@apply bg-peach;
 }
 
-.developer__container {
+.about__container {
 	@apply flex flex-col md:flex-row-reverse justify-center md:justify-between items-center md:gap-10;
 }
 
-.developer__info {
+.about__info {
 	@apply text-center md:text-left;
 }
 
-.developer__heading {
+.about__heading {
 	@apply pb-6;
 }
 
-.developer__text {
+.about__text {
 	@apply pb-6;
 	@apply text-base sm:text-lg;
 }
 
-.developer__buttons {
+.about__buttons {
 	@apply flex justify-center md:justify-start flex-wrap gap-5;
 }
 
-.developer__imageWrapper {
+.about__imageWrapper {
 	@apply relative flex-shrink-0 w-64 h-64 -mt-40 mb-5 md:m-0;
 }
 
-.developer__image {
+.about__image {
 	@apply rounded-xl;
 	@apply bg-white;
 }
 
 :global(.dark) {
-	.developer {
+	.about {
 		@apply bg-gray-800;
 	}
 
-	.developer__image {
+	.about__image {
 		@apply bg-gray-700;
 	}
 }
