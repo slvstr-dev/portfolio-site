@@ -24,7 +24,7 @@ export const Header: React.FC = () => {
 		window.addEventListener("scroll", updateHeaderStyling);
 
 		return () => window.removeEventListener("scroll", updateHeaderStyling);
-	}, [positionY]);
+	}, [updateHeaderStyling]);
 
 	return (
 		<header className={stickyHeader ? styles.headerSticky : styles.header}>
