@@ -5,7 +5,6 @@ import useTranslation from "next-translate/useTranslation";
 interface Meta {
 	imageUrl?: string;
 	follow?: boolean;
-	title?: string;
 }
 
 const domain =
@@ -13,11 +12,7 @@ const domain =
 		? `${process.env.NEXT_PUBLIC_PRODUCTION_DOMAIN}`
 		: "http://localhost:3000";
 
-export const Meta: React.FC<Meta> = ({
-	imageUrl = "",
-	title = "",
-	follow = true,
-}) => {
+export const Meta: React.FC<Meta> = ({ imageUrl = "", follow = true }) => {
 	const router = useRouter();
 	const { t } = useTranslation("common");
 	const url = router.asPath ? router.asPath : undefined;
@@ -25,7 +20,7 @@ export const Meta: React.FC<Meta> = ({
 
 	return (
 		<Head>
-			<title>{title ? title : t("meta_title")}</title>
+			<title>{t("meta_title")}</title>
 			<meta charSet="utf-8" />
 			<meta content="IE=edge" httpEquiv="X-UA-Compatible" />
 			<meta
@@ -37,7 +32,7 @@ export const Meta: React.FC<Meta> = ({
 				name="robots"
 			/>
 			<meta content={router.locale} property="og:locale" />
-			<meta content={title} property="og:title" />
+			<meta content={t("meta_title")} property="og:title" />
 			<meta name="keywords" content={t("meta_keywords")} />
 			<meta content={t("meta_description")} property="og:description" />
 			<meta name="description" content={t("meta_description")} />
