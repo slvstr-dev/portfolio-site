@@ -15,7 +15,7 @@
 	}
 
 	.swiper-slide-active {
-		@apply bg-olive;
+		@apply bg-olive dark:bg-olive;
 
 		div {
 			@apply inset-2 #{!important};
