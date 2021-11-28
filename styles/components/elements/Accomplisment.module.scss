@@ -23,3 +23,7 @@
 	@apply pt-5;
 	@apply flex flex-wrap gap-2;
 }
+
+:global(.dark) .accomplisment__description {
+	@apply text-gray-800;
+}
