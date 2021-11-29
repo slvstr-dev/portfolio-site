@@ -3,11 +3,7 @@ import useTranslation from "next-translate/useTranslation";
 import { Container } from "../elements/Container";
 import styles from "../../styles/components/blocks/Hero.module.scss";
 
-interface Hero {
-	imageUrl: string;
-}
-
-export const Hero: React.FC<Hero> = ({ imageUrl }) => {
+export const Hero: React.FC = () => {
 	const { t } = useTranslation("index");
 
 	return (
@@ -16,7 +12,7 @@ export const Hero: React.FC<Hero> = ({ imageUrl }) => {
 				<div className={styles.hero__imageWrapper}>
 					<Image
 						className={styles.hero__image}
-						src={imageUrl}
+						src="/images/hero.png"
 						alt=""
 						priority={true}
 						layout="fill"

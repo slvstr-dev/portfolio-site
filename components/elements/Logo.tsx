@@ -10,7 +10,7 @@ export const Logo: React.FC<Logo> = ({ classNames }) => (
 		<a className={`${styles.logo} ${classNames}`}>
 			<span className={styles.logo__heading}>Slvstr</span>
 
-			<span className={styles.logo__subtitle}>Frontend developer</span>
+			<span className={styles.logo__subheading}>Frontend developer</span>
 		</a>
 	</Link>
 );

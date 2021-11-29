@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import useTranslation from "next-translate/useTranslation";
 
 interface Meta {
-	imageUrl?: string;
 	follow?: boolean;
 }
 
@@ -12,7 +11,7 @@ const domain =
 		? `${process.env.NEXT_PUBLIC_PRODUCTION_DOMAIN}`
 		: "http://localhost:3000";
 
-export const Meta: React.FC<Meta> = ({ imageUrl = "", follow = true }) => {
+export const Meta: React.FC<Meta> = ({ follow = true }) => {
 	const router = useRouter();
 	const { t } = useTranslation("common");
 	const url = router.asPath ? router.asPath : undefined;
@@ -37,7 +36,7 @@ export const Meta: React.FC<Meta> = ({ imageUrl = "", follow = true }) => {
 			<meta content={t("meta_description")} property="og:description" />
 			<meta name="description" content={t("meta_description")} />
 			<meta content={t("meta_description")} property="og:image:alt" />
-			<meta content={imageUrl} property="og:image" />
+			<meta content="/images/website.png" property="og:image" />
 			<meta content="summary_large_image" name="twitter:card" />
 			<meta content={canonical} property="og:url" />
 			<meta

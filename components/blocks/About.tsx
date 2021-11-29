@@ -1,32 +1,31 @@
 import Image from "next/image";
+import useTranslation from "next-translate/useTranslation";
 import { Button } from "../elements/Button";
 import { Container } from "../elements/Container";
-import useTranslation from "next-translate/useTranslation";
 import styles from "../../styles/components/blocks/About.module.scss";
 
 interface About {
-	developer: {
+	about: {
 		name: string;
 		description_nl: string;
 		description_en: string;
 		quote_nl: string;
 		quote_en: string;
-		image_url: string;
 	};
 	locale: string;
 }
 
-export const About: React.FC<About> = ({ developer, locale }) => {
+export const About: React.FC<About> = ({ about, locale }) => {
 	const { t } = useTranslation("index");
 
 	return (
-		<section id="developer" className={styles.about}>
+		<section id="about" className={styles.about}>
 			<Container classNames={styles.about__container}>
 				<div className={styles.about__imageWrapper}>
 					<Image
 						className={styles.about__image}
-						src={developer.image_url}
-						alt={developer.name}
+						src="/images/avatar.jpg"
+						alt={about.name}
 						layout="fill"
 						objectFit="cover"
 						objectPosition="center"
@@ -34,12 +33,12 @@ export const About: React.FC<About> = ({ developer, locale }) => {
 				</div>
 
 				<div className={styles.about__info}>
-					<h2 className={styles.about__heading}>{developer.name}</h2>
+					<h2 className={styles.about__heading}>{about.name}</h2>
 
 					<p className={styles.about__text}>
 						{locale === "nl"
-							? developer.description_nl
-							: developer.description_en}
+							? about.description_nl
+							: about.description_en}
 					</p>
 
 					<div className={styles.about__buttons}>

@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next";
 import { supabase } from "../supabaseClient";
-import { Accomplisments } from "../components/blocks/Accomplisments";
+import { Experience } from "../components/blocks/Experience";
 import { Contact } from "../components/blocks/Contact";
 import { About } from "../components/blocks/About";
 import { Error } from "../components/blocks/Error";
@@ -12,17 +12,14 @@ import { Quote } from "../components/blocks/Quote";
 import { Skills } from "../components/blocks/Skills";
 
 interface Index {
-	meta: { image_url: string };
-	hero: { image_url: string };
-	developer: {
+	about: {
 		name: string;
 		description_nl: string;
 		description_en: string;
 		quote_nl: string;
 		quote_en: string;
-		image_url: string;
 	};
-	accomplisments: [
+	experience: [
 		{
 			id: number;
 			name_nl: string;
@@ -48,26 +45,16 @@ interface Index {
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
 	const {
-		data: meta,
-		status: metaStatus,
-		error: metaError,
-	} = await supabase.from("meta").select().limit(1).single();
+		data: about,
+		status: aboutStatus,
+		error: aboutError,
+	} = await supabase.from("about").select().limit(1).single();
 	const {
-		data: hero,
-		status: heroStatus,
-		error: heroError,
-	} = await supabase.from("hero").select().limit(1).single();
-	const {
-		data: developer,
-		status: developerStatus,
-		error: developerError,
-	} = await supabase.from("developer").select().limit(1).single();
-	const {
-		data: accomplisments,
-		status: accomplismentsStatus,
-		error: accomplismentsError,
+		data: experience,
+		status: experienceStatus,
+		error: experienceError,
 	} = await supabase
-		.from("accomplisments")
+		.from("experience")
 		.select()
 		.order("id", { ascending: false });
 	const {
@@ -77,15 +64,11 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 	} = await supabase.from("skills").select().order("id", { ascending: true });
 
 	if (
-		metaStatus !== 200 ||
-		heroStatus !== 200 ||
-		developerStatus !== 200 ||
-		accomplismentsStatus !== 200 ||
+		aboutStatus !== 200 ||
+		experienceStatus !== 200 ||
 		skillsStatus !== 200 ||
-		metaError ||
-		heroError ||
-		developerError ||
-		accomplismentsError ||
+		aboutError ||
+		experienceError ||
 		skillsError
 	) {
 		return {
@@ -95,48 +78,34 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 
 	return {
 		props: {
-			meta,
-			hero,
-			developer,
-			accomplisments,
+			about,
+			experience,
 			skills,
 			locale,
 		},
 	};
 };
 
-const Index: React.FC<Index> = ({
-	meta,
-	hero,
-	developer,
-	accomplisments,
-	skills,
-	locale,
-}) => (
+const Index: React.FC<Index> = ({ about, experience, skills, locale }) => (
 	<>
-		<Meta imageUrl={meta.image_url} />
+		<Meta />
 
 		<Header />
 
 		<main>
-			{hero && developer && accomplisments && skills ? (
+			{about && experience && skills ? (
 				<>
-					<Hero imageUrl={hero.image_url} />
+					<Hero />
 
 					<Quote
 						quote={
-							locale === "nl"
-								? developer.quote_nl
-								: developer.quote_en
+							locale === "nl" ? about.quote_nl : about.quote_en
 						}
 					/>
 
-					<About developer={developer} locale={locale} />
+					<About about={about} locale={locale} />
 
-					<Accomplisments
-						accomplisments={accomplisments}
-						locale={locale}
-					/>
+					<Experience experience={experience} locale={locale} />
 
 					<Skills skills={skills} />
 				</>

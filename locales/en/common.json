@@ -1,17 +1,16 @@
 {
 	"meta_title": "slvstr.dev | portfolio",
-	"meta_description": "slvstr.dev is my portfolio website, where I demonstrate on which projects I've worked so far.",
+	"meta_description": "slvstr.dev is my portfolio, where I give an overview of my skills and the projects I've worked on.",
 	"meta_keywords": "sylvester hofstra, frontend developer, portfolio, html, css, scss, tailwind, bootstrap, javascript, react, next js, gulp, webpack, tablericons",
 
-	"header_locale_button": "Change the language",
+	"header_locale_button": "Change language",
 	"header_darkmode_toggle": "Toggle darkmode",
-	"header_portfolio": "View the GitHub repository of this website",
+	"header_portfolio": "View GitHub repository",
 	"header_github": "View GitHub profile",
 	"header_linkedin": "View LinkedIn profile",
 
-	"navbar_home": "Home",
-	"navbar_developer": "Profile",
-	"navbar_accomplisments": "Accomplisments",
+	"navbar_about": "About",
+	"navbar_experience": "Experience",
 	"navbar_skills": "Skills",
 
 	"404_heading": "404",

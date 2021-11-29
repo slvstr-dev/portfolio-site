@@ -1,6 +1,5 @@
 import useTranslation from "next-translate/useTranslation";
 import { Container } from "../elements/Container";
-import { SkillList } from "../elements/SkillList";
 import styles from "../../styles/components/blocks/Skills.module.scss";
 
 interface Skills {
@@ -25,7 +24,24 @@ export const Skills: React.FC<Skills> = ({ skills }) => {
 
 				<div className={styles.skills__content}>
 					{skills.map((skill, index) => (
-						<SkillList key={index} skill={skill} />
+						<div key={index} className={styles.skills__category}>
+							<h3 className={styles.skills__listHeading}>
+								{skill.category}
+							</h3>
+
+							<ul>
+								{skill.list.sort().map((item, index) => {
+									return (
+										<li
+											key={index}
+											className={styles.skills__listItem}
+										>
+											{item}
+										</li>
+									);
+								})}
+							</ul>
+						</div>
 					))}
 				</div>
 			</Container>

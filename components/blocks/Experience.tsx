@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
-import { Accomplisment } from "../elements/Accomplisment";
+import { Project } from "../elements/Project";
 import { Container } from "../elements/Container";
 import SwiperCore, {
 	Autoplay,
@@ -14,12 +14,12 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import styles from "../../styles/components/blocks/Accomplisments.module.scss";
+import styles from "../../styles/components/blocks/experience.module.scss";
 
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 
-interface Accomplisments {
-	accomplisments: [
+interface Experience {
+	experience: [
 		{
 			id: number;
 			name_nl: string;
@@ -36,43 +36,38 @@ interface Accomplisments {
 	locale: string;
 }
 
-export const Accomplisments: React.FC<Accomplisments> = ({
-	accomplisments,
-	locale,
-}) => {
-	const [activeAccomplisment, setActiveAccomplisment] = useState(
-		accomplisments[0]
-	);
+export const Experience: React.FC<Experience> = ({ experience, locale }) => {
+	const [activeProject, setActiveProject] = useState(experience[0]);
 	const { t } = useTranslation("index");
 
 	return (
-		<section id="accomplisments" className={styles.accomplisments}>
-			<Container classNames={styles.accomplisments__container}>
-				<h2 className={styles.accomplisments__heading}>
-					{t("accomplisments_heading")}
+		<section id="experience" className={styles.experience}>
+			<Container classNames={styles.experience__container}>
+				<h2 className={styles.experience__heading}>
+					{t("experience_heading")}
 				</h2>
 
 				<Swiper
 					onSlideChange={(slide) =>
-						setActiveAccomplisment(accomplisments[slide.realIndex])
+						setActiveProject(experience[slide.realIndex])
 					}
 					className="custom-swiper"
 					navigation={true}
 					loop={true}
-					loopedSlides={accomplisments.length}
+					loopedSlides={experience.length}
 					pagination={{ type: "fraction" }}
 					slideToClickedSlide={true}
 					slidesPerView={"auto"}
 				>
-					{accomplisments.map((accomplisment, index) => {
+					{experience.map((project, index) => {
 						return (
 							<SwiperSlide key={index}>
 								<Image
-									src={accomplisment.image_url}
+									src={project.image_url}
 									alt={
 										locale === "nl"
-											? accomplisment.name_nl
-											: accomplisment.name_en
+											? project.name_nl
+											: project.name_en
 									}
 									layout="fill"
 									objectFit="cover"
@@ -84,10 +79,7 @@ export const Accomplisments: React.FC<Accomplisments> = ({
 				</Swiper>
 			</Container>
 
-			<Accomplisment
-				accomplisment={activeAccomplisment}
-				locale={locale}
-			/>
+			<Project project={activeProject} locale={locale} />
 		</section>
 	);
 };

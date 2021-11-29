@@ -1,0 +1,54 @@
+.project__heading {
+	@apply pb-3;
+	@apply text-xl xs:text-2xl;
+}
+
+.project__subheading {
+	@apply block;
+	@apply font-semibold text-olive text-sm xs:text-base;
+}
+
+.project__description {
+	@apply w-full sm:inline-block sm:w-3/5 py-2 px-4;
+	@apply rounded-md;
+	@apply bg-white;
+	@apply text-base md:text-lg;
+}
+
+.project__stack {
+	@apply w-full align-top sm:inline-block mt-2 sm:mt-0 sm:w-2/5 sm:pl-3 md:pl-5;
+}
+
+.project__listHeading {
+	@apply font-semibold text-bordeaux text-base;
+}
+
+.project__listItem {
+	@apply relative inline-block mr-2 mb-1 px-1 z-0;
+	@apply font-mono font-medium text-xs md:text-sm;
+
+	&:before {
+		@apply absolute left-0 right-0 bottom-0 h-1/2 w-full;
+		@apply bg-peach;
+		content: "";
+		z-index: -1;
+	}
+}
+
+.project__buttons {
+	@apply pt-5;
+	@apply flex flex-wrap gap-2;
+}
+
+:global(.dark) .project__description {
+	@apply text-gray-800;
+}
+
+:global(.dark) {
+	.project__listHeading {
+		@apply text-gray-400;
+	}
+	.project__listItem:before {
+		@apply bg-gray-900;
+	}
+}
