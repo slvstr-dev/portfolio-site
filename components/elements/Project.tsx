@@ -1,7 +1,7 @@
 import useTranslation from "next-translate/useTranslation";
 import { Button } from "./Button";
 import { Container } from "./Container";
-import styles from "../../styles/components/elements/project.module.scss";
+import styles from "../../styles/components/elements/Project.module.scss";
 
 interface project {
 	project: {

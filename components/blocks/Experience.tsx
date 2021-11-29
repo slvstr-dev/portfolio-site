@@ -14,7 +14,8 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import styles from "../../styles/components/blocks/experience.module.scss";
+
+import styles from "../../styles/components/blocks/Experience.module.scss";
 
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 
