@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import useTranslation from "next-translate/useTranslation";
-import staticImage from "../../public/images/website.png";
 
 interface Meta {
 	follow?: boolean;
@@ -37,7 +36,10 @@ export const Meta: React.FC<Meta> = ({ follow = true }) => {
 			<meta content={t("meta_description")} property="og:description" />
 			<meta name="description" content={t("meta_description")} />
 			<meta content={t("meta_description")} property="og:image:alt" />
-			<meta content={staticImage.src} property="og:image" />
+			<meta
+				content={`${domain}/images/website.png`}
+				property="og:image"
+			/>
 			<meta content="summary_large_image" name="twitter:card" />
 			<meta content={canonical} property="og:url" />
 			<meta
