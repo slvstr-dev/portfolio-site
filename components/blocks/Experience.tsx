@@ -55,7 +55,7 @@ export const Experience: React.FC<Experience> = ({ experience, locale }) => {
 					className="custom-swiper"
 					navigation={true}
 					loop={true}
-					loopedSlides={experience.length}
+					loopedSlides={5}
 					pagination={{ type: "fraction" }}
 					slideToClickedSlide={true}
 					slidesPerView={"auto"}
