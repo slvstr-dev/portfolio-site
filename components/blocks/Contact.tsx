@@ -23,7 +23,9 @@ export const Contact: React.FC = () => {
 				<Button
 					classNames={styles.contact__button}
 					text={t("contact_button")}
-					href="mailto:hello@slvstr.dev?subject=Contact"
+					href={`mailto:hello@slvstr.dev?subject=${t(
+						"contact_heading"
+					)}`}
 				/>
 			</Container>
 		</section>

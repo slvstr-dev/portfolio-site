@@ -26,7 +26,6 @@ export const About: React.FC<About> = ({ about, locale }) => {
 						className={styles.about__image}
 						src="/images/avatar.jpg"
 						alt={about.name}
-						priority={true}
 						layout="fill"
 						objectFit="cover"
 						objectPosition="center"
