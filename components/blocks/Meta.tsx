@@ -1,5 +1,6 @@
-import Head from "next/head";
 import { useRouter } from "next/router";
+import Head from "next/head";
+import Script from "next/script";
 import useTranslation from "next-translate/useTranslation";
 
 interface Meta {
@@ -79,11 +80,12 @@ export const Meta: React.FC<Meta> = ({ follow = true }) => {
 			<link href={canonical} rel="canonical" />
 			{process.env.NODE_ENV === "production" && (
 				<>
-					<script
+					<Script
 						async
 						src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
+						strategy="afterInteractive"
 					/>
-					<script
+					<Script
 						async
 						dangerouslySetInnerHTML={{
 							__html: `
@@ -93,6 +95,7 @@ export const Meta: React.FC<Meta> = ({ follow = true }) => {
                                 gtag("config", "${process.env.NEXT_PUBLIC_GA_TRACKING_ID}");
                             `,
 						}}
+						strategy="afterInteractive"
 					/>
 				</>
 			)}

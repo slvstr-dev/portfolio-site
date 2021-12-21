@@ -2,6 +2,7 @@ import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
 import { Button } from "../elements/Button";
 import { Container } from "../elements/Container";
+import avatar from "../../public/images/avatar.jpg";
 import styles from "../../styles/components/blocks/About.module.scss";
 
 interface About {
@@ -24,11 +25,12 @@ export const About: React.FC<About> = ({ about, locale }) => {
 				<div className={styles.about__imageWrapper}>
 					<Image
 						className={styles.about__image}
-						src="/images/avatar.jpg"
+						src={avatar}
 						alt={about.name}
 						layout="fill"
 						objectFit="cover"
 						objectPosition="center"
+						placeholder="blur"
 					/>
 				</div>
 
