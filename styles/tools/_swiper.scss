@@ -9,7 +9,7 @@
 		width: calc((100% - theme("padding.5")) / 2);
 		padding-bottom: calc((100% - theme("padding.5")) / 2);
 
-		div {
+		span {
 			@apply rounded-xl;
 		}
 	}
@@ -17,7 +17,7 @@
 	.swiper-slide-active {
 		@apply bg-olive dark:bg-olive;
 
-		div {
+		span {
 			@apply inset-2 #{!important};
 		}
 	}
