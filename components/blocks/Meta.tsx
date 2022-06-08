@@ -81,11 +81,13 @@ export const Meta: React.FC<Meta> = ({ follow = true }) => {
 			{process.env.NODE_ENV === "production" && (
 				<>
 					<Script
+						id="next-script-1"
 						async
 						src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
 						strategy="afterInteractive"
 					/>
 					<Script
+						id="next-script-2"
 						async
 						dangerouslySetInnerHTML={{
 							__html: `
